@@ -1,0 +1,43 @@
+select {
+    width: 250px;
+    /*left: 50%;*/
+    margin: 0 auto;
+}
+
+label {
+    font-weight: 400;
+    color: #39B54A;
+}
+
+.content-wrapper {
+    /* These styles are required for the "scroll-over" effect */
+    /*position: absolute;*/
+    top: 10%;
+    width: 100%;
+    min-height: 90%;
+    /*min-height: 100%;*/
+    z-index: 2;
+    background: #000000;
+}
+
+.content-head {
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 2em 0 1em;
+    color: #39B54A;
+}
+
+/* This is the class used for the footer */
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    background: #222222;
+}

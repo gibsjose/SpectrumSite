@@ -1,0 +1,158 @@
+#canvas-container {
+   width: 100%;
+   text-align:center;
+}
+
+canvas {
+   display: inline;
+}
+
+#img-container {
+	width: 100%;
+	text-align:center;
+}
+
+a {
+	color: #FFFF00;
+	text-decoration: none;
+}
+a:hover {
+	color: #DDD703;
+}
+
+header {
+	height: 128px;
+	position: fixed;
+	width: 100%;
+	background: #343434;
+	z-index: 10;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 36px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+}
+
+article {
+	width: 1000px; padding: 50px 0 0 0;
+	margin: 0 auto;
+}
+
+article p {
+	margin: 0 0 30px 0;
+}
+
+#header-content {
+    width: 1000px; margin: 0 auto; padding: 35px 0 0 0;
+    overflow: hidden;
+}
+
+#header-content h1 {
+    float: left;
+    font-size: 50px; text-transform: uppercase; letter-spacing: 10px;
+}
+
+#header-content nav {
+    float: right;
+}
+#header-content nav li {
+	float: left;
+	margin: 0 0 0 50px;
+	list-style: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 100;
+}
+
+#banner {
+	height: 500px;
+	position: fixed;
+	background: url(banner-bg.jpg);
+	background-size: cover;
+	width: 100%;
+	top: 100px;
+}
+#banner h2 {
+	margin: 130px auto;
+	color: #fff;
+	width: 800px;
+	font-size: 50px; line-height: 60px; text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	text-shadow: 0 3px 5px rgba(0,0,0,0.3);
+}
+
+footer {
+    height: 64px;
+    width: 100%;
+    background: #343434;
+
+    text-align:right;
+    vertical-align:middle;
+
+    font-family: 'Lato', sans-serif;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+}
+
+h1 {
+	font-family: 'Lato', sans-serif;
+	font-size: 36px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+}
+h3 {
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: bold;
+}
+h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+}
+p {
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+}
+blockquote {
+	font-family: 'Lato', sans-serif;
+	font-size: 21px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+}
+pre {
+	font-family: 'Lato', sans-serif;
+	font-size: 13px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+}
+
+html, body {
+      margin: 0; padding: 0;
+      width: 100%; height: 100%;
+
+      font-family: 'Lato', sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 400;
+
+      background: #000000;
+      color: #FFFFFF;
+}

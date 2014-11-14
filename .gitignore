@@ -1,0 +1,9 @@
+#Ignore Spectrum Folders and Symlinks
+Data
+Grids
+PDF
+PDFsets
+Spectrum
+Steering
+plots
+logs
