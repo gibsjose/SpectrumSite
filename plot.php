@@ -41,7 +41,15 @@
         <script type="text/javascript">
             function Plot() {
                 //Somehow reload the canvas when the user presses the button to always play the animation each time
-                // $('#canvas-container').load('canvas.php');
+                // $('#canvas-container').html("<h1>TEST</h1>");
+                // $('#canvas-container').html("<h1><font color=#319400 size=40px>PLOTTING</font></h1>");
+
+                $('#canvas-container').html(function() {
+                    canvas = "<canvas id='particle-canvas' width='800' height='800' style='border:0px solid #262626;'></canvas>";
+                    script = "<script type='text/javascript' src='js/protons.js'><\/script>";
+                    return canvas + script;
+                });
+
                 Collision();
 
                 var steering_v = document.getElementById('steering').value;
