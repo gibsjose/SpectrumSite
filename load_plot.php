@@ -51,11 +51,6 @@
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
 <?php } ?>
 
-<!-- Reset Collision -->
-<script>
-    ResetCollision();
-</script>
-
 <br>
 <br>
 <br>
