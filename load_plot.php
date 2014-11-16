@@ -45,9 +45,16 @@
 <?php } else {?>
     <br>
     <br>
+    <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
+    <br>
     <br>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
 <?php } ?>
+
+<!-- Reset Collision -->
+<script>
+    ResetCollision();
+</script>
 
 <br>
 <br>
