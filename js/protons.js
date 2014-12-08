@@ -7,8 +7,8 @@ var canvas = document.getElementById('particle-canvas'),
         ctx = canvas.getContext('2d'),
         window_width = canvas.width,//window.innerWidth,
         window_height = canvas.height;//window.innerHeight;
-        if(debug) console.log('window_width set to ' + window_width);
-        if(debug) console.log('window_height set to ' + window_height);
+        console.log('window_width set to ' + window_width);
+        console.log('window_height set to ' + window_height);
 
 // Just a random object name to store some utility
 // functions that we can use later

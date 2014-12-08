@@ -41,7 +41,7 @@
 <?php if(($plotted == TRUE) && ($return_status == 0)) {?>
     <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
     <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
-    <img src="plots/atlas_mtt_5fb_plot_0.png" alt="ERROR" width="800">
+    <img src="plots/atlas_mtt_5fb_plot_0.png" alt="ERROR" width="600px">
 <?php } else {?>
     <br>
     <br>

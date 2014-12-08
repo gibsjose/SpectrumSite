@@ -118,14 +118,18 @@ a.pure-button-primary {
     padding: 0.5em;
     text-align: center;
     box-shadow: 0 1px 1px rgba(0,0,0, 0.10);
-    /*height: 86px;*/
 
     font-family: 'Lato', sans-serif;
     font-style: normal;
     font-variant: normal;
     font-weight: 400;
-    font-size: 120%;
+    font-size: 80%;
 }
+
+.home-menu img{
+    display: none;
+}
+
 .home-menu.pure-menu-open {
     background: #222222;
 }
@@ -311,6 +315,10 @@ a.pure-button-primary {
         border: none;
     }
 
+    .home-menu img{
+        display: inline;
+    }
+
 }
 
 /*
@@ -322,5 +330,14 @@ a.pure-button-primary {
     /* We increase the header font size even more */
     .splash-head {
         font-size: 300%;
+    }
+
+    .home-menu {
+        font-weight: 400;
+        font-size: 120%;
+    }
+
+    .home-menu img{
+        display: inline;
     }
 }

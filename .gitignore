@@ -7,3 +7,6 @@ Spectrum
 Steering
 plots
 logs
+
+#Ignore hidden/temp files
+*~

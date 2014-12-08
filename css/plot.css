@@ -1,19 +1,33 @@
-#canvas-container {
-   width: 100%;
-   text-align:center;
+/*
+* -- PURE FORM STYLES --
+* Style the form inputs and labels
+*/
+
+.pure-form label {
+    margin: 1em 0 0;
+    font-weight: bold;
+    font-size: 100%;
 }
 
-canvas {
-   display: inline;
+.pure-form input[type] {
+    border: 2px solid #ddd;
+    box-shadow: none;
+    font-size: 100%;
+    margin-bottom: 1em;
+    width: auto;
 }
 
-#form-container {
-    width: 100%;
-    text-align:center;
+h2,
+h3 {
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 300;
+    color: #39B54A;
 }
 
 select {
-    width: 250px;
+    width: auto;
     /*left: 50%;*/
     margin: 0 auto;
 }

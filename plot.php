@@ -40,12 +40,8 @@
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
-                //Somehow reload the canvas when the user presses the button to always play the animation each time
-                // $('#canvas-container').html("<h1>TEST</h1>");
-                // $('#canvas-container').html("<h1><font color=#319400 size=40px>PLOTTING</font></h1>");
-
                 $('#canvas-container').html(function() {
-                    canvas = "<canvas id='particle-canvas' width='800' height='800' style='border:0px solid #262626;'></canvas>";
+                    canvas = "<canvas id='particle-canvas' width='600px' height='600px'></canvas>";
                     script = "<script type='text/javascript' src='js/protons.js'><\/script>";
                     return canvas + script;
                 });
@@ -81,26 +77,42 @@
         <div class="content-wrapper">
             <div class="content">
                 <h2 class="content-head is-center">Plot</h2>
-                <div id="form-container">
-                    <!-- <form class="pure-form pure-form-stacked" action="./cgi-bin/SteeringGenerator.py" method="post"> -->
-                    <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
-                        <fieldset>
-                            <label for="steering">Steering File</label>
-                            <center>
-                            <select name="steering" id="steering">
-                                <option>good_test.txt</option>
-                                <option>atlas2012_mtt.txt</option>
-                                <option>atlas2012_ptt.txt</option>
-                            </select>
-                            </center>
-                            <button type="submit" id="submit" class="pure-button">Plot</button>
-                        </fieldset>
-                    </form>
-                </div>
+                <div class="pure-g">
+                    <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
+                        <div id="form-container">
+                            <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
+                                <fieldset>
+                                    <label for="steering">Steering File</label>
+                                    <select name="steering" id="steering">
+                                        <option>good_test.txt</option>
+                                        <option>atlas2012_mtt.txt</option>
+                                        <option>atlas2012_ptt.txt</option>
+                                    </select>
 
-                <div id="canvas-container">
-                    <canvas id="particle-canvas" width="800" height="800" style="border:0px solid #262626;"></canvas>
-                    <script type="text/javascript" src="js/protons.js"></script>
+                                    <label for="plot_title">Title</label>
+                                    <input id="plot_title" type="text" placeholder="Plot Title">
+
+                                    <label for="plot_band">
+                                        <input id="plot_band" type="checkbox"> Plot Band
+                                    </label>
+                                    <label for="plot_marker">
+                                        <input id="plot_marker" type="checkbox"> Plot Marker
+                                    </label>
+                                    <label for="plot_staggered">
+                                        <input id="plot_staggered" type="checkbox"> Plot Staggered
+                                    </label>
+
+                                    <button type="submit" id="submit" class="pure-button">Submit</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="is-center pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+                        <div id="canvas-container">
+                            <canvas id="particle-canvas" width="600px" height="600px"></canvas>
+                            <!-- <script type="text/javascript" src="js/protons.js"></script> -->
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="footer l-box is-center">
