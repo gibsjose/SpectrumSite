@@ -76,7 +76,7 @@
         </div>
         <div class="content-wrapper">
             <div class="content">
-                <h2 class="content-head is-center">Plot</h2>
+                <h2 class="content-head is-center">Plot TEST</h2>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
                         <div id="form-container">
