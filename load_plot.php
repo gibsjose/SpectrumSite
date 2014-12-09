@@ -30,7 +30,7 @@
         $output = "Steering/steering.txt";
 
         //Remove the existing KVP File
-        unlink("$input");
+        unlink($input);
 
         //Remove the existing Steering File
         unlink($output);
@@ -44,6 +44,9 @@
 
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);
+
+        $string = file_get_contents($kvp_file);
+        print("<p>$kvp_file:<br><br>$string</p>");
 
         //Make sure input exists
         if(file_exists($input)) {

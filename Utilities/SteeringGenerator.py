@@ -18,7 +18,6 @@ def Write(_key, _file):
 inputPath = sys.argv[1]
 outputPath = sys.argv[2]
 
-
 # Open the key-value-pair file and create a dictionary out of it
 with open(inputPath, 'r') as f:
     for line in f:
