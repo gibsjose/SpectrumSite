@@ -2,7 +2,7 @@
 <!-- Scan the 'Steering' directory and create options for each entry -->
 <?php
     $output = shell_exec('find Steering/ -name *.txt');
-    $steering_array = preg_split("/\r\n|\n|\r/", $string);
+    $steering_array = preg_split("/\r\n|\n|\r| /", $string);
 
     echo "$output";
     echo "<option>None</option>\n";
