@@ -137,7 +137,8 @@
                                     <select class="pure-u-2-5" name="pdf_steering" id="pdf_steering">
                                         <option>None</option>
                                     </select>
-
+                                    <br>
+                                    <br>
                                     <button type="submit" id="submit" class="pure-button">Submit</button>
                                 </fieldset>
                             </form>
