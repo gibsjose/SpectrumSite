@@ -20,33 +20,55 @@
     $data_steering = $_POST['data_steering'];
     $grid_steering = $_POST['grid_steering'];
     $pdf_steering = $_POST['pdf_steering'];
-
-    //DEBUG: Print output
-    print("<h2>$steering</h2>");
-    // print("<h2>Data Steering File: $data_steering</h2>");
-    // print("<h2>Grid Steering File: $grid_steering</h2>");
-    // print("<h2>PDF Steering File: $pdf_steering</h2>");
 ?>
 
 <!-- Write variables to file (settings.txt) -->
 <?php
-    //print("<h2>$steering</h2>");
+    //If 'steering' is 'None', then create a steering file with the other data
+    if($steering == "None") {
+        $input = "kvp/settings.txt";
+        $output = "Steering/steering.txt";
 
-    //If 'steering' is not 'None', then create a steering file with the other steerings
+        //Remove the existing KVP File
+        unlink("$input");
+
+        //Remove the existing Steering File
+        unlink($output);
+
+        //Write a new kvp file
+        $kvp_file = fopen("$input", "w");
+        $kvp_text = "defaults: true\n".
+                    "data_steering: $data_steering\n".
+                    "grid_steering: $grid_steering\n".
+                    "pdf_steering: $pdf_steering\n".
+
+        fwrite($kvp_file, $kvp_text);
+        fclose($kvp_file);
+
+        //Make sure input exists
+        if(file_exists($input)) {
+            //Call SteeringGenerator.py on the file to create a steering file
+            $ret = `2>&1 Utilities/SteeringGenerator.py $input $output`;
+
+            //Steering file is now the newly generated file
+            $steering = $output;
+
+            //Generate a link to the generated file for viewing
+            print("<h2><a href=\"$steering\" target=\"_newtab\">Steering File</a></h2>");
+        }
+    } else {
+        //Print the Steering File name if a pre-built file was specified
+        print("<h2>$steering</h2>");
+    }
 ?>
-
-<!-- Call SteeringGenerator.py on the file to create a steering file -->
 
 <!-- Run Spectrum on the steering file -->
 <?php
-    // $output=`2>logs/error.log ./Spectrum/Spectrum -p Steering/$steering > logs/spectrum.log`;
-
     exec("2>logs/error.log ./Spectrum/Spectrum -p $steering > logs/spectrum.log", $output, $return_status);
-    //print("<h2>$return_status</h2>");
 ?>
 
 <?php
-    //$plotted = file_exists("plots/atlas_mtt_5fb_plot_0.png");
+    //Get the name of the plot
     $plots = glob('plots/*.png');
     if(count($plots) != 0) {
         $plot = $plots[0];
