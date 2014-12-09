@@ -50,8 +50,8 @@
 
         $kvp_text =
                     "data_directory $data_directory\n".
-                    "grid_directory $grid_directory".
-                    "pdf_directory $pdf_directory".
+                    "grid_directory $grid_directory\n".
+                    "pdf_directory $pdf_directory\n".
                     "data_steering_files $data_file\n".
                     "grid_steering_files $grid_file\n".
                     "pdf_steering_files $pdf_file\n";
