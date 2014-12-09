@@ -37,9 +37,24 @@
 
         //Write a new kvp file
         $kvp_file = fopen($input, "w");
-        $kvp_text = "data_steering_files $data_steering\n".
-                    "grid_steering_files $grid_steering\n".
-                    "pdf_steering_files $pdf_steering\n";
+
+        //Get the data, grid, and pdf directories from the selected files
+        $data_directory = dirname($data_steering);
+        $data_file = basename($data_steering);
+
+        $grid_directory = dirname($grid_steering);
+        $grid_file = basename($grid_steering);
+
+        $pdf_directory = dirname($pdf_steering);
+        $pdf_file = basename($pdf_steering);
+
+        $kvp_text =
+                    "data_directory $data_directory\n".
+                    "grid_directory $grid_directory".
+                    "pdf_directory $pdf_directory".
+                    "data_steering_files $data_file\n".
+                    "grid_steering_files $grid_file\n".
+                    "pdf_steering_files $pdf_file\n";
 
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);
