@@ -5,6 +5,7 @@
     $steering_array = preg_split("/\r\n|\n|\r|\s/", $string);
 
     echo "$output";
+    var_dump($steering_array);
     echo "<option>None</option>\n";
 
     foreach ($steering_array as $file) {
