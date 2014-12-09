@@ -25,7 +25,7 @@
 <!-- Write variables to file (settings.txt) -->
 <?php
     //If 'steering' is 'None', then create a steering file with the other data
-    if($steering == "None") {
+    if(strcasecmp($steering, "None") == 0) {
         $input = "kvp/settings.txt";
         $output = "Steering/steering.txt";
 
