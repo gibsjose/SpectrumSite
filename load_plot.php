@@ -35,15 +35,12 @@
         //Remove the existing Steering File
         unlink($output);
 
-        echo "$input";
-        echo "$output";
-
         //Write a new kvp file
-        $kvp_file = fopen("$input", "w");
+        $kvp_file = fopen($input, "w");
         $kvp_text = "defaults true\n".
                     "data_steering $data_steering\n".
                     "grid_steering $grid_steering\n".
-                    "pdf_steering $pdf_steering\n".
+                    "pdf_steering $pdf_steering\n";
 
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);
