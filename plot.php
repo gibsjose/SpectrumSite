@@ -119,22 +119,22 @@
                             <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
                                 <fieldset>
                                     <label for="steering">Steering File</label>
-                                    <select name="steering" id="steering">
+                                    <select class="pure-u-2-5" name="steering" id="steering">
                                         <option>None</option>
                                     </select>
 
                                     <label for="data_steering">Data Steering File</label>
-                                    <select name="data_steering" id="data_steering">
+                                    <select class="pure-u-2-5" name="data_steering" id="data_steering">
                                         <option>None</option>
                                     </select>
 
                                     <label for="grid_steering">Grid Steering File</label>
-                                    <select name="grid_steering" id="grid_steering">
+                                    <select class="pure-u-2-5" name="grid_steering" id="grid_steering">
                                         <option>None</option>
                                     </select>
 
                                     <label for="pdf_steering">PDF Steering File</label>
-                                    <select name="pdf_steering" id="pdf_steering">
+                                    <select class="pure-u-2-5" name="pdf_steering" id="pdf_steering">
                                         <option>None</option>
                                     </select>
 
