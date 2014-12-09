@@ -37,6 +37,10 @@
         <!-- jQuery -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
+        <!-- JS and CSS for MultiSelect -->
+        <link rel="stylesheet" href="css/jquery.multiselect.css">
+        <script type="text/javascript" src="js/jquery.multiselect.min.js"></script>
+
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
@@ -86,11 +90,89 @@
                 $('#data_steering').load('get_data_steering_files.php');
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
+
+                $("#data_steering").multiselect({
+                    multiple: false
+                });
+                $("#grid_steering").multiselect({
+                    multiple: false
+                });
+                $("#pdf_steering").multiselect({
+                    multiple: false
+                });
             }
 
             //Run this when the window is loaded
             window.onload = UpdateForms;
         </script>
+
+        <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
+        <script type="text/javascript">
+            function PlotTypeChanged() {
+                var pt = document.GetElementById('plot_type').value;
+
+                //1 Data, 1 Grid, 1 PDF
+                if(pt == 0) {
+                    $("#data_steering").multiselect({
+                        multiple: false
+                    });
+
+                    $("#grid_steering").multiselect({
+                        multiple: false
+                    });
+
+                    $("#pdf_steering").multiselect({
+                        multiple: false
+                    });
+                }
+
+                //N Data, N Grids, 1 PDF
+                if(pt == 1) {
+                    $("#data_steering").multiselect({
+                        multiple: true
+                    });
+
+                    $("#grid_steering").multiselect({
+                        multiple: true
+                    });
+
+                    $("#pdf_steering").multiselect({
+                        multiple: false
+                    });
+                }
+
+                //1 Data, N Grids, 1 PDF
+                if(pt == 2) {
+                    $("#data_steering").multiselect({
+                        multiple: false
+                    });
+
+                    $("#grid_steering").multiselect({
+                        multiple: true
+                    });
+
+                    $("#pdf_steering").multiselect({
+                        multiple: false
+                    });
+                }
+
+                //1 Data, 1 Grid, N PDFs
+                if(pt == 3) {
+                    $("#data_steering").multiselect({
+                        multiple: false
+                    });
+
+                    $("#grid_steering").multiselect({
+                        multiple: false
+                    });
+
+                    $("#pdf_steering").multiselect({
+                        multiple: true
+                    });
+                }
+            }
+        </script>
+
     </head>
 
     <body>
@@ -123,18 +205,26 @@
                                         <option>None</option>
                                     </select>
 
+                                    <label for="plot_type">Plot Type</label>
+                                    <select class="pure-u-2-5" name="plot_type" id="plot_type" onchange="if (this.selectedIndex) PlotTypeChanged();">
+                                        <option value="0">1 Data, 1 Grid, 1 PDF</option>
+                                        <option value="1">N Data, N Grids, 1 PDF</option>
+                                        <option value="2">1 Data, N Grids, 1 PDF</option>
+                                        <option value="3">1 Data, 1 Grid, N PDFs</option>
+                                    </select>
+
                                     <label for="data_steering">Data Steering File</label>
-                                    <select class="pure-u-2-5" name="data_steering" id="data_steering">
+                                    <select class="pure-u-2-5" name="data_steering" id="data_steering" multiple="multiple">
                                         <option>None</option>
                                     </select>
 
                                     <label for="grid_steering">Grid Steering File</label>
-                                    <select class="pure-u-2-5" name="grid_steering" id="grid_steering">
+                                    <select class="pure-u-2-5" name="grid_steering" id="grid_steering" multiple="multiple">
                                         <option>None</option>
                                     </select>
 
                                     <label for="pdf_steering">PDF Steering File</label>
-                                    <select class="pure-u-2-5" name="pdf_steering" id="pdf_steering">
+                                    <select class="pure-u-2-5" name="pdf_steering" id="pdf_steering" multiple="multiple">
                                         <option>None</option>
                                     </select>
                                     <br>
