@@ -22,10 +22,10 @@
     $pdf_steering = $_POST['pdf_steering'];
 
     //DEBUG: Print output
-    print("<h2>Steering File: $steering</h2>");
-    print("<h2>Data Steering File: $data_steering</h2>");
-    print("<h2>Grid Steering File: $grid_steering</h2>");
-    print("<h2>PDF Steering File: $pdf_steering</h2>");
+    print("<h2>$steering</h2>");
+    // print("<h2>Data Steering File: $data_steering</h2>");
+    // print("<h2>Grid Steering File: $grid_steering</h2>");
+    // print("<h2>PDF Steering File: $pdf_steering</h2>");
 ?>
 
 <!-- Write variables to file (settings.txt) -->
@@ -41,7 +41,7 @@
 <?php
     // $output=`2>logs/error.log ./Spectrum/Spectrum -p Steering/$steering > logs/spectrum.log`;
 
-    exec("2>logs/error.log ./Spectrum/Spectrum -p $steering > logs/spectrum.log", $output, $return_status);
+    exec("2>logs/error.log ./Spectrum/Spectrum -p ./$steering > logs/spectrum.log", $output, $return_status);
     //print("<h2>$return_status</h2>");
 ?>
 
