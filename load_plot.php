@@ -35,6 +35,9 @@
         //Remove the existing Steering File
         unlink($output);
 
+        echo "$input";
+        echo "$output";
+
         //Write a new kvp file
         $kvp_file = fopen("$input", "w");
         $kvp_text = "defaults true\n".
