@@ -98,8 +98,6 @@
 <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
 
 <?php } else {?>
-    <br>
-    <br>
     <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
     <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
     <br>

@@ -1,6 +1,6 @@
 <!-- Scan the 'Steering' directory and create options for each entry -->
 <?php
-$output = shell_exec('find Data/ -name *.txt');
+$output = shell_exec('find Data/ -name *[^rav].txt');
 $steering_array = preg_split("/\r\n|\n|\r| /", $output);
 
 echo "<option>None</option>\n";
