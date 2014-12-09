@@ -54,18 +54,24 @@
 
                 //Get all the variables from the form
                 var steering_v = document.getElementById('steering').value;
-                var plot_title_v = document.getElementById('plot_title').value;
-                var plot_band_v = document.getElementById('plot_band').checked;
-                var plot_marker_v = document.getElementById('plot_marker').checked;
-                var plot_staggered_v = document.getElementById('plot_staggered').checked;
+                var data_steering_v = document.getElementById('data_steering').value;
+                var grid_steering_v = document.getElementById('grid_steering').value;
+                var pdf_steering_v = document.getElementById('pdf_steering').value;
+                // var plot_title_v = document.getElementById('plot_title').value;
+                // var plot_band_v = document.getElementById('plot_band').checked;
+                // var plot_marker_v = document.getElementById('plot_marker').checked;
+                // var plot_staggered_v = document.getElementById('plot_staggered').checked;
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
                     steering: steering_v,
-                    plot_title: plot_title_v,
-                    plot_band: plot_band_v,
-                    plot_marker: plot_marker_v,
-                    plot_staggered: plot_staggered_v
+                    data_steering: data_steering_v,
+                    grid_steering: grid_steering_v,
+                    pdf_steering: pdf_steering_v
+                    // plot_title: plot_title_v,
+                    // plot_band: plot_band_v,
+                    // plot_marker: plot_marker_v,
+                    // plot_staggered: plot_staggered_v
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
@@ -76,6 +82,7 @@
         <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
         <script type="text/javascript">
             function UpdateForms() {
+                $('#canvas-container').load('get_steering_files.php');
                 $('#steering').load('get_steering_files.php');
                 $('#data_steering').load('get_data_steering_files.php');
                 $('#grid_steering').load('get_grid_steering_files.php');
