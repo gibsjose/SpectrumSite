@@ -91,13 +91,13 @@
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
 
-                $("#data_steering").multiselect({
+                $("#data_steering").multiSelect({
                     multiple: false
                 });
-                $("#grid_steering").multiselect({
+                $("#grid_steering").multiSelect({
                     multiple: false
                 });
-                $("#pdf_steering").multiselect({
+                $("#pdf_steering").multiSelect({
                     multiple: false
                 });
             }
