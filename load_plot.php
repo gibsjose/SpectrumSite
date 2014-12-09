@@ -57,6 +57,7 @@
     <br>
     <br>
     <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
+    <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
     <br>
     <br>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
