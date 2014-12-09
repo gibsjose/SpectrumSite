@@ -41,7 +41,7 @@
 <?php
     // $output=`2>logs/error.log ./Spectrum/Spectrum -p Steering/$steering > logs/spectrum.log`;
 
-    exec("2>logs/error.log ./Spectrum/Spectrum -p Steering/$steering > logs/spectrum.log", $output, $return_status);
+    exec("2>logs/error.log ./Spectrum/Spectrum -p $steering > logs/spectrum.log", $output, $return_status);
     //print("<h2>$return_status</h2>");
 ?>
 
