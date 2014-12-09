@@ -82,6 +82,7 @@
         <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
         <script type="text/javascript">
             function UpdateForms() {
+                console.log("HERE");
                 $('#canvas-container').load('get_steering_files.php');
                 $('#steering').load('get_steering_files.php');
                 $('#data_steering').load('get_data_steering_files.php');
