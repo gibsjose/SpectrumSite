@@ -17,11 +17,22 @@
 <!-- Get HTTP Request from JS on plot.php -->
 <?php
     $steering = $_POST['steering'];
+    $data_steering = $_POST['data_steering'];
+    $grid_steering = $_POST['grid_steering'];
+    $pdf_steering = $_POST['pdf_steering'];
+
+    //DEBUG: Print output
+    print("<h2>Steering File: $steering</h2>");
+    print("<h2>Data Steering File: $data_steering</h2>");
+    print("<h2>Grid Steering File: $grid_steering</h2>");
+    print("<h2>PDF Steering File: $pdf_steering</h2>");
 ?>
 
 <!-- Write variables to file (settings.txt) -->
 <?php
     //print("<h2>$steering</h2>");
+
+    //If 'steering' is not 'None', then create a steering file with the other steerings
 ?>
 
 <!-- Call SteeringGenerator.py on the file to create a steering file -->

@@ -40,20 +40,50 @@
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
+
+                //Replace the container content with the particle canvas to run the animation each time
                 $('#canvas-container').html(function() {
                     canvas = "<canvas id='particle-canvas' width='600px' height='600px'></canvas>";
                     script = "<script type='text/javascript' src='js/protons.js'><\/script>";
                     return canvas + script;
                 });
 
+
+                //Generate a collision
                 Collision();
 
+                //Get all the variables from the form
                 var steering_v = document.getElementById('steering').value;
+                var plot_title_v = document.getElementById('plot_title').value;
+                var plot_band_v = document.getElementById('plot_band').checked;
+                var plot_marker_v = document.getElementById('plot_marker').checked;
+                var plot_staggered_v = document.getElementById('plot_staggered').checked;
 
-                //Get Steering File from form and send it to PHP for plotting
-                data = {steering: steering_v};
+                //Get Steering File data from form and send it to PHP for plotting
+                data = {
+                    steering: steering_v,
+                    plot_title: plot_title_v,
+                    plot_band: plot_band_v,
+                    plot_marker: plot_marker_v,
+                    plot_staggered: plot_staggered_v
+                };
+
+                //Run the PHP script which creates the steering file, runs spectrum, and updates the page
                 $('#canvas-container').load('load_plot.php', data);
             }
+        </script>
+
+        <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
+        <script type="text/javascript">
+            function UpdateForms() {
+                $('#steering').load('get_steering_files.php');
+                $('#data_steering').load('get_data_steering_files.php');
+                $('#grid_steering').load('get_grid_steering_files.php');
+                $('#pdf_steering').load('get_pdf_steering_files.php');
+            }
+
+            //Run this when the window is loaded
+            window.onload = UpdateForms;
         </script>
     </head>
 
@@ -76,7 +106,7 @@
         </div>
         <div class="content-wrapper">
             <div class="content">
-                <h2 class="content-head is-center">Plot TEST</h2>
+                <h2 class="content-head is-center">Plot</h2>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
                         <div id="form-container">
@@ -84,23 +114,23 @@
                                 <fieldset>
                                     <label for="steering">Steering File</label>
                                     <select name="steering" id="steering">
-                                        <option>good_test.txt</option>
-                                        <option>atlas2012_mtt.txt</option>
-                                        <option>atlas2012_ptt.txt</option>
+                                        <option>None</option>
                                     </select>
 
-                                    <label for="plot_title">Title</label>
-                                    <input id="plot_title" type="text" placeholder="Plot Title">
+                                    <label for="data_steering">Data Steering File</label>
+                                    <select name="data_steering" id="data_steering">
+                                        <option>None</option>
+                                    </select>
 
-                                    <label for="plot_band">
-                                        <input id="plot_band" type="checkbox"> Plot Band
-                                    </label>
-                                    <label for="plot_marker">
-                                        <input id="plot_marker" type="checkbox"> Plot Marker
-                                    </label>
-                                    <label for="plot_staggered">
-                                        <input id="plot_staggered" type="checkbox"> Plot Staggered
-                                    </label>
+                                    <label for="grid_steering">Grid Steering File</label>
+                                    <select name="grid_steering" id="grid_steering">
+                                        <option>None</option>
+                                    </select>
+
+                                    <label for="pdf_steering">PDF Steering File</label>
+                                    <select name="pdf_steering" id="pdf_steering">
+                                        <option>None</option>
+                                    </select>
 
                                     <button type="submit" id="submit" class="pure-button">Submit</button>
                                 </fieldset>
