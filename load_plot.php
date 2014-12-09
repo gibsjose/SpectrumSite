@@ -26,8 +26,8 @@
 <?php
     //If 'steering' is 'None', then create a steering file with the other data
     if(strcasecmp($steering, "None") == 0) {
-        $input = "kvp/settings.txt";
-        $output = "Steering/steering.txt";
+        $input = "tmp/kvp.txt";
+        $output = "tmp/steering.txt";
 
         //Remove the existing KVP File
         unlink($input);
