@@ -32,16 +32,8 @@
         //Remove the existing KVP File
         unlink($input);
 
-        if(file_exists($output)) {
-            print("<h2>$output EXISTS!</h2>");
-        }
-
         //Remove the existing Steering File
         unlink($output);
-
-        if(file_exists($output)) {
-            print("<h2>$output EXISTS AFTER!</h2>");
-        }
 
         //Write a new kvp file
         $kvp_file = fopen($input, "w");
