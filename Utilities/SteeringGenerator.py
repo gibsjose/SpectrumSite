@@ -13,7 +13,7 @@ def Write(_key, _file):
     if _key in d:
         print(_key + " EXISTS")
         _file.write(_key + ' = ' + d[_key] + '\n')
-    else:
+    else if _key in defaults:
         print(_key + " DEFAULT")
         _file.write(_key + ' = ' + defaults[_key] + '\n')
 
