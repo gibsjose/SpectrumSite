@@ -113,60 +113,60 @@
 
                 //1 Data, 1 Grid, 1 PDF
                 if(pt == 0) {
-                    $("#data_steering").multiselect({
+                    $("#data_steering").multiSelect({
                         multiple: false
                     });
 
-                    $("#grid_steering").multiselect({
+                    $("#grid_steering").multiSelect({
                         multiple: false
                     });
 
-                    $("#pdf_steering").multiselect({
+                    $("#pdf_steering").multiSelect({
                         multiple: false
                     });
                 }
 
                 //N Data, N Grids, 1 PDF
                 if(pt == 1) {
-                    $("#data_steering").multiselect({
+                    $("#data_steering").multiSelect({
                         multiple: true
                     });
 
-                    $("#grid_steering").multiselect({
+                    $("#grid_steering").multiSelect({
                         multiple: true
                     });
 
-                    $("#pdf_steering").multiselect({
+                    $("#pdf_steering").multiSelect({
                         multiple: false
                     });
                 }
 
                 //1 Data, N Grids, 1 PDF
                 if(pt == 2) {
-                    $("#data_steering").multiselect({
+                    $("#data_steering").multiSelect({
                         multiple: false
                     });
 
-                    $("#grid_steering").multiselect({
+                    $("#grid_steering").multiSelect({
                         multiple: true
                     });
 
-                    $("#pdf_steering").multiselect({
+                    $("#pdf_steering").multiSelect({
                         multiple: false
                     });
                 }
 
                 //1 Data, 1 Grid, N PDFs
                 if(pt == 3) {
-                    $("#data_steering").multiselect({
+                    $("#data_steering").multiSelect({
                         multiple: false
                     });
 
-                    $("#grid_steering").multiselect({
+                    $("#grid_steering").multiSelect({
                         multiple: false
                     });
 
-                    $("#pdf_steering").multiselect({
+                    $("#pdf_steering").multiSelect({
                         multiple: true
                     });
                 }
