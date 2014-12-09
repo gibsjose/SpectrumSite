@@ -37,9 +37,9 @@
 
         //Write a new kvp file
         $kvp_file = fopen($input, "w");
-        $kvp_text = "data_steering $data_steering\n".
-                    "grid_steering $grid_steering\n".
-                    "pdf_steering $pdf_steering\n";
+        $kvp_text = "data_steering_files $data_steering\n".
+                    "grid_steering_files $grid_steering\n".
+                    "pdf_steering_files $pdf_steering\n";
 
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);
