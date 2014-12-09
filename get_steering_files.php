@@ -7,6 +7,7 @@
     echo "<option>None</option>\n";
 
     foreach ($steering_array as $file) {
+        error_log("$file");
         echo "<option>$file</option>\n";
     }
 ?>
