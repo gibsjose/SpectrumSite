@@ -19,7 +19,7 @@ inputPath = sys.argv[1]
 outputPath = sys.argv[2]
 
 # Open the key-value-pair file and create a dictionary out of it
-with open(inputPath, 'r') as f:
+with f as open(inputPath, 'r'):
     for line in f:
         (key, val) = line.split()
         d[key] = val
@@ -68,7 +68,7 @@ defaults['overlay_style'] = 'data, convolute'
 defaults['ratio_title'] = 'Ratio'
 
 # Write the Steering File
-with open(outputPath, 'w') as f:
+with f as open(outputPath, 'w'):
     # [GEN]
     f.write('\n\n[GEN]\n')
     Write('debug', f)

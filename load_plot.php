@@ -45,9 +45,6 @@
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);
 
-        $string = file_get_contents($input);
-        print("<p>$input:<br><br>$string</p>");
-
         //Make sure input exists
         if(file_exists($input)) {
             //Call SteeringGenerator.py on the file to create a steering file
