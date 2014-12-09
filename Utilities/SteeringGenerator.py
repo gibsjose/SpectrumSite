@@ -19,11 +19,12 @@ inputPath = sys.argv[1]
 outputPath = sys.argv[2]
 
 # Open the key-value-pair file and create a dictionary out of it
-with f as open(inputPath, 'r'):
-    for line in f:
-        (key, val) = line.split()
-        d[key] = val
-
+#with open(inputPath, 'r') as f:
+f = open(inputPath, 'r')
+for line in f:
+    (key, val) = line.split()
+    d[key] = val
+f.close()
 
 # Create default dictionary
 
@@ -68,48 +69,52 @@ defaults['overlay_style'] = 'data, convolute'
 defaults['ratio_title'] = 'Ratio'
 
 # Write the Steering File
-with f as open(outputPath, 'w'):
-    # [GEN]
-    f.write('\n\n[GEN]\n')
-    Write('debug', f)
+#with open(outputPath, 'w') as f:
+f = open(outputPath, 'w')
 
-    # [GRAPH]
-    f.write('\n\n[GRAPH]\n')
-    Write('plot_band', f)
-    Write('plot_error_ticks', f)
-    Write('plot_marker', f)
-    Write('plot_staggered', f)
-    Write('match_binning', f)
-    Write('grid_corr', f)
-    Write('label_sqrt_s', f)
-    Write('x_legend', f)
-    Write('y_legend', f)
-    Write('y_overlay_min', f)
-    Write('y_overlay_max', f)
-    Write('y_ratio_min', f)
-    Write('y_ratio_max', f)
+# [GEN]
+f.write('\n\n[GEN]\n')
+Write('debug', f)
 
-    # [PLOT_0]
-    f.write('\n\n[PLOT_0]\n')
-    Write('plot_type', f)
-    Write('desc', f)
-    Write('data_directory', f)
-    Write('grid_directory', f)
-    Write('pdf_directory', f)
-    Write('data_steering_files', f)
-    Write('grid_steering_files', f)
-    Write('pdf_steering_files', f)
-    Write('data_marker_style', f)
-    Write('data_marker_color', f)
-    Write('pdf_fill_style', f)
-    Write('pdf_fill_color', f)
-    Write('pdf_marker_style', f)
-    Write('x_scale', f)
-    Write('y_scale', f)
-    Write('x_log', f)
-    Write('y_log', f)
-    Write('display_style', f)
-    Write('overlay_style', f)
-    Write('ratio_title', f)
+# [GRAPH]
+f.write('\n\n[GRAPH]\n')
+Write('plot_band', f)
+Write('plot_error_ticks', f)
+Write('plot_marker', f)
+Write('plot_staggered', f)
+Write('match_binning', f)
+Write('grid_corr', f)
+Write('label_sqrt_s', f)
+Write('x_legend', f)
+Write('y_legend', f)
+Write('y_overlay_min', f)
+Write('y_overlay_max', f)
+Write('y_ratio_min', f)
+Write('y_ratio_max', f)
 
-    #@TODO Implement ratios...
+# [PLOT_0]
+f.write('\n\n[PLOT_0]\n')
+Write('plot_type', f)
+Write('desc', f)
+Write('data_directory', f)
+Write('grid_directory', f)
+Write('pdf_directory', f)
+Write('data_steering_files', f)
+Write('grid_steering_files', f)
+Write('pdf_steering_files', f)
+Write('data_marker_style', f)
+Write('data_marker_color', f)
+Write('pdf_fill_style', f)
+Write('pdf_fill_color', f)
+Write('pdf_marker_style', f)
+Write('x_scale', f)
+Write('y_scale', f)
+Write('x_log', f)
+Write('y_log', f)
+Write('display_style', f)
+Write('overlay_style', f)
+Write('ratio_title', f)
+
+#@TODO Implement ratios...
+
+f.close()
