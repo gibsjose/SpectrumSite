@@ -45,8 +45,8 @@
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);
 
-        $string = file_get_contents($kvp_file);
-        print("<p>$kvp_file:<br><br>$string</p>");
+        $string = file_get_contents($input);
+        print("<p>$input:<br><br>$string</p>");
 
         //Make sure input exists
         if(file_exists($input)) {
