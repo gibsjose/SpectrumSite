@@ -32,7 +32,7 @@
         //Remove the existing KVP File
         unlink($input);
 
-        f(file_exists($output)) {
+        if(file_exists($output)) {
             print("<h2>$output EXISTS!</h2>");
         }
 
