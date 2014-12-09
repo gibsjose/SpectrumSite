@@ -109,7 +109,7 @@
         <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
         <script type="text/javascript">
             function PlotTypeChanged() {
-                var pt = document.GetElementById('plot_type').value;
+                var pt = document.getElementById('plot_type').value;
 
                 //1 Data, 1 Grid, 1 PDF
                 if(pt == 0) {
