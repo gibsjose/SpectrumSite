@@ -177,6 +177,10 @@
                     </div>
                 </div>
             </div>
+            <div class="footer l-box is-center">
+                Check out the <a href="http://www.github.com/gibsjose/Spectrum/">Spectrum Project</a> on GitHub –
+                Designed by <a href="http://www.github.com/gibsjose">Joe Gibson</a> – CERN 2014.
+            </div>
         </div>
 
         <!-- Chosen handling and configuration -->
@@ -211,10 +215,5 @@
         });
         </script>
         -->
-
-        <div class="footer l-box is-center">
-            Check out the <a href="http://www.github.com/gibsjose/Spectrum/">Spectrum Project</a> on GitHub –
-            Designed by <a href="http://www.github.com/gibsjose">Joe Gibson</a> – CERN 2014.
-        </div>
     </body>
 </html>
