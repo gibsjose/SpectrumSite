@@ -49,14 +49,12 @@
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
-
                 //Replace the container content with the particle canvas to run the animation each time
                 $('#canvas-container').html(function() {
                     canvas = "<canvas id='particle-canvas' width='600px' height='600px'></canvas>";
                     script = "<script type='text/javascript' src='js/protons.js'><\/script>";
                     return canvas + script;
                 });
-
 
                 //Generate a collision
                 Collision();
@@ -169,7 +167,6 @@
                     <div class="is-center pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
                         <div id="canvas-container">
                             <canvas id="particle-canvas" width="600px" height="600px"></canvas>
-                            <!-- <script type="text/javascript" src="js/protons.js"></script> -->
                         </div>
                     </div>
                 </div>
