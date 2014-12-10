@@ -94,7 +94,7 @@
         </script>
 
         <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
-        <script type="text/javascript">
+        <!--<script type="text/javascript">
             function UpdateForms() {
                 // jQuery('#steering').load('get_steering_files.php');
                 // jQuery('#data_steering').load('get_data_steering_files.php');
@@ -105,6 +105,7 @@
             //Run this when the window is loaded
             window.onload = UpdateForms;
         </script>
+        -->
 
         <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
 
@@ -129,19 +130,18 @@
         </div>
         <div class="content-wrapper">
             <div class="content">
-                <!-- <h2 class="content-head is-center">Plot</h2> -->
+                <h2 class="content-head is-center">Spectrum Plot</h2>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
                         <div id="form-container">
                             <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
                                 <fieldset>
                                     <label for="steering">Pre-Defined Plots</label>
-                                    <!-- <select class="pure-u-2-5" name="steering" id="steering"> -->
                                     <select name="steering" id="steering" data-placeholder="Pre-Defined Plot" class="pure-u-2-5 chosen-select">
                                         <option>None</option>
                                     </select>
-                                    <!-- <hr color="#39B54A" width="60%" size="2" align="left">
-                                    <br> -->
+                                    <hr color="#39B54A" width="60%" size="2" align="left">
+                                    <br>
                                     <label for="plot_type">Plot Type</label>
                                     <select class="pure-u-2-5 chosen-select" name="plot_type" id="plot_type" onchange="if (this.selectedIndex) PlotTypeChanged();">
                                         <option value="0">1 Data, 1 Grid, 1 PDF</option>
@@ -178,10 +178,6 @@
                     </div>
                 </div>
             </div>
-            <div class="footer l-box is-center">
-                Check out the <a href="http://www.github.com/gibsjose/Spectrum/">Spectrum Project</a> on GitHub –
-                Designed by <a href="http://www.github.com/gibsjose">Joe Gibson</a> – CERN 2014.
-            </div>
         </div>
 
         <!-- Chosen handling and configuration -->
@@ -213,6 +209,10 @@
             return results;
         });
         </script>
-
+        
+        <div class="footer l-box is-center">
+            Check out the <a href="http://www.github.com/gibsjose/Spectrum/">Spectrum Project</a> on GitHub –
+            Designed by <a href="http://www.github.com/gibsjose">Joe Gibson</a> – CERN 2014.
+        </div>
     </body>
 </html>
