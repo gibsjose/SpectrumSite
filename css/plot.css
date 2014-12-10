@@ -42,7 +42,7 @@ label {
     /*position: absolute;*/
     top: 10%;
     width: 100%;
-    min-height: 90%;
+    /*min-height: 90%;*/
     z-index: 0;
     background: #000000;
 }
