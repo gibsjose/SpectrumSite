@@ -54,8 +54,8 @@
         //Get the data, grid, and pdf directories from the selected files
         foreach($data_steerings as $file) {
             echo "<h2>$file</h2>";
-            $data_directory += dirname($file);
-            $data_file += basename($file);
+            $data_directory = $data_directory . dirname($file) . ",";
+            $data_file = $data_file . basename($file) . ",";
         }
 
         foreach($grid_steerings as $file) {
