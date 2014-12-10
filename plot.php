@@ -69,19 +69,17 @@
                 console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
 
-                switch(plot_type_v) {
-                    case 0:
-                        plot_type_v = "data, grid, pdf";
-                        break;
-                    case 1:
-                        plot_type_v = "data[], grid[], pdf";
-                        break;
-                    case 2:
-                        plot_type_v = "data, grid[], pdf";
-                        break;
-                    case 3:
-                        plot_type_v = "data, grid, pdf[]";
-                        break;
+                if(plot_type_v == 0) {
+                    plot_type_v = "data, grid, pdf";
+                }
+                else if(plot_type_v == 1) {
+                    plot_type_v = "data[], grid[], pdf";
+                }
+                else if(plot_type_v == 2) {
+                    plot_type_v = "data, grid[], pdf";
+                }
+                else if(plot_type_v == 3) {
+                    plot_type_v = "data, grid, pdf[]";
                 }
 
                 console.log("plot_type_v: " + plot_type_v);
