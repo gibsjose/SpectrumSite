@@ -42,23 +42,39 @@
         $data_steerings = explode(",", $data_steering);
         $data_directory = "";
         $data_file = "";
+
+        $grid_steerings = explode(",", $grid_steering);
+        $grid_directory = "";
+        $grid_file = "";
+
+        $pdf_steerings = explode(",", $pdf_steering);
+        $pdf_directory = "";
+        $pdf_file = "";
+
         //Get the data, grid, and pdf directories from the selected files
         foreach($data_steerings as $file) {
-            // echo "$file\n";
             $data_directory += dirname($file) . ",";
             $data_file += basename($file) . ",";
-            // echo "$data_directory\n";
-            // echo "$data_file\n";
+        }
+
+        foreach($grid_steerings as $file) {
+            $grid_directory += dirname($file) . ",";
+            $grid_file += basename($file) . ",";
+        }
+
+        foreach($pdf_steerings as $file) {
+            $pdf_directory += dirname($file) . ",";
+            $pdf_file += basename($file) . ",";
         }
 
         // $data_directory = dirname($data_steering);
         // $data_file = basename($data_steering);
-
-        $grid_directory = dirname($grid_steering);
-        $grid_file = basename($grid_steering);
-
-        $pdf_directory = dirname($pdf_steering);
-        $pdf_file = basename($pdf_steering);
+        //
+        // $grid_directory = dirname($grid_steering);
+        // $grid_file = basename($grid_steering);
+        //
+        // $pdf_directory = dirname($pdf_steering);
+        // $pdf_file = basename($pdf_steering);
 
         $kvp_text = "plot_type = $plot_type\n".
                     "data_directory = $data_directory\n".
