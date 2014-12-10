@@ -431,8 +431,8 @@ function MasterTimer() {
             time = time + 1;
         }
 
-        //Kill after 4000ms
-        if(time > 40) {
+        //Kill after 20000ms
+        if(time > 200) {
             timeout = true;
             clearInterval(masterTimer);
             if(debug) console.log('masterTimer --> TIMEOUT <--');
