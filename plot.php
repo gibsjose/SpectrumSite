@@ -81,17 +81,17 @@
 
                 console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
-                console.log("data_steering_v: " + data_steering_v);
-                console.log("grid_steering_v: " + grid_steering_v);
-                console.log("pdf_steering_v: " + pdf_steering_v);
+                console.log("data_steering_v: " + data_steering_v[0]);
+                console.log("grid_steering_v: " + grid_steering_v[0]);
+                console.log("pdf_steering_v: " + pdf_steering_v[0]);
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
                     steering: steering_v,
                     plot_type: plot_type_v,
-                    data_steering: data_steering_v,
-                    grid_steering: grid_steering_v,
-                    pdf_steering: pdf_steering_v
+                    data_steering: data_steering_v[0],
+                    grid_steering: grid_steering_v[0],
+                    pdf_steering: pdf_steering_v[0]
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
