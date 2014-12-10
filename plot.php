@@ -53,7 +53,7 @@
         <script type="text/javascript">
             function Plot() {
                 //Replace the container content with the particle canvas to run the animation each time
-                $('#canvas-container').html(function() {
+                jQuery('#canvas-container').html(function() {
                     canvas = "<canvas id='particle-canvas' width='600px' height='600px'></canvas>";
                     script = "<script type='text/javascript' src='js/protons.js'><\/script>";
                     return canvas + script;
@@ -92,10 +92,10 @@
         <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
         <script type="text/javascript">
             function UpdateForms() {
-                jQuery('#steering').load('get_steering_files.php');
-                jQuery('#data_steering').load('get_data_steering_files.php');
-                jQuery('#grid_steering').load('get_grid_steering_files.php');
-                jQuery('#pdf_steering').load('get_pdf_steering_files.php');
+                // jQuery('#steering').load('get_steering_files.php');
+                // jQuery('#data_steering').load('get_data_steering_files.php');
+                // jQuery('#grid_steering').load('get_grid_steering_files.php');
+                // jQuery('#pdf_steering').load('get_pdf_steering_files.php');
             }
 
             //Run this when the window is loaded
@@ -185,6 +185,13 @@
         <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
         document.observe('dom:loaded', function(evt) {
+
+            //Load the selects with the steering files
+            jQuery('#steering').load('get_steering_files.php');
+            jQuery('#data_steering').load('get_data_steering_files.php');
+            jQuery('#grid_steering').load('get_grid_steering_files.php');
+            jQuery('#pdf_steering').load('get_pdf_steering_files.php');
+
             var config = {
                 '.chosen-select'           : {},
                 '.chosen-select-deselect'  : {allow_single_deselect:true},
