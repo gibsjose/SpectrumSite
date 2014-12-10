@@ -89,6 +89,7 @@
         <script type="text/javascript">
             function UpdateForms() {
                 $('#steering').select2();
+                $('#plot_type').select2();
                 $('#data_steering').select2();
                 $('#grid_steering').select2();
                 $('#pdf_steering').select2();
@@ -133,13 +134,13 @@
                             <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
                                 <fieldset>
                                     <label for="steering">Pre-Defined Plots</label>
-                                    <select name="steering" id="steering" data-placeholder="Pre-Defined Plot" class="pure-u-2-5 chosen-select">
+                                    <select class="pure-u-4-5" name="steering" id="steering">
                                         <option>None</option>
                                     </select>
                                     <hr color="#39B54A" width="60%" size="2" align="left">
                                     <br>
                                     <label for="plot_type">Plot Type</label>
-                                    <select class="pure-u-2-5 chosen-select" name="plot_type" id="plot_type" onchange="if (this.selectedIndex) PlotTypeChanged();">
+                                    <select class="pure-u-4-5" name="plot_type" id="plot_type" onchange="if (this.selectedIndex) PlotTypeChanged();">
                                         <option value="0">1 Data, 1 Grid, 1 PDF</option>
                                         <option value="1">N Data, N Grids, 1 PDF</option>
                                         <option value="2">1 Data, N Grids, 1 PDF</option>
@@ -147,17 +148,17 @@
                                     </select>
 
                                     <label for="data_steering">Data Steering File</label>
-                                    <select class="pure-u-2-5 chosen-select-deselect" name="data_steering" id="data_steering" multiple>
+                                    <select class="pure-u-4-5 chosen-select-deselect" name="data_steering" id="data_steering" multiple>
                                         <option>None</option>
                                     </select>
 
                                     <label for="grid_steering">Grid Steering File</label>
-                                    <select class="pure-u-2-5 chosen-select-deselect" name="grid_steering" id="grid_steering" multiple>
+                                    <select class="pure-u-4-5 chosen-select-deselect" name="grid_steering" id="grid_steering" multiple>
                                         <option>None</option>
                                     </select>
 
                                     <label for="pdf_steering">PDF Steering File</label>
-                                    <select class="pure-u-2-5 chosen-select-deselect" name="pdf_steering" id="pdf_steering" multiple>
+                                    <select class="pure-u-4-5 chosen-select-deselect" name="pdf_steering" id="pdf_steering" multiple>
                                         <option>None</option>
                                     </select>
                                     <br>
