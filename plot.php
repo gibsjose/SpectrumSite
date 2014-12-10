@@ -37,9 +37,14 @@
         <!-- jQuery -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
-        <!-- JS and CSS for MultiSelect -->
-        <link rel="stylesheet" href="css/jquery.multiselect.css">
-        <script type="text/javascript" src="js/jquery.multiselect.min.js"></script>
+        <!-- Chosen -->
+        <link rel="stylesheet" href="docsupport/style.css">
+        <link rel="stylesheet" href="docsupport/prism.css">
+        <link rel="stylesheet" href="chosen.css">
+        <style type="text/css" media="all">
+        /* fix rtl for demo */
+        .chosen-rtl .chosen-drop { left: -9000px; }
+        </style>
 
         <!-- Collide Function -->
         <script type="text/javascript">
@@ -90,16 +95,6 @@
                 $('#data_steering').load('get_data_steering_files.php');
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
-
-                jQuery("#data_steering").multiselect({
-                    multiple: false
-                });
-                jQuery("#grid_steering").multiselect({
-                    multiple: false
-                });
-                jQuery("#pdf_steering").multiselect({
-                    multiple: false
-                });
             }
 
             //Run this when the window is loaded
@@ -107,71 +102,6 @@
         </script>
 
         <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
-        <script type="text/javascript">
-            function PlotTypeChanged() {
-                var pt = document.getElementById('plot_type').value;
-
-                //1 Data, 1 Grid, 1 PDF
-                if(pt == 0) {
-                    $("#data_steering").multiSelect({
-                        multiple: false
-                    });
-
-                    $("#grid_steering").multiSelect({
-                        multiple: false
-                    });
-
-                    $("#pdf_steering").multiSelect({
-                        multiple: false
-                    });
-                }
-
-                //N Data, N Grids, 1 PDF
-                if(pt == 1) {
-                    $("#data_steering").multiSelect({
-                        multiple: true
-                    });
-
-                    $("#grid_steering").multiSelect({
-                        multiple: true
-                    });
-
-                    $("#pdf_steering").multiSelect({
-                        multiple: false
-                    });
-                }
-
-                //1 Data, N Grids, 1 PDF
-                if(pt == 2) {
-                    $("#data_steering").multiSelect({
-                        multiple: false
-                    });
-
-                    $("#grid_steering").multiSelect({
-                        multiple: true
-                    });
-
-                    $("#pdf_steering").multiSelect({
-                        multiple: false
-                    });
-                }
-
-                //1 Data, 1 Grid, N PDFs
-                if(pt == 3) {
-                    $("#data_steering").multiSelect({
-                        multiple: false
-                    });
-
-                    $("#grid_steering").multiSelect({
-                        multiple: false
-                    });
-
-                    $("#pdf_steering").multiSelect({
-                        multiple: true
-                    });
-                }
-            }
-        </script>
 
     </head>
 
@@ -254,6 +184,30 @@
             if(submit) {
                 // submit.addEventListener('click', function() { Collision(); });
             }
+        </script>
+
+        <!-- Chosen handling and configuration -->
+        <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+        <script src="chosen.proto.js" type="text/javascript"></script>
+        <script src="docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+        <script type="text/javascript">
+        document.observe('dom:loaded', function(evt) {
+            var config = {
+                '.steering'           : {},
+                '.data_steering'  : {allow_single_deselect:true},
+                '.grid_steering' : {disable_search_threshold:10},
+                '.pdf_steering': {no_results_text: "Oops, nothing found!"}
+                //'.chosen-select-width'     : {width: "95%"}
+            }
+            var results = [];
+            for (var selector in config) {
+                var elements = $$(selector);
+                for (var i = 0; i < elements.length; i++) {
+                    results.push(new Chosen(elements[i],config[selector]));
+                }
+            }
+            return results;
+        });
         </script>
 
     </body>
