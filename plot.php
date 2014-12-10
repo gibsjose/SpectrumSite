@@ -47,22 +47,15 @@
         <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>-->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-        <script>
-            var jQ = jQuery.noConflict();
-        </script>
-
-        <!-- Prototype -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
-
         <!-- Chosen handling and configuration -->
-        <script src="chosen/chosen.proto.js" type="text/javascript"></script>
+        <script src="chosen/chosen.jquery.min.js" type="text/javascript"></script>
         <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
 
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
                 //Replace the container content with the particle canvas to run the animation each time
-                jQ('#canvas-container').html(function() {
+                $('#canvas-container').html(function() {
                     canvas = "<canvas id='particle-canvas' width='600px' height='600px'></canvas>";
                     script = "<script type='text/javascript' src='js/protons.js'><\/script>";
                     return canvas + script;
@@ -71,7 +64,7 @@
                 //Generate a collision
                 Collision();
 
-                jQ('#canvas-container').html(function() {
+                $('#canvas-container').html(function() {
                     return "<h2>Spectrum still running...</h2>"
                 });
 
@@ -98,17 +91,17 @@
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
-                jQ('#canvas-container').load('load_plot.php', data);
+                $('#canvas-container').load('load_plot.php', data);
             }
         </script>
 
         <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
         <script type="text/javascript">
             function UpdateForms() {
-                jQ('#steering').load('get_steering_files.php');
-                jQ('#data_steering').load('get_data_steering_files.php');
-                jQ('#grid_steering').load('get_grid_steering_files.php');
-                jQ('#pdf_steering').load('get_pdf_steering_files.php');
+                $('#steering').load('get_steering_files.php');
+                $('#data_steering').load('get_data_steering_files.php');
+                $('#grid_steering').load('get_grid_steering_files.php');
+                $('#pdf_steering').load('get_pdf_steering_files.php');
 
                 $('.chosen-select').chosen();
                 $('.chosen-select-deselect').chosen({allow_single_deselect:true});
