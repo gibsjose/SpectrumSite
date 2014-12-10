@@ -43,11 +43,11 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
-        <!-- Prototype -->
-        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
-
         <!-- jQuery -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+
+        <!-- Prototype -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
 
         <!-- Collide Function -->
         <script type="text/javascript">
@@ -85,17 +85,17 @@
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
-                $('#canvas-container').load('load_plot.php', data);
+                jQuery('#canvas-container').load('load_plot.php', data);
             }
         </script>
 
         <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
         <script type="text/javascript">
             function UpdateForms() {
-                $('#steering').load('get_steering_files.php');
-                $('#data_steering').load('get_data_steering_files.php');
-                $('#grid_steering').load('get_grid_steering_files.php');
-                $('#pdf_steering').load('get_pdf_steering_files.php');
+                jQuery('#steering').load('get_steering_files.php');
+                jQuery('#data_steering').load('get_data_steering_files.php');
+                jQuery('#grid_steering').load('get_grid_steering_files.php');
+                jQuery('#pdf_steering').load('get_pdf_steering_files.php');
             }
 
             //Run this when the window is loaded
