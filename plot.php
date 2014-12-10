@@ -185,7 +185,8 @@
         <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
         document.observe('dom:loaded', function(evt) {
-
+            jQuery('#canvas-container').load('get_steering_files.php');
+            
             //Load the selects with the steering files
             jQuery('#steering').load('get_steering_files.php');
             jQuery('#data_steering').load('get_data_steering_files.php');
