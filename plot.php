@@ -9,15 +9,6 @@
         <title>Spectrum</title>
         <link rel="shortcut icon" href="img/spectrum_64.ico">
 
-        <!-- Chosen -->
-        <!-- <link rel="stylesheet" href="chosen/docsupport/style.css"> -->
-        <!-- <link rel="stylesheet" href="chosen/docsupport/prism.css"> -->
-        <link rel="stylesheet" href="chosen/chosen.css">
-        <style type="text/css" media="all">
-        /* fix rtl for demo */
-        .chosen-rtl .chosen-drop { left: -9000px; }
-        </style>
-
         <!-- Lato Font -->
         <link href='//fonts.googleapis.com/css?family=Lato:100,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
@@ -44,12 +35,11 @@
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
         <!-- jQuery -->
-        <!--<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>-->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
-        <!-- Chosen handling and configuration -->
-        <script src="chosen/chosen.jquery.min.js" type="text/javascript"></script>
-        <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+        <!-- Select2 -->
+        <link href="select2/select2.css" rel="stylesheet"/>
+        <script src="select2/select2.js"></script>
 
         <!-- Collide Function -->
         <script type="text/javascript">
@@ -98,16 +88,15 @@
         <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
         <script type="text/javascript">
             function UpdateForms() {
-                $('.chosen-select').chosen();
-                $('.chosen-select-deselect').chosen({allow_single_deselect:true});
+                $('#steering').select2();
+                $('#data_steering').select2();
+                $('#grid_steering').select2();
+                $('#pdf_steering').select2();
 
                 $('#steering').load('get_steering_files.php');
                 $('#data_steering').load('get_data_steering_files.php');
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
-
-                $('#steering').trigger("chosen:updated");
-                $('.chosen-select-deselect').trigger("chosen:updated");
             }
 
             //Run this when the window is loaded
@@ -190,34 +179,5 @@
                 Designed by <a href="http://www.github.com/gibsjose">Joe Gibson</a> – CERN 2014.
             </div>
         </div>
-
-        <!--
-        <script type="text/javascript">
-        document.observe('dom:loaded', function(evt) {
-            var config = {
-                '.chosen-select'           : {},
-                '.chosen-select-deselect'  : {allow_single_deselect:true},
-                '.chosen-select-no-single' : {disable_search_threshold:10},
-                '.chosen-select-no-results': {no_results_text: "Oops, nothing found!"},
-                '.chosen-select-width'     : {width: "95%"}
-            }
-            var results = [];
-            for (var selector in config) {
-                var elements = $$(selector);
-                for (var i = 0; i < elements.length; i++) {
-                    results.push(new Chosen(elements[i],config[selector]));
-                }
-            }
-
-            //Load the selects with the steering files
-            jQuery('#steering').load('get_steering_files.php');
-            jQuery('#data_steering').load('get_data_steering_files.php');
-            jQuery('#grid_steering').load('get_grid_steering_files.php');
-            jQuery('#pdf_steering').load('get_pdf_steering_files.php');
-
-            return results;
-        });
-        </script>
-        -->
     </body>
 </html>
