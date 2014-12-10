@@ -20,7 +20,7 @@
     $plot_type = $_POST['plot_type'];
     $data_steering = $_POST['data_steering'];
     $grid_steering = $_POST['grid_steering'];
-    $pdf_steering = $_POST['pdf_steering';
+    $pdf_steering = $_POST['pdf_steering'];
 ?>
 
 <!-- Write variables to file (settings.txt) -->
@@ -39,16 +39,16 @@
         //Write a new kvp file
         $kvp_file = fopen($input, "w");
 
+        $data_steerings = explode(",", $data_steering);
         $data_directory = "";
         $data_file = "";
-
         //Get the data, grid, and pdf directories from the selected files
-        foreach($data_steering as $file) {
-            echo "$file\n";
+        foreach($data_steerings as $file) {
+            // echo "$file\n";
             $data_directory += dirname($file) . ",";
             $data_file += basename($file) . ",";
-            echo "$data_directory\n";
-            echo "$data_file\n";
+            // echo "$data_directory\n";
+            // echo "$data_file\n";
         }
 
         // $data_directory = dirname($data_steering);
