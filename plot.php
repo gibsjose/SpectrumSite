@@ -100,10 +100,10 @@
                 jQuery('#data_steering').load('get_data_steering_files.php');
                 jQuery('#grid_steering').load('get_grid_steering_files.php');
                 jQuery('#pdf_steering').load('get_pdf_steering_files.php');
-            }
 
-            ('.chosen-select').chosen();
-            ('.chosen-select-deselect').chosen();
+                $('.chosen-select').chosen();
+                $('.chosen-select-deselect').chosen({allow_single_deselect:true});
+            }
 
             //Run this when the window is loaded
             window.onload = UpdateForms;
