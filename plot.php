@@ -62,6 +62,10 @@
                 //Generate a collision
                 Collision();
 
+                jQuery('#canvas-container').html(function() {
+                    return "<h2>Spectrum still running...</h2>"
+                });
+
                 //Get all the variables from the form
                 var steering_v = document.getElementById('steering').value;
                 var data_steering_v = document.getElementById('data_steering').value;
