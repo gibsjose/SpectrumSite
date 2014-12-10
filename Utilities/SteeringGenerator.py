@@ -22,7 +22,7 @@ outputPath = sys.argv[2]
 #with open(inputPath, 'r') as f:
 f = open(inputPath, 'r')
 for line in f:
-    (key, val) = line.split()
+    (key, val) = line.split(' = ')
     d[key] = val
 f.close()
 
