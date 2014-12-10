@@ -150,17 +150,17 @@
 
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
-                console.log("ds");
+                console.log(ds);
             }
 
             function GridSteering() {
                 var gs = $('#grid_steering').select2("val");
-                console.log("gs");
+                console.log(gs);
             }
 
             function PDFSteering() {
                 var ps = $('#pdf_steering').select2("val");
-                console.log("ps");
+                console.log(ps);
             }
         </script>
     </head>
