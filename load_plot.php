@@ -18,9 +18,9 @@
 <?php
     $steering = $_POST['steering'];
     $plot_type = $_POST['plot_type'];
-    $data_steering = $_POST['data_steering'];
-    $grid_steering = $_POST['grid_steering'];
-    $pdf_steering = $_POST['pdf_steering'];
+    $data_steering = $_POST['data_steering[]'];
+    $grid_steering = $_POST['grid_steering[]'];
+    $pdf_steering = $_POST['pdf_steering[]'];
 ?>
 
 <!-- Write variables to file (settings.txt) -->
