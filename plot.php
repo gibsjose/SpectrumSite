@@ -62,9 +62,9 @@
 
                 var steering_v = document.getElementById('steering').value;
                 var plot_type_v = $('#plot_type').select2("val");
-                var data_steering_v = $('#data_steering').select2("val");
-                var grid_steering_v = $('#grid_steering').select2("val");
-                var pdf_steering_v = $('#pdf_steering').select2("val");
+                var data_steering_v = $('#data_steering').select2("val")[0];
+                var grid_steering_v = $('#grid_steering').select2("val")[0];
+                var pdf_steering_v = $('#pdf_steering').select2("val")[0];
 
                 if(plot_type_v == 0) {
                     plot_type_v = "data, grid, pdf";

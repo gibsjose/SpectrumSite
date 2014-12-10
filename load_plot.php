@@ -49,8 +49,7 @@
         $pdf_directory = dirname($pdf_steering);
         $pdf_file = basename($pdf_steering);
 
-        $kvp_text =
-                    "plot_type $plot_type\n".
+        $kvp_text = "plot_type $plot_type\n".
                     "data_directory $data_directory\n".
                     "grid_directory $grid_directory\n".
                     "pdf_directory $pdf_directory\n".
