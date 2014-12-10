@@ -66,9 +66,6 @@
                 var grid_steering_v = $('#grid_steering').select2("val");
                 var pdf_steering_v = $('#pdf_steering').select2("val");
 
-                console.log("steering_v: " + steering_v);
-                console.log("plot_type_v: " + plot_type_v);
-
                 if(plot_type_v == 0) {
                     plot_type_v = "data, grid, pdf";
                 }
@@ -82,6 +79,7 @@
                     plot_type_v = "data, grid, pdf[]";
                 }
 
+                console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
                 console.log("data_steering_v: " + data_steering_v);
                 console.log("grid_steering_v: " + grid_steering_v);
