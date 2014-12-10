@@ -117,19 +117,31 @@
             function PlotType() {
                 var pt = $('#plot_type').select2("val");
 
-                console.log(pt);
-
                 if(pt == 0) {
                     console.log("1 Data, 1 Grid, 1 PDF");
+
+                    // $('#data_steering').select2({maximumSelectionSize: 1, formatSelectionTooBig: "You can only select 1 Data Steering File"});
+                    $('#data_steering').select2({maximumSelectionSize: 1});
+                    $('#grid_steering').select2({maximumSelectionSize: 1});
+                    $('#pdf_steering').select2({maximumSelectionSize: 1});
                 }
                 else if(pt == 1) {
                     console.log("N Data, N Grids, 1 PDF");
+                    $('#data_steering').select2({maximumSelectionSize: 0});
+                    $('#grid_steering').select2({maximumSelectionSize: 0});
+                    $('#pdf_steering').select2({maximumSelectionSize: 1});
                 }
                 else if(pt == 2) {
                     console.log("1 Data, N Grids, 1 PDF");
+                    $('#data_steering').select2({maximumSelectionSize: 1});
+                    $('#grid_steering').select2({maximumSelectionSize: 0});
+                    $('#pdf_steering').select2({maximumSelectionSize: 1});
                 }
                 else if(pt == 3) {
                     console.log("1 Data, 1 Grid, N PDFs");
+                    $('#data_steering').select2({maximumSelectionSize: 1});
+                    $('#grid_steering').select2({maximumSelectionSize: 1});
+                    $('#pdf_steering').select2({maximumSelectionSize: 0});
                 }
             }
         </script>
