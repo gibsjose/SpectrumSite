@@ -81,7 +81,7 @@
         <script type="text/javascript">
 
             function ClearDataSteeringFiles() {
-                $("#data_steering").select2("val").length = 0;
+                $("#data_steering").select2("val", "");
 
                 // $('#data_steering').each(function() {
                 //     if(this.defaultSelected) {
@@ -92,7 +92,7 @@
             }
 
             function ClearGridSteeringFiles() {
-                $("#grid_steering").select2("val").length = 0;
+                $("#grid_steering").select2("val", "");
 
                 // $('#grid_steering').each(function() {
                 //     if(this.defaultSelected) {
@@ -103,7 +103,7 @@
             }
 
             function ClearPDFSteeringFiles() {
-                $("#pdf_steering").select2("val").length = 0;
+                $("#pdf_steering").select2("val", "");
 
                 // $('#pdf_steering').each(function() {
                 //     if(this.defaultSelected) {
@@ -162,6 +162,7 @@
 
                 //Limit the number of grid steering files to match the number of data if plot type is N, N, 1
                 if($('plot_type').select2("val") == 1) {
+                    console.log("Setting max for grids to " + ds.length);
                     $('#grid_steering').select2({maximumSelectionSize: ds.length});
                 }
             }
