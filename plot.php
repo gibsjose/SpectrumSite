@@ -152,7 +152,7 @@
                 var ds = $('#data_steering').select2("val");
                 console.log(ds);
 
-                var numDS = ds.size;
+                var numDS = ds.length;
                 console.log(numDS);
 
                 var pt = $('#plot_type').select2("val");
