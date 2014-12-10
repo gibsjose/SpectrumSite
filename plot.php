@@ -160,8 +160,10 @@
                 var ds = $('#data_steering').select2("val");
                 console.log(ds);
 
+                var pt = $('#plot_type').select2("val");
+
                 //Limit the number of grid steering files to match the number of data if plot type is N, N, 1
-                if($('#plot_type').select2("val") == 1) {
+                if(pt == 1) {
                     console.log("Setting max for grids to " + ds.length);
                     $('#grid_steering').select2({maximumSelectionSize: ds.length});
                 }
