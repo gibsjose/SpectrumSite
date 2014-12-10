@@ -192,6 +192,8 @@
             jQuery('#grid_steering').load('get_grid_steering_files.php');
             jQuery('#pdf_steering').load('get_pdf_steering_files.php');
 
+            console.log(jQuery("#steering"));
+
             var config = {
                 '.chosen-select'           : {},
                 '.chosen-select-deselect'  : {allow_single_deselect:true},
@@ -209,7 +211,7 @@
             return results;
         });
         </script>
-        
+
         <div class="footer l-box is-center">
             Check out the <a href="http://www.github.com/gibsjose/Spectrum/">Spectrum Project</a> on GitHub –
             Designed by <a href="http://www.github.com/gibsjose">Joe Gibson</a> – CERN 2014.
