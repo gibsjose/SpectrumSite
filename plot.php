@@ -135,8 +135,8 @@
                                     <select name="steering" id="steering" data-placeholder="Pre-Defined Plot" class="pure-u-2-5 chosen-select">
                                         <option>None</option>
                                     </select>
-                                    <hr color="#39B54A" width="60%" size="2" align="left">
-                                    <br>
+                                    <!-- <hr color="#39B54A" width="60%" size="2" align="left">
+                                    <br> -->
                                     <label for="plot_type">Plot Type</label>
                                     <select class="pure-u-2-5 chosen-select-deselect" name="plot_type" id="plot_type" multiple onchange="if (this.selectedIndex) PlotTypeChanged();">
                                         <option value="0">1 Data, 1 Grid, 1 PDF</option>
