@@ -102,6 +102,9 @@
                 jQuery('#pdf_steering').load('get_pdf_steering_files.php');
             }
 
+            ('.chosen-select').chosen();
+            ('.chosen-select-deselect').chosen();
+
             //Run this when the window is loaded
             window.onload = UpdateForms;
         </script>

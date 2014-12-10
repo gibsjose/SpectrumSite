@@ -39,10 +39,8 @@ label {
 
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
-    /*position: absolute;*/
     top: 10%;
     width: 100%;
-    /*min-height: 90%;*/
     z-index: 2;
     background: #000000;
 }
