@@ -9,6 +9,15 @@
         <title>Spectrum</title>
         <link rel="shortcut icon" href="img/spectrum_64.ico">
 
+        <!-- Chosen -->
+        <link rel="stylesheet" href="chosen/docsupport/style.css">
+        <link rel="stylesheet" href="chosen/docsupport/prism.css">
+        <link rel="stylesheet" href="chosen/chosen.css">
+        <style type="text/css" media="all">
+        /* fix rtl for demo */
+        .chosen-rtl .chosen-drop { left: -9000px; }
+        </style>
+
         <!-- Lato Font -->
         <link href='//fonts.googleapis.com/css?family=Lato:100,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
@@ -36,15 +45,6 @@
 
         <!-- jQuery -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
-
-        <!-- Chosen -->
-        <link rel="stylesheet" href="chosen/docsupport/style.css">
-        <link rel="stylesheet" href="chosen/docsupport/prism.css">
-        <link rel="stylesheet" href="chosen/chosen.css">
-        <style type="text/css" media="all">
-        /* fix rtl for demo */
-        .chosen-rtl .chosen-drop { left: -9000px; }
-        </style>
 
         <!-- Collide Function -->
         <script type="text/javascript">
@@ -178,14 +178,6 @@
                 Designed by <a href="http://www.github.com/gibsjose">Joe Gibson</a> – CERN 2014.
             </div>
         </div>
-
-        <!-- Adds a 'click' Event Listener to the Submit Button such that the particle animation is played only upon submission -->
-        <script type="text/javascript">
-            var submit = document.getElementById("submit");
-            if(submit) {
-                // submit.addEventListener('click', function() { Collision(); });
-            }
-        </script>
 
         <!-- Chosen handling and configuration -->
         <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
