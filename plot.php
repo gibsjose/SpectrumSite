@@ -38,9 +38,9 @@
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
         <!-- Chosen -->
-        <link rel="stylesheet" href="docsupport/style.css">
-        <link rel="stylesheet" href="docsupport/prism.css">
-        <link rel="stylesheet" href="chosen.css">
+        <link rel="stylesheet" href="chosen/docsupport/style.css">
+        <link rel="stylesheet" href="chosen/docsupport/prism.css">
+        <link rel="stylesheet" href="chosen/chosen.css">
         <style type="text/css" media="all">
         /* fix rtl for demo */
         .chosen-rtl .chosen-drop { left: -9000px; }
@@ -189,8 +189,8 @@
 
         <!-- Chosen handling and configuration -->
         <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
-        <script src="chosen.proto.js" type="text/javascript"></script>
-        <script src="docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+        <script src="chosen/chosen.proto.js" type="text/javascript"></script>
+        <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
         document.observe('dom:loaded', function(evt) {
             var config = {
