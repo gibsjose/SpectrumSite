@@ -43,7 +43,7 @@ label {
     top: 10%;
     width: 100%;
     min-height: 90%;
-    z-index: 2;
+    z-index: 0;
     background: #000000;
 }
 
@@ -56,10 +56,10 @@ label {
 }
 
 .footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     width: 100%;
-    z-index: 2;
+    z-index: 0;
 
     font-family: 'Lato', sans-serif;
     font-style: normal;
