@@ -178,7 +178,7 @@
         </div>
 
         <!-- Chosen handling and configuration -->
-        // <script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script> -->
         <script src="chosen/chosen.proto.js" type="text/javascript"></script>
         <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
