@@ -81,36 +81,36 @@
         <script type="text/javascript">
 
             function ClearDataSteeringFiles() {
-                //$("#data_steering").select2("val", "");
+                $("#data_steering").select2("val", null);
 
-                $('#data_steering').each(function() {
-                    if(this.defaultSelected) {
-                        this.selected = true;
-                        return false;
-                    }
-                });
+                // $('#data_steering').each(function() {
+                //     if(this.defaultSelected) {
+                //         this.selected = true;
+                //         return false;
+                //     }
+                // });
             }
 
             function ClearGridSteeringFiles() {
-                //$("#grid_steering").select2("val", "");
+                $("#grid_steering").select2("val", null);
 
-                $('#grid_steering').each(function() {
-                    if(this.defaultSelected) {
-                        this.selected = true;
-                        return false;
-                    }
-                });
+                // $('#grid_steering').each(function() {
+                //     if(this.defaultSelected) {
+                //         this.selected = true;
+                //         return false;
+                //     }
+                // });
             }
 
             function ClearPDFSteeringFiles() {
-                //$("#pdf_steering").select2("val", "");
+                $("#pdf_steering").select2("val", null);
 
-                $('#pdf_steering').each(function() {
-                    if(this.defaultSelected) {
-                        this.selected = true;
-                        return false;
-                    }
-                });
+                // $('#pdf_steering').each(function() {
+                //     if(this.defaultSelected) {
+                //         this.selected = true;
+                //         return false;
+                //     }
+                // });
             }
 
             function ClearAllSteeringFiles() {
