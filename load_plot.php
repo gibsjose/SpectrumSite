@@ -17,6 +17,7 @@
 <!-- Get HTTP Request from JS on plot.php -->
 <?php
     $steering = $_POST['steering'];
+    $plot_type = $_POST['plot_type'];
     $data_steering = $_POST['data_steering'];
     $grid_steering = $_POST['grid_steering'];
     $pdf_steering = $_POST['pdf_steering'];
@@ -49,6 +50,7 @@
         $pdf_file = basename($pdf_steering);
 
         $kvp_text =
+                    "plot_type $plot_type\n".
                     "data_directory $data_directory\n".
                     "grid_directory $grid_directory\n".
                     "pdf_directory $pdf_directory\n".

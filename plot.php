@@ -55,11 +55,33 @@
                 Collision();
 
                 //Get all the variables from the form
-                var steering_v = document.getElementById('steering').value;
-                var data_steering_v = document.getElementById('data_steering').value;
-                var grid_steering_v = document.getElementById('grid_steering').value;
-                var pdf_steering_v = document.getElementById('pdf_steering').value;
+                // var steering_v = document.getElementById('steering').value;
+                // var data_steering_v = document.getElementById('data_steering').value;
+                // var grid_steering_v = document.getElementById('grid_steering').value;
+                // var pdf_steering_v = document.getElementById('pdf_steering').value;
 
+                var steering_v = $('#steering').select2("val");
+                var plot_type_v = $('#plot_type').select2("val");
+                var data_steering_v = $('#data_steering').select2("val");
+                var grid_steering_v = $('#grid_steering').select2("val");
+                var pdf_steering_v = $('#pdf_steering').select2("val");
+
+                switch(plot_type_v) {
+                    case 0:
+                        plot_type_v = "data, grid, pdf";
+                        break;
+                    case 1:
+                        plot_type_v = "data[], grid[], pdf";
+                        break;
+                    case 2:
+                        plot_type_v = "data, grid[], pdf";
+                        break;
+                    case 3:
+                        plot_type_v = "data, grid, pdf[]";
+                        break;
+                }
+
+                console.log(plot_type_v);
                 console.log(data_steering_v);
                 console.log(grid_steering_v);
                 console.log(pdf_steering_v);
@@ -67,6 +89,7 @@
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
                     steering: steering_v,
+                    plot_type: plot_type_v,
                     data_steering: data_steering_v,
                     grid_steering: grid_steering_v,
                     pdf_steering: pdf_steering_v
