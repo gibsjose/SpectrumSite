@@ -109,6 +109,7 @@
                 //Bind OnChange events
                 $('#plot_type').on("change", PlotType);
                 $('#data_steering').on("change", DataSteering);
+                $('#data_steering').on("select2-remove", DataSteering);
                 $('#grid_steering').on("change", GridSteering);
                 $('#pdf_steering').on("change", PDFSteering);
             }
@@ -119,6 +120,25 @@
 
         <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
         <script type="text/javascript">
+
+            function ClearDataSteeringFiles() {
+                $("#data_steering").select2("val", "");
+            }
+
+            function ClearGridSteeringFiles() {
+                $("#grid_steering").select2("val", "");
+            }
+
+            function ClearPDFSteeringFiles() {
+                $("#pdf_steering").select2("val", "");
+            }
+
+            function ClearAllSteeringFiles() {
+                ClearDataSteeringFiles();
+                ClearGridSteeringFiles();
+                ClearPDFSteeringFiles();
+            }
+
             function PlotType() {
                 var pt = $('#plot_type').select2("val");
 
@@ -127,24 +147,32 @@
                     $('#data_steering').select2({maximumSelectionSize: 1});
                     $('#grid_steering').select2({maximumSelectionSize: 1});
                     $('#pdf_steering').select2({maximumSelectionSize: 1});
+
+                    ClearAllSteeringFiles();
                 }
                 else if(pt == 1) {
                     console.log("N Data, N Grids, 1 PDF");
                     $('#data_steering').select2({maximumSelectionSize: 0});
                     $('#grid_steering').select2({maximumSelectionSize: 0});
                     $('#pdf_steering').select2({maximumSelectionSize: 1});
+
+                    ClearAllSteeringFiles();
                 }
                 else if(pt == 2) {
                     console.log("1 Data, N Grids, 1 PDF");
                     $('#data_steering').select2({maximumSelectionSize: 1});
                     $('#grid_steering').select2({maximumSelectionSize: 0});
                     $('#pdf_steering').select2({maximumSelectionSize: 1});
+
+                    ClearAllSteeringFiles();
                 }
                 else if(pt == 3) {
                     console.log("1 Data, 1 Grid, N PDFs");
                     $('#data_steering').select2({maximumSelectionSize: 1});
                     $('#grid_steering').select2({maximumSelectionSize: 1});
                     $('#pdf_steering').select2({maximumSelectionSize: 0});
+
+                    ClearAllSteeringFiles();
                 }
             }
 
@@ -153,14 +181,17 @@
                 console.log(ds);
 
                 var numDS = ds.length;
-                console.log(numDS);
-
                 var pt = $('#plot_type').select2("val");
 
                 //Limit the number of grid steering files to match the number of data if plot type is N, N, 1
                 if(pt == 1) {
                     console.log("Limiting number of Grids to " + numDS);
                     $('#grid_steering').select2({maximumSelectionSize: numDS});
+
+                    //Clear Grid Steerings if the number of data selected has decreased
+                    if(($'#grid_steering').select2("val").length > numDS) {
+                        ClearGridSteeringFiles();
+                    }
                 }
             }
 
