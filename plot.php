@@ -54,10 +54,6 @@
                 //Generate a collision
                 Collision();
 
-                // $('#canvas-container').html(function() {
-                //     return "<h2>Spectrum still running...</h2>"
-                // });
-
                 //Get all the variables from the form
                 var steering_v = document.getElementById('steering').value;
                 var data_steering_v = document.getElementById('data_steering').value;
@@ -67,10 +63,6 @@
                 console.log(data_steering_v);
                 console.log(grid_steering_v);
                 console.log(pdf_steering_v);
-                // var plot_title_v = document.getElementById('plot_title').value;
-                // var plot_band_v = document.getElementById('plot_band').checked;
-                // var plot_marker_v = document.getElementById('plot_marker').checked;
-                // var plot_staggered_v = document.getElementById('plot_staggered').checked;
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
@@ -78,10 +70,6 @@
                     data_steering: data_steering_v,
                     grid_steering: grid_steering_v,
                     pdf_steering: pdf_steering_v
-                    // plot_title: plot_title_v,
-                    // plot_band: plot_band_v,
-                    // plot_marker: plot_marker_v,
-                    // plot_staggered: plot_staggered_v
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
@@ -151,18 +139,9 @@
                 var ds = $('#data_steering').select2("val");
                 console.log(ds);
 
-                var numDS = ds.length;
-                var pt = $('#plot_type').select2("val");
-
                 //Limit the number of grid steering files to match the number of data if plot type is N, N, 1
-                if(pt == 1) {
-                    console.log("Limiting number of Grids to " + numDS);
-                    $('#grid_steering').select2({maximumSelectionSize: numDS});
-
-                    //Clear Grid Steerings if the number of data selected has decreased
-                    if($('#grid_steering').select2("val").length > numDS) {
-                        ClearGridSteeringFiles();
-                    }
+                if($('plot_type').select2("val") == 1) {
+                    $('#grid_steering').select2({maximumSelectionSize: ds.length});
                 }
             }
 
