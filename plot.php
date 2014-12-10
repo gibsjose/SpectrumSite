@@ -106,10 +106,8 @@
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
 
-                $("#steering").trigger("liszt:updated");
-                $("#data_steering").trigger("liszt:updated");
-                $("#grid_steering").trigger("liszt:updated");
-                $("#pdf_steering").trigger("liszt:updated");
+                $('.chosen-select').trigger("chosen:updated");
+                $('.chosen-select-deselect').trigger("chosen:updated");
             }
 
             //Run this when the window is loaded
