@@ -100,11 +100,16 @@
             function UpdateForms() {
                 $('.chosen-select').chosen();
                 $('.chosen-select-deselect').chosen({allow_single_deselect:true});
-                
+
                 $('#steering').load('get_steering_files.php');
                 $('#data_steering').load('get_data_steering_files.php');
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
+
+                $("#steering").trigger("liszt:updated");
+                $("#data_steering").trigger("liszt:updated");
+                $("#grid_steering").trigger("liszt:updated");
+                $("#pdf_steering").trigger("liszt:updated");
             }
 
             //Run this when the window is loaded
