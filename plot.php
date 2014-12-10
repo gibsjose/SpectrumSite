@@ -115,7 +115,7 @@
         <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
         <script type="text/javascript">
             function PlotType() {
-                var pt = $('#plot_type');
+                var pt = $('#plot_type').select2("val");
 
                 console.log(pt);
 
