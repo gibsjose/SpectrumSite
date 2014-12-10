@@ -66,6 +66,7 @@
                 var grid_steering_v = $('#grid_steering').select2("val");
                 var pdf_steering_v = $('#pdf_steering').select2("val");
 
+                console.log(steering_v);
                 console.log(plot_type_v);
 
                 switch(plot_type_v) {
