@@ -80,19 +80,19 @@
                 }
 
                 var data_steerings_v = "";
-                for(d in data_steering_v) {
+                for each (d in data_steering_v) {
                     console.log("data_steering_v: " + data_steering_v);
                     console.log("d: " + d);
                     data_steerings_v += d + ",";
                 }
 
                 var grid_steerings_v = "";
-                for(g in grid_steering_v) {
+                for each (g in grid_steering_v) {
                     grid_steerings_v += g + ",";
                 }
 
                 var pdf_steerings_v = "";
-                for(p in pdf_steering_v) {
+                for each (p in pdf_steering_v) {
                     pdf_steerings_v += p + ",";
                 }
 
