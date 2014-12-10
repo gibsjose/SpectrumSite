@@ -130,11 +130,12 @@
                         <div id="form-container">
                             <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
                                 <fieldset>
-                                    <label for="steering">Steering File</label>
+                                    <label for="steering">Pre-Defined Plots</label>
                                     <select class="pure-u-2-5" name="steering" id="steering">
+                                        <select data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:350px;" tabindex="4">
                                         <option>None</option>
                                     </select>
-
+                                    <hr>
                                     <label for="plot_type">Plot Type</label>
                                     <select class="pure-u-2-5" name="plot_type" id="plot_type" onchange="if (this.selectedIndex) PlotTypeChanged();">
                                         <option value="0">1 Data, 1 Grid, 1 PDF</option>

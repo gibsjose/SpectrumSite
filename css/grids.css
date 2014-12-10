@@ -58,10 +58,10 @@ label {
 
 /* This is the class used for the footer */
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
-    z-index: 4;
+    z-index: 0;
 
     font-family: 'Lato', sans-serif;
     font-style: normal;
