@@ -131,13 +131,13 @@
                             <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
                                 <fieldset>
                                     <label for="steering">Pre-Defined Plots</label>
-                                    <select class="pure-u-2-5" name="steering" id="steering">
-                                        <select data-placeholder="Choose a Country..." class="chosen-select" multiple style="width:350px;" tabindex="4">
+                                    <!-- <select class="pure-u-2-5" name="steering" id="steering"> -->
+                                    <select name="steering" id="steering" data-placeholder="Pre-Defined Plot" class="pure-u-2-5 chosen-select">
                                         <option>None</option>
                                     </select>
                                     <hr>
                                     <label for="plot_type">Plot Type</label>
-                                    <select class="pure-u-2-5" name="plot_type" id="plot_type" onchange="if (this.selectedIndex) PlotTypeChanged();">
+                                    <select class="pure-u-2-5 chosen-select-deselect" name="plot_type" id="plot_type" multiple onchange="if (this.selectedIndex) PlotTypeChanged();">
                                         <option value="0">1 Data, 1 Grid, 1 PDF</option>
                                         <option value="1">N Data, N Grids, 1 PDF</option>
                                         <option value="2">1 Data, N Grids, 1 PDF</option>
@@ -194,11 +194,11 @@
         <script type="text/javascript">
         document.observe('dom:loaded', function(evt) {
             var config = {
-                '.steering'           : {},
-                '.data_steering'  : {allow_single_deselect:true},
-                '.grid_steering' : {disable_search_threshold:10},
-                '.pdf_steering': {no_results_text: "Oops, nothing found!"}
-                //'.chosen-select-width'     : {width: "95%"}
+                '.chosen-select'           : {},
+                '.chosen-select-deselect'  : {allow_single_deselect:true},
+                '.chosen-select-no-single' : {disable_search_threshold:10},
+                '.chosen-select-no-results': {no_results_text: "Oops, nothing found!"},
+                '.chosen-select-width'     : {width: "95%"}
             }
             var results = [];
             for (var selector in config) {
