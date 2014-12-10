@@ -60,14 +60,14 @@
                 // var grid_steering_v = document.getElementById('grid_steering').value;
                 // var pdf_steering_v = document.getElementById('pdf_steering').value;
 
-                var steering_v = $('#steering').select2("val");
+                var steering_v = document.getElementById('steering').value;
                 var plot_type_v = $('#plot_type').select2("val");
                 var data_steering_v = $('#data_steering').select2("val");
                 var grid_steering_v = $('#grid_steering').select2("val");
                 var pdf_steering_v = $('#pdf_steering').select2("val");
 
-                console.log(steering_v);
-                console.log(plot_type_v);
+                console.log("steering_v: " + steering_v);
+                console.log("plot_type_v: " + plot_type_v);
 
                 switch(plot_type_v) {
                     case 0:
@@ -84,10 +84,10 @@
                         break;
                 }
 
-                console.log(plot_type_v);
-                console.log(data_steering_v);
-                console.log(grid_steering_v);
-                console.log(pdf_steering_v);
+                console.log("plot_type_v: " + plot_type_v);
+                console.log("data_steering_v: " + data_steering_v);
+                console.log("grid_steering_v: " + grid_steering_v);
+                console.log("pdf_steering_v: " + pdf_steering_v);
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
@@ -165,7 +165,7 @@
 
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
-                console.log(ds);
+                //console.log(ds);
 
                 var pt = $('#plot_type').select2("val");
 
@@ -178,12 +178,12 @@
 
             function GridSteering() {
                 var gs = $('#grid_steering').select2("val");
-                console.log(gs);
+                //console.log(gs);
             }
 
             function PDFSteering() {
                 var ps = $('#pdf_steering').select2("val");
-                console.log(ps);
+                //console.log(ps);
             }
         </script>
 
