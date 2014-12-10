@@ -89,27 +89,32 @@
             }
         </script>
 
-        <!-- Scans the Steering, Data Steering, Grid Steering, and PDF Steering directories and updates the forms based on their contents -->
+        <!-- Initialize the Forms -->
         <script type="text/javascript">
-            function UpdateForms() {
+            function InitializeForms() {
+
+                //Initialize the forms using the select2 interface: Default to Plot Type 0 (1, 1, 1)
                 $('#steering').select2();
                 $('#plot_type').select2();
-                $('#data_steering').select2({closeOnSelect: false});
-                $('#grid_steering').select2({closeOnSelect: false});
-                $('#pdf_steering').select2({closeOnSelect: false});
+                $('#data_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
+                $('#grid_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
+                $('#pdf_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
 
+                //Populate the forms with the data in the steering files
                 $('#steering').load('get_steering_files.php');
                 $('#data_steering').load('get_data_steering_files.php');
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
 
+                //Bind OnChange events
                 $('#plot_type').on("change", PlotType);
-                //$('#data_steering').on("change", DataSteering);
-                //$('#grid_steering').on("change", GridSteering);
+                $('#data_steering').on("change", DataSteering);
+                $('#grid_steering').on("change", GridSteering);
+                $('#pdf_steering').on("change", PDFSteering);
             }
 
             //Run this when the window is loaded
-            window.onload = UpdateForms;
+            window.onload = InitializeForms;
         </script>
 
         <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
@@ -119,8 +124,6 @@
 
                 if(pt == 0) {
                     console.log("1 Data, 1 Grid, 1 PDF");
-
-                    // $('#data_steering').select2({maximumSelectionSize: 1, formatSelectionTooBig: "You can only select 1 Data Steering File"});
                     $('#data_steering').select2({maximumSelectionSize: 1});
                     $('#grid_steering').select2({maximumSelectionSize: 1});
                     $('#pdf_steering').select2({maximumSelectionSize: 1});
@@ -143,6 +146,21 @@
                     $('#grid_steering').select2({maximumSelectionSize: 1});
                     $('#pdf_steering').select2({maximumSelectionSize: 0});
                 }
+            }
+
+            function DataSteering() {
+                var ds = $('#data_steering').select2("val");
+                console.log("ds");
+            }
+
+            function GridSteering() {
+                var gs = $('#grid_steering').select2("val");
+                console.log("gs");
+            }
+
+            function PDFSteering() {
+                var ps = $('#pdf_steering').select2("val");
+                console.log("ps");
             }
         </script>
     </head>
