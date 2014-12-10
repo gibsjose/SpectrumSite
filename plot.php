@@ -49,6 +49,10 @@
         <!-- Prototype -->
         <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
 
+        <!-- Chosen handling and configuration -->
+        <script src="chosen/chosen.proto.js" type="text/javascript"></script>
+        <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
+        
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
@@ -185,10 +189,6 @@
                 Designed by <a href="http://www.github.com/gibsjose">Joe Gibson</a> – CERN 2014.
             </div>
         </div>
-
-        <!-- Chosen handling and configuration -->
-        <script src="chosen/chosen.proto.js" type="text/javascript"></script>
-        <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
 
         <!--
         <script type="text/javascript">
