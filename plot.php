@@ -63,6 +63,10 @@
                 var data_steering_v = document.getElementById('data_steering').value;
                 var grid_steering_v = document.getElementById('grid_steering').value;
                 var pdf_steering_v = document.getElementById('pdf_steering').value;
+
+                console.log(data_steering_v);
+                console.log(grid_steering_v);
+                console.log(pdf_steering_v);
                 // var plot_title_v = document.getElementById('plot_title').value;
                 // var plot_band_v = document.getElementById('plot_band').checked;
                 // var plot_marker_v = document.getElementById('plot_marker').checked;
@@ -98,6 +102,10 @@
                 $('#data_steering').load('get_data_steering_files.php');
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
+
+                $('#plot_type').on("change", PlotType);
+                $('#data_steering').on("change", DataSteering);
+                $('#grid_steering').on("change", GridSteering);
             }
 
             //Run this when the window is loaded
@@ -105,7 +113,24 @@
         </script>
 
         <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
+        <script type="text/javascript">
+            function PlotType() {
+                var pt = $('#plot_type').value;
 
+                if(pt == 0) {
+                    console.log("1 Data, 1 Grid, 1 PDF");
+                }
+                else if(pt == 1) {
+                    console.log("N Data, N Grids, 1 PDF");
+                }
+                else if(pt == 2) {
+                    console.log("1 Data, N Grids, 1 PDF");
+                }
+                else if(pt == 3) {
+                    console.log("1 Data, 1 Grid, N PDFs");
+                }
+            }
+        </script>
     </head>
 
     <body>
