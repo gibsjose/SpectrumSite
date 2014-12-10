@@ -52,7 +52,7 @@
         <!-- Chosen handling and configuration -->
         <script src="chosen/chosen.proto.js" type="text/javascript"></script>
         <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
-        
+
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
@@ -105,8 +105,8 @@
                 jQuery('#grid_steering').load('get_grid_steering_files.php');
                 jQuery('#pdf_steering').load('get_pdf_steering_files.php');
 
-                $('.chosen-select').chosen();
-                $('.chosen-select-deselect').chosen({allow_single_deselect:true});
+                jQuery('.chosen-select').chosen();
+                jQuery('.chosen-select-deselect').chosen({allow_single_deselect:true});
             }
 
             //Run this when the window is loaded
