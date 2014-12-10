@@ -43,7 +43,7 @@ label {
     top: 10%;
     width: 100%;
     /*min-height: 90%;*/
-    z-index: 0;
+    z-index: 2;
     background: #000000;
 }
 
@@ -59,7 +59,7 @@ label {
     position: relative;
     bottom: 0;
     width: 100%;
-    z-index: 0;
+    z-index: 4;
 
     font-family: 'Lato', sans-serif;
     font-style: normal;
