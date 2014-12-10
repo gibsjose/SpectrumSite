@@ -43,6 +43,9 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
 
+        <!-- Prototype -->
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js"></script>
+
         <!-- jQuery -->
         <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
 
@@ -178,7 +181,6 @@
         </div>
 
         <!-- Chosen handling and configuration -->
-        <!--<script src="https://ajax.googleapis.com/ajax/libs/prototype/1.7.0.0/prototype.js" type="text/javascript"></script> -->
         <script src="chosen/chosen.proto.js" type="text/javascript"></script>
         <script src="chosen/docsupport/prism.js" type="text/javascript" charset="utf-8"></script>
         <script type="text/javascript">
