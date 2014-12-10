@@ -79,10 +79,6 @@
                     plot_type_v = "data,grid,pdf[]";
                 }
 
-                var data_steering_n = dsv.length;
-                var grid_steering_n = gsv.length;
-                var pdf_steering_n = psv.length;
-
                 console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
                 console.log("data_steering_v: " + data_steering_v);
