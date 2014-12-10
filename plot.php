@@ -81,36 +81,15 @@
         <script type="text/javascript">
 
             function ClearDataSteeringFiles() {
-                $("#data_steering").select2("val", "");
-
-                // $('#data_steering').each(function() {
-                //     if(this.defaultSelected) {
-                //         this.selected = true;
-                //         return false;
-                //     }
-                // });
+                $("#data_steering").select2("data", null);
             }
 
             function ClearGridSteeringFiles() {
-                $("#grid_steering").select2("val", "");
-
-                // $('#grid_steering').each(function() {
-                //     if(this.defaultSelected) {
-                //         this.selected = true;
-                //         return false;
-                //     }
-                // });
+                $("#grid_steering").select2("data", null);
             }
 
             function ClearPDFSteeringFiles() {
-                $("#pdf_steering").select2("val", "");
-
-                // $('#pdf_steering').each(function() {
-                //     if(this.defaultSelected) {
-                //         this.selected = true;
-                //         return false;
-                //     }
-                // });
+                $("#pdf_steering").select2("data", null);
             }
 
             function ClearAllSteeringFiles() {
