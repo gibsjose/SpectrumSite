@@ -59,7 +59,7 @@ label {
     position: fixed;
     bottom: 0;
     width: 100%;
-    z-index: 0;
+    z-index: 4;
 
     font-family: 'Lato', sans-serif;
     font-style: normal;
