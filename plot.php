@@ -104,8 +104,8 @@
                 $('#pdf_steering').load('get_pdf_steering_files.php');
 
                 $('#plot_type').on("change", PlotType);
-                $('#data_steering').on("change", DataSteering);
-                $('#grid_steering').on("change", GridSteering);
+                //$('#data_steering').on("change", DataSteering);
+                //$('#grid_steering').on("change", GridSteering);
             }
 
             //Run this when the window is loaded
@@ -116,6 +116,8 @@
         <script type="text/javascript">
             function PlotType() {
                 var pt = $('#plot_type').value;
+
+                console.log($('#plot_type').value);
 
                 if(pt == 0) {
                     console.log("1 Data, 1 Grid, 1 PDF");
@@ -165,7 +167,7 @@
                                     <hr color="#39B54A" width="100%" size="2" align="left">
                                     <br>
                                     <label for="plot_type">Plot Type</label>
-                                    <select class="pure-u-1" name="plot_type" id="plot_type" onchange="if (this.selectedIndex) PlotTypeChanged();">
+                                    <select class="pure-u-1" name="plot_type" id="plot_type">
                                         <option value="0">1 Data, 1 Grid, 1 PDF</option>
                                         <option value="1">N Data, N Grids, 1 PDF</option>
                                         <option value="2">1 Data, N Grids, 1 PDF</option>
