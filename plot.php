@@ -112,7 +112,9 @@
                 else if(pt == 1) {
                     console.log("N Data, N Grids, 1 PDF");
                     $('#data_steering').select2({maximumSelectionSize: 0});
-                    $('#grid_steering').select2({maximumSelectionSize: 0});
+
+                    //Set this to 1 because it will be properly set when N data files are selected
+                    $('#grid_steering').select2({maximumSelectionSize: 1});
                     $('#pdf_steering').select2({maximumSelectionSize: 1});
 
                     ClearAllSteeringFiles();
