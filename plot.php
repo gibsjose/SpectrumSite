@@ -125,7 +125,7 @@
         </div>
         <div class="content-wrapper">
             <div class="content">
-                <h2 class="content-head is-center">Plot</h2>
+                <!-- <h2 class="content-head is-center">Plot</h2> -->
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
                         <div id="form-container">
@@ -139,7 +139,7 @@
                                     <!-- <hr color="#39B54A" width="60%" size="2" align="left">
                                     <br> -->
                                     <label for="plot_type">Plot Type</label>
-                                    <select class="pure-u-2-5 chosen-select-deselect" name="plot_type" id="plot_type" multiple onchange="if (this.selectedIndex) PlotTypeChanged();">
+                                    <select class="pure-u-2-5 chosen-select" name="plot_type" id="plot_type" onchange="if (this.selectedIndex) PlotTypeChanged();">
                                         <option value="0">1 Data, 1 Grid, 1 PDF</option>
                                         <option value="1">N Data, N Grids, 1 PDF</option>
                                         <option value="2">1 Data, N Grids, 1 PDF</option>
@@ -147,17 +147,17 @@
                                     </select>
 
                                     <label for="data_steering">Data Steering File</label>
-                                    <select class="pure-u-2-5" name="data_steering" id="data_steering" multiple="multiple">
+                                    <select class="pure-u-2-5 chosen-select-deselect" name="data_steering" id="data_steering" multiple>
                                         <option>None</option>
                                     </select>
 
                                     <label for="grid_steering">Grid Steering File</label>
-                                    <select class="pure-u-2-5" name="grid_steering" id="grid_steering" multiple="multiple">
+                                    <select class="pure-u-2-5 chosen-select-deselect" name="grid_steering" id="grid_steering" multiple>
                                         <option>None</option>
                                     </select>
 
                                     <label for="pdf_steering">PDF Steering File</label>
-                                    <select class="pure-u-2-5" name="pdf_steering" id="pdf_steering" multiple="multiple">
+                                    <select class="pure-u-2-5 chosen-select-deselect" name="pdf_steering" id="pdf_steering" multiple>
                                         <option>None</option>
                                     </select>
                                     <br>
