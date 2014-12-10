@@ -10,9 +10,9 @@
         <link rel="shortcut icon" href="img/spectrum_64.ico">
 
         <!-- Chosen -->
-        <link rel="stylesheet" href="chosen/docsupport/style.css">
-        <link rel="stylesheet" href="chosen/docsupport/prism.css">
-        <link rel="stylesheet" href="chosen/chosen.css">
+        <!-- <link rel="stylesheet" href="chosen/docsupport/style.css"> -->
+        <!-- <link rel="stylesheet" href="chosen/docsupport/prism.css"> -->
+        <!-- <link rel="stylesheet" href="chosen/chosen.css"> -->
         <style type="text/css" media="all">
         /* fix rtl for demo */
         .chosen-rtl .chosen-drop { left: -9000px; }
