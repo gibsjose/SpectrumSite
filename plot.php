@@ -81,7 +81,7 @@
         <script type="text/javascript">
 
             function ClearDataSteeringFiles() {
-                $("#data_steering").select2("val", null);
+                $("#data_steering").select2("val").length = 0;
 
                 // $('#data_steering').each(function() {
                 //     if(this.defaultSelected) {
@@ -92,7 +92,7 @@
             }
 
             function ClearGridSteeringFiles() {
-                $("#grid_steering").select2("val", null);
+                $("#grid_steering").select2("val").length = 0;
 
                 // $('#grid_steering').each(function() {
                 //     if(this.defaultSelected) {
@@ -103,7 +103,7 @@
             }
 
             function ClearPDFSteeringFiles() {
-                $("#pdf_steering").select2("val", null);
+                $("#pdf_steering").select2("val").length = 0;
 
                 // $('#pdf_steering').each(function() {
                 //     if(this.defaultSelected) {
