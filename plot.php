@@ -79,19 +79,34 @@
                     plot_type_v = "data,grid,pdf[]";
                 }
 
+                var data_steerings_v = "";
+                for(d in data_steering_v) {
+                    data_steerings_v += d + ",";
+                }
+
+                var grid_steerings_v = "";
+                for(g in grid_steering_v) {
+                    grid_steerings_v += g + ",";
+                }
+
+                var pdf_steerings_v = "";
+                for(p in pdf_steering_v) {
+                    pdf_steerings_v += p + ",";
+                }
+
                 console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
-                console.log("data_steering_v: " + data_steering_v);
-                console.log("grid_steering_v: " + grid_steering_v);
-                console.log("pdf_steering_v: " + pdf_steering_v);
+                console.log("data_steerings_v: " + data_steerings_v);
+                console.log("grid_steerings_v: " + grid_steerings_v);
+                console.log("pdf_steerings_v: " + pdf_steerings_v);
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
                     steering: steering_v,
                     plot_type: plot_type_v,
-                    data_steering: data_steering_v,
-                    grid_steering: grid_steering_v,
-                    pdf_steering: pdf_steering_v
+                    data_steering: data_steerings_v,
+                    grid_steering: grid_steerings_v,
+                    pdf_steering: pdf_steerings_v
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
