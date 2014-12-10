@@ -81,6 +81,8 @@
 
                 var data_steerings_v = "";
                 for(d in data_steering_v) {
+                    console.log("data_steering_v: " + data_steering_v);
+                    console.log("d: " + d);
                     data_steerings_v += d + ",";
                 }
 
