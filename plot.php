@@ -106,7 +106,7 @@
                 $('#grid_steering').load('get_grid_steering_files.php');
                 $('#pdf_steering').load('get_pdf_steering_files.php');
 
-                $('.chosen-select').trigger("chosen:updated");
+                $('#steering').trigger("chosen:updated");
                 $('.chosen-select-deselect').trigger("chosen:updated");
             }
 
