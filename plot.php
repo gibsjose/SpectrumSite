@@ -115,9 +115,9 @@
         <!-- When the user changes the plot type, update the multiplicity of the other select boxes -->
         <script type="text/javascript">
             function PlotType() {
-                var pt = $('#plot_type').value;
+                var pt = $('#plot_type');
 
-                console.log($('#plot_type').value);
+                console.log(pt);
 
                 if(pt == 0) {
                     console.log("1 Data, 1 Grid, 1 PDF");
