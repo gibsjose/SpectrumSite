@@ -322,8 +322,8 @@
                     <li><a href="index.html">HOME</a></li>
                     <li class="pure-menu-selected"><a href="plot.php">PLOT</a></li>
                     <li><a href="downloads.html">DOWNLOADS</a></li>
-                    <li><a href="grids.html">GRIDS</a></li>
-                    <li><a href="pdf-sets.html">PDF SETS</a></li>
+                    <!-- <li><a href="grids.html">GRIDS</a></li>
+                    <li><a href="pdf-sets.html">PDF SETS</a></li> -->
                 </ul>
             </div>
         </div>
@@ -339,6 +339,7 @@
                                     <select class="pure-u-1" name="steering" id="steering">
                                         <option>None</option>
                                     </select>
+                                    <br>
                                     <hr color="#39B54A" width="100%" size="2" align="left">
                                     <br>
                                     <label for="plot_type">Plot Type</label>
