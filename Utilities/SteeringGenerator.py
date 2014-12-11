@@ -13,12 +13,12 @@ def Write(_key, _file):
     print("Looking for key: " + key)
     if _key in d:
         _file.write(_key + ' = ' + d[_key] + '\n')
-        print("key found")
+        print("\tkey found")
     elif _key in defaults:
         _file.write(_key + ' = ' + defaults[_key] + '\n')
-        print("default key found")
+        print("\tdefault key found")
     else:
-        print("key not found")
+        print("\tkey not found")
 
 inputPath = sys.argv[1]
 outputPath = sys.argv[2]
