@@ -74,15 +74,6 @@
             $pdf_file = $pdf_file . basename($file) . ",";
         }
 
-        // $data_directory = dirname($data_steering);
-        // $data_file = basename($data_steering);
-        //
-        // $grid_directory = dirname($grid_steering);
-        // $grid_file = basename($grid_steering);
-        //
-        // $pdf_directory = dirname($pdf_steering);
-        // $pdf_file = basename($pdf_steering);
-
         $kvp_text = "plot_type = $plot_type\n".
                     "data_directory = $data_directory\n".
                     "grid_directory = $grid_directory\n".
@@ -134,7 +125,8 @@
     //Get the name of the plot
     $plots = glob('plots/*.png');
     if(count($plots) != 0) {
-        $plot = $plots[0];
+        //Append the timestamp to the file
+        $plot = $plots[0] . data(DATE_ATOM);
         $plotted = TRUE;
     } else {
         $plotted = FALSE;
