@@ -80,20 +80,33 @@
                 }
 
                 var data_steerings_v = "";
-                for (d of data_steering_v) {
-                    console.log("data_steering_v: " + data_steering_v);
-                    console.log("d: " + d);
-                    data_steerings_v += d + ",";
+                for(var i = 0; i < data_steering_v.length; i++) {
+                    if(i == (data_steering_v.length - 1)) {
+                        data_steerings_v += data_steering_v[i];
+                        break;
+                    } else {
+                        data_steerings_v += data_steering_v[i] + ", ";
+                    }
                 }
 
                 var grid_steerings_v = "";
-                for (g of grid_steering_v) {
-                    grid_steerings_v += g + ",";
+                for(var i = 0; i < grid_steering_v.length; i++) {
+                    if(i == (grid_steering_v.length - 1)) {
+                        grid_steerings_v += grid_steering_v[i];
+                        break;
+                    } else {
+                        grid_steerings_v += grid_steering_v[i] + ", ";
+                    }
                 }
 
                 var pdf_steerings_v = "";
-                for (p of pdf_steering_v) {
-                    pdf_steerings_v += p + ",";
+                for(var i = 0; i < pdf_steering_v.length; i++) {
+                    if(i == (pdf_steering_v.length - 1)) {
+                        pdf_steerings_v += pdf_steering_v[i];
+                        break;
+                    } else {
+                        pdf_steerings_v += pdf_steering_v[i] + ", ";
+                    }
                 }
 
                 console.log("steering_v: " + steering_v);
