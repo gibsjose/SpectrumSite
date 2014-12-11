@@ -373,7 +373,6 @@
                                     </label>
 
                                     <br>
-                                    <br>
                                     <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
                                 </fieldset>
                             </form>
