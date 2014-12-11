@@ -162,6 +162,8 @@
 ?>
 
 <?php if(($plotted == TRUE) && ($return_status == 0)) {?>
+    <br>
+    <br>
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
     <br>
     <br>
