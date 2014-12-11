@@ -126,11 +126,11 @@
     $plots = glob('plots/*.png');
     if(count($plots) != 0) {
         //Append the timestamp to the file
+        $plot_dir = dirname($plots[0]);
         $plot_name = basename($plots[0], '.png');
-        $timestamped_filename = $plot_name . date("Y-m-d\TH-i-s") . ".png";
-        print("<h3>TS: $timestamped_filename</h3>");
+        $timestamped_filename = $plot_dir . "/" . $plot_name . "-" . date("Y-m-d\TH-i-s") . ".png";
+        print("<h3>TS:   $timestamped_filename</h3>");
         rename($plots[0], $timestamped_filename);
-        print("<h2>$plots[0]</h2>");
         $plot = $timestamped_filename;
         $plotted = TRUE;
     } else {
