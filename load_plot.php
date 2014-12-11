@@ -126,7 +126,9 @@
     $plots = glob('plots/*.png');
     if(count($plots) != 0) {
         //Append the timestamp to the file
-        $plot = $plots[0] . data(DATE_ATOM);
+        $timestamped_filename = $plots[0] . date(DATE_ATOM);
+        renmame($plots[0], $timestamped_filename);
+        $plot = $timestamped_filename;
         $plotted = TRUE;
     } else {
         $plotted = FALSE;
