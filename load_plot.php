@@ -147,28 +147,29 @@
     <!-- @TODO Add 'download under anchor options to download the file instead of view it' -->
     <div class="pure-g" width="600px">
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='$plot'>") ?><button width="90%" color="#1F8DD6" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
+            <?php print("<a href='$plot'>") ?><button width="90%" class="button-plot pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='#'>") ?><button width="90%" color="#39B54A" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Data</button></a>
+            <?php print("<a href='#'>") ?><button width="90%" class="button-data pure-button"><i class="fa fa-chevron-circle-down"></i> Data</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='#'>") ?><button width="90%" color="#D4F447" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Grid</button></a>
+            <?php print("<a href='#'>") ?><button width="90%" class="button-grid pure-button"><i class="fa fa-chevron-circle-down"></i> Grid</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='$steering'>") ?><button width="90%" color="#Ef3E3E" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Steering</button></a>
+            <?php print("<a href='$steering'>") ?><button width="90%" class="button-steering pure-button"><i class="fa fa-chevron-circle-down"></i> Steering</button></a>
         </div>
     </div>
     <br>
-    <a href="./logs/error.log" target="_newtab"><button class="pure-button" width="600px" background="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
-    <a href="./logs/spectrum.log" target="_newtab"><button class="pure-button" width="600px" background="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
+    <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button" background="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
+    <br>
+    <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button" background="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
 <?php } else {?>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
     <br>
     <br>
-    <a href="./logs/error.log" target="_newtab"><button class="pure-button" width="600px" background="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
+    <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
     <br>
-    <a href="./logs/spectrum.log" target="_newtab"><button class="pure-button" width="600px" background="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
+    <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
 
 <?php } ?>
 

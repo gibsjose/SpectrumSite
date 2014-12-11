@@ -3,6 +3,37 @@
 * Style the form inputs and labels
 */
 
+/* Custom button colors */
+.button-plot {
+    background: #1F8DD6; /*Blue*/
+    width: auto;
+}
+
+.button-data {
+    background: #39B54A; /*Green*/
+    width: auto;
+}
+
+.button-grid {
+    background: #E4A91F; /*Orange*/
+    width: auto;
+}
+
+.button-steering {
+    background: #D4F447; /*Yellow*/
+    width: auto;
+}
+
+.button-error {
+    background: #Ef3E3E; /*Red*/
+    width: 600px;
+}
+
+.button-log {
+    background: #D4F447; /*Yellow*/
+    width: 600px;
+}
+
 .pure-form label {
     margin: 1em 0 0;
     font-weight: bold;
