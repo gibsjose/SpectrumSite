@@ -374,7 +374,7 @@
 
                                     <br>
                                     <br>
-                                    <button type="submit" id="submit" class="pure-button">Submit</button>
+                                    <button type="submit" id="submit" class="pure-button" width="90%"><i class="fa fa-rocket"></i> Go!</button>
                                 </fieldset>
                             </form>
                         </div>
