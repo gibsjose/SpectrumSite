@@ -124,7 +124,7 @@ Write('ratio_title', f)
 for i in range(0, 10):
     rs = 'ratio_style_' + str(i)
     r = 'ratio_' + str(i)
-    Write(rs)
-    Write(r)
+    Write(rs, f)
+    Write(r, f)
 
 f.close()
