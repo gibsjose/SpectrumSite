@@ -115,6 +115,9 @@ Write('display_style', f)
 Write('overlay_style', f)
 Write('ratio_title', f)
 
-#@TODO Implement ratios...
+#Look for up to 10 ratios
+for i in range(0, 10):
+    Write('ratio_style_' + i)
+    Write('ratio_' + i)
 
 f.close()
