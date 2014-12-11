@@ -54,7 +54,7 @@
         $pdf_directory = "";
         $pdf_file = "";
 
-        $ratio_style = explode(":", $ratio_style);
+        $ratio_styles = explode(":", $ratio_style);
         $ratios = explode(":", $ratio);
 
         //Get the data, grid, and pdf directories from the selected files
