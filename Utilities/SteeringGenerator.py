@@ -10,7 +10,7 @@ defaults = {}
 
 # Checks whether the key exists in the input dictionary
 def Write(_key, _file):
-    print("Looking for key: " + key)
+    print("\nLooking for key: " + _key)
     if _key in d:
         _file.write(_key + ' = ' + d[_key] + '\n')
         print("\tkey found")
