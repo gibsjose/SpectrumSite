@@ -147,16 +147,16 @@
     <!-- @TODO Add 'download under anchor options to download the file instead of view it' -->
     <div class="download-buttons pure-g is-center">
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='$plot'>") ?><button width="90%" class="button-plot pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
+            <a href=<?php print("\"$plot\"")?> target="_newtab"><button width="90%" class="button-plot pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='#'>") ?><button width="90%" class="button-data pure-button"><i class="fa fa-chevron-circle-down"></i> Data</button></a>
+            <a href=<?php print("\"#\"")?> target="_newtab"><button width="90%" class="button-data pure-button"><i class="fa fa-chevron-circle-down"></i> Data</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='#'>") ?><button width="90%" class="button-grid pure-button"><i class="fa fa-chevron-circle-down"></i> Grid</button></a>
+            <a href=<?php print("\"#\"")?> target="_newtab"><button width="90%" class="button-grid pure-button"><i class="fa fa-chevron-circle-down"></i> Grid</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='$steering'>") ?><button width="90%" class="button-steering pure-button"><i class="fa fa-chevron-circle-down"></i> Steering</button></a>
+            <a href=<?php print("\"$steering\"")?> target="_newtab"><button width="90%" class="button-steering pure-button"><i class="fa fa-chevron-circle-down"></i> Steering</button></a>
         </div>
     </div>
     <br>
