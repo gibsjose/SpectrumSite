@@ -145,18 +145,18 @@
     <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
 
-    <div class="pure-g">
+    <div class="pure-g" width="600px">
         <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='$plot' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Plot</button></a>
+            <?php print("<a href='$plot' download>") ?><button width="90%" class="pure-button"><i class="fa fa-chevron-circle-down"></i>Plot</button></a>
         </div>
         <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='#' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Data</button></a>
+            <?php print("<a href='#' download>") ?><button width="90%" class="pure-button"><i class="fa fa-chevron-circle-down"></i>Data</button></a>
         </div>
         <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='#' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Grid</button></a>
+            <?php print("<a href='#' download>") ?><button width="90%" class="pure-button"><i class="fa fa-chevron-circle-down"></i>Grid</button></a>
         </div>
         <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='$steering' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Steering</button></a>
+            <?php print("<a href='$steering' download>") ?><button width="90%" class="pure-button"><i class="fa fa-chevron-circle-down"></i>Steering</button></a>
         </div>
     </div>
 <?php } else {?>
