@@ -4,6 +4,10 @@
 */
 
 /* Custom button colors */
+.button-submit {
+    width: 90%;
+}
+
 .button-plot {
     background: #1F8DD6; /*Blue*/
     width: 90%;
