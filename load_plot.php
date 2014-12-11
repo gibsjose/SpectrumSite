@@ -146,7 +146,18 @@
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
 
     <div class="pure-g">
-        <?php print("<a href='$plot' download>") ?><button class="pure-button pure-u-1 pure-md-1-2 pure-lg-1-4"><i class="fa fa-chevron-circle-down"></i>Plot</button></a>
+        <div class="pure-u-1 pure-md-1-2 pure-lg-1-4">
+            <?php print("<a href='$plot' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Plot</button></a>
+        </div>
+        <div class="pure-u-1 pure-md-1-2 pure-lg-1-4">
+            <?php print("<a href='#' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Data</button></a>
+        </div>
+        <div class="pure-u-1 pure-md-1-2 pure-lg-1-4">
+            <?php print("<a href='#' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Grid</button></a>
+        </div>
+        <div class="pure-u-1 pure-md-1-2 pure-lg-1-4">
+            <?php print("<a href='$steering' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Steering</button></a>
+        </div>
     </div>
 <?php } else {?>
     <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
