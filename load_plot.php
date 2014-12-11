@@ -163,8 +163,9 @@
     <div class="error-log-buttons pure-g is-center">
         <div class="pure-u-1">
             <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
-            <br>
         </div>
+        <br>
+        <br>
         <div class="pure-u-1">
             <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
         </div>
@@ -176,8 +177,9 @@
     <div class="error-log-buttons pure-g is-center">
         <div class="pure-u-1">
             <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
-            <br>
         </div>
+        <br>
+        <br>
         <div class="pure-u-1">
             <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
         </div>
