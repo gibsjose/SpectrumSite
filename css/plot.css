@@ -6,22 +6,22 @@
 /* Custom button colors */
 .button-plot {
     background: #1F8DD6; /*Blue*/
-    width: auto;
+    width: 100px;
 }
 
 .button-data {
     background: #39B54A; /*Green*/
-    width: auto;
+    width: 100px;
 }
 
 .button-grid {
     background: #E4A91F; /*Orange*/
-    width: auto;
+    width: 100px;
 }
 
 .button-steering {
-    background: #D4F447; /*Yellow*/
-    width: auto;
+    background: #03AAAA; /*Teal*/
+    width: 100px;
 }
 
 .button-error {
@@ -30,7 +30,7 @@
 }
 
 .button-log {
-    background: #D4F447; /*Yellow*/
+    background: #03AAAA; /*Teal*/
     width: 600px;
 }
 

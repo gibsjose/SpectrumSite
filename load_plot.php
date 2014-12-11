@@ -160,17 +160,26 @@
         </div>
     </div>
     <br>
-    <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button" background="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
-    <br>
-    <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button" background="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
+    <div class="pure-g" width="600px">
+        <div class="pure-u-1">
+            <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
+        </div>
+        <div class="pure-u-1">
+            <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
+        </div>
+    </div>
 <?php } else {?>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
     <br>
     <br>
-    <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
-    <br>
-    <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
-
+    <div class="pure-g" width="600px">
+        <div class="pure-u-1">
+            <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
+        </div>
+        <div class="pure-u-1">
+            <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
+        </div>
+    </div>
 <?php } ?>
 
 <br>
