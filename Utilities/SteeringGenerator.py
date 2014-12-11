@@ -117,7 +117,9 @@ Write('ratio_title', f)
 
 #Look for up to 10 ratios
 for i in range(0, 10):
-    Write('ratio_style_' + i)
-    Write('ratio_' + i)
+    rs = 'ratio_style_' + str(i)
+    r = 'ratio_' + str(i)
+    Write(rs)
+    Write(r)
 
 f.close()
