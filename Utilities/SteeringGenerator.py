@@ -81,11 +81,11 @@ defaults['ratio_title'] = 'Ratio'
 f = open(outputPath, 'w')
 
 # [GEN]
-f.write('\n\n[GEN]\n')
+f.write('[GEN]\n')
 Write('debug', f)
 
 # [GRAPH]
-f.write('\n\n[GRAPH]\n')
+f.write('\n[GRAPH]\n')
 Write('plot_band', f)
 Write('plot_error_ticks', f)
 Write('plot_marker', f)
@@ -101,7 +101,7 @@ Write('y_ratio_min', f)
 Write('y_ratio_max', f)
 
 # [PLOT_0]
-f.write('\n\n[PLOT_0]\n')
+f.write('\n[PLOT_0]\n')
 Write('plot_type', f)
 Write('desc', f)
 Write('data_directory', f)
