@@ -21,6 +21,7 @@
     $data_steering = $_POST['data_steering'];
     $grid_steering = $_POST['grid_steering'];
     $pdf_steering = $_POST['pdf_steering'];
+    $display_style = $_POST['display_style'];
 ?>
 
 <!-- Write variables to file (settings.txt) -->
@@ -83,7 +84,8 @@
                     "pdf_directory = $pdf_directory\n".
                     "data_steering_files = $data_file\n".
                     "grid_steering_files = $grid_file\n".
-                    "pdf_steering_files = $pdf_file\n";
+                    "pdf_steering_files = $pdf_file\n".
+                    "display_style = $display_style\n";
 
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);

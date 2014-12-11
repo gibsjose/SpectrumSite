@@ -66,6 +66,20 @@
                 var grid_steering_v = $('#grid_steering').select2("val");
                 var pdf_steering_v = $('#pdf_steering').select2("val");
 
+                var display_style_v = "";
+                var overlay_v = document.getElementById('overlay').checked;
+                var ratio_v = document.getElementById('ratio').checked;
+
+                if(overlay_v && ratio_v) {
+                    display_style_v = "overlay, ratio";
+                } else if(overlay_v) {
+                    display_style_v = "overlay";
+                } else if(ratio_v) {
+                    display_style_v = "ratio";
+                } else {
+                    display_style_v = "";
+                }
+
                 if(plot_type_v == 0) {
                     plot_type_v = "data,grid,pdf";
                 }
@@ -114,6 +128,7 @@
                 console.log("data_steerings_v: " + data_steerings_v);
                 console.log("grid_steerings_v: " + grid_steerings_v);
                 console.log("pdf_steerings_v: " + pdf_steerings_v);
+                console.log("display_style_v: " + display_style_v);
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
@@ -121,7 +136,8 @@
                     plot_type: plot_type_v,
                     data_steering: data_steerings_v,
                     grid_steering: grid_steerings_v,
-                    pdf_steering: pdf_steerings_v
+                    pdf_steering: pdf_steerings_v,
+                    display_style: display_style_v
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
@@ -296,6 +312,15 @@
                                     <select class="pure-u-1" name="pdf_steering" id="pdf_steering" multiple>
                                         <option>None</option>
                                     </select>
+
+                                    <label for="overlay">
+                                        <input id="overlay" type="checkbox" checked> Overlay
+                                    </label>
+
+                                    <label for="ratio">
+                                        <input id="ratio" type="checkbox" checked> Ratio
+                                    </label>
+
                                     <br>
                                     <br>
                                     <button type="submit" id="submit" class="pure-button">Submit</button>
