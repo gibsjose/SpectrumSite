@@ -27,8 +27,16 @@ outputPath = sys.argv[2]
 #with open(inputPath, 'r') as f:
 f = open(inputPath, 'r')
 for line in f:
+    # Split the line based on the '='
     (key, val) = line.split(' = ')
+
+    # Strip newlines from the value
+    val.rstrip('\n');
+
+    #Store in the dictionary
     d[key] = val
+
+#Close the file
 f.close()
 
 # Create default dictionary
