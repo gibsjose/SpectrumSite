@@ -10,15 +10,10 @@ defaults = {}
 
 # Checks whether the key exists in the input dictionary
 def Write(_key, _file):
-    print("\nLooking for key: " + _key)
     if _key in d:
-        _file.write(_key + ' = ' + d[_key] + '\n')
-        print("\tkey found")
+        _file.write(_key + ' = ' + d[_key])
     elif _key in defaults:
         _file.write(_key + ' = ' + defaults[_key] + '\n')
-        print("\tdefault key found")
-    else:
-        print("\tkey not found")
 
 inputPath = sys.argv[1]
 outputPath = sys.argv[2]
