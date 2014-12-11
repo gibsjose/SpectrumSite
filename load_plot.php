@@ -146,38 +146,17 @@
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
 
     <div class="pure-g">
-        <div class="pure-u-1 pure-md-1-2 pure-lg-1-4">
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
             <?php print("<a href='$plot' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Plot</button></a>
         </div>
-        <div class="pure-u-1 pure-md-1-2 pure-lg-1-4">
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
             <?php print("<a href='#' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Data</button></a>
         </div>
-        <div class="pure-u-1 pure-md-1-2 pure-lg-1-4">
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
             <?php print("<a href='#' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Grid</button></a>
         </div>
-        <div class="pure-u-1 pure-md-1-2 pure-lg-1-4">
+        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
             <?php print("<a href='$steering' download>") ?><button class="pure-button"><i class="fa fa-chevron-circle-down"></i>Steering</button></a>
-        </div>
-    </div>
-
-    <div class="pure-g">
-        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-5">
-            <h3 class="content-subhead">
-                <i class="fa fa-rocket"></i>
-                Start Quickly
-            </h3>
-            <p>
-                A number of pre-configured plots are available for quick access to the most commonly used plots.
-            </p>
-        </div>
-        <div class="l-box pure-u-1 pure-u-md-1-2 pure-u-lg-1-5">
-            <h3 class="content-subhead">
-                <i class="fa fa-gears"></i>
-                Configure With Ease
-            </h3>
-            <p>
-                Configuring a Spectrum plot is simple due to the dynamic user interface and configuration help dialogues.
-            </p>
         </div>
     </div>
 <?php } else {?>
