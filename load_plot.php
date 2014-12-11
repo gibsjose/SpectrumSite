@@ -145,7 +145,7 @@
     <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
 
-    <div id = "pure-g">
+    <div class="pure-g">
         <?php print("<a href='$plot' download>") ?><button class="pure-button pure-u-1 pure-md-1-2 pure-lg-1-4"><i class="fa fa-chevron-circle-down"></i>Plot</button></a>
     </div>
 <?php } else {?>
