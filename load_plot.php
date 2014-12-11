@@ -143,8 +143,9 @@
 <?php if(($plotted == TRUE) && ($return_status == 0)) {?>
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
     <br>
+    <br>
     <!-- @TODO Add 'download under anchor options to download the file instead of view it' -->
-    <div class="pure-g" width="100px">
+    <div class="pure-g" width="600px">
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
             <?php print("<a href='$plot'>") ?><button width="90%" color="#1F8DD6" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
         </div>
@@ -159,14 +160,14 @@
         </div>
     </div>
     <br>
-    <h3><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h3>
-    <h3><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h3>
+    <a href="./logs/error.log" target="_newtab"><button class="pure-button" width="600px" color="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
+    <a href="./logs/spectrum.log" target="_newtab"><button class="pure-button" width="600px" color="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
 <?php } else {?>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
     <br>
     <br>
-    <h3><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h3>
-    <h3><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h3>
+    <a href="./logs/error.log" target="_newtab"><button class="pure-button" width="600px" color="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
+    <a href="./logs/spectrum.log" target="_newtab"><button class="pure-button" width="600px" color="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
 
 <?php } ?>
 
