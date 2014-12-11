@@ -160,14 +160,15 @@
         </div>
     </div>
     <br>
-    <a href="./logs/error.log" target="_newtab"><button class="pure-button" width="600px" color="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
-    <a href="./logs/spectrum.log" target="_newtab"><button class="pure-button" width="600px" color="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
+    <a href="./logs/error.log" target="_newtab"><button class="pure-button" width="600px" background="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
+    <a href="./logs/spectrum.log" target="_newtab"><button class="pure-button" width="600px" background="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
 <?php } else {?>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
     <br>
     <br>
-    <a href="./logs/error.log" target="_newtab"><button width="600px" color="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
-    <a href="./logs/spectrum.log" target="_newtab"><button width="600px" color="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
+    <a href="./logs/error.log" target="_newtab"><button class="pure-button" width="600px" background="#Ef3E3E"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
+    <br>
+    <a href="./logs/spectrum.log" target="_newtab"><button class="pure-button" width="600px" background="#D4F447"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
 
 <?php } ?>
 
