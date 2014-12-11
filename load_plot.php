@@ -129,9 +129,11 @@
         $plot_dir = dirname($plots[0]);
         $plot_name = basename($plots[0], '.png');
         $timestamped_filename = $plot_dir . "/" . $plot_name . "-" . date("Y-m-d\TH-i-s") . ".png";
-        print("<h3>TS:   $timestamped_filename</h3>");
+
+        //Rename the plot to the timestamped version
         rename($plots[0], $timestamped_filename);
         $plot = $timestamped_filename;
+        
         $plotted = TRUE;
     } else {
         $plotted = FALSE;
