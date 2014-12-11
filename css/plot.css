@@ -3,6 +3,49 @@
 * Style the form inputs and labels
 */
 
+/* Custom button colors */
+.button-submit {
+    width: 100%;
+}
+
+.button-plot {
+    background: #1F8DD6; /*Blue*/
+    width: 90%;
+}
+
+.button-data {
+    background: #39B54A; /*Green*/
+    width: 90%;
+}
+
+.button-grid {
+    background: #E4A91F; /*Orange*/
+    width: 90%;
+}
+
+.button-steering {
+    background: #03AAAA; /*Teal*/
+    width: 90%;
+}
+
+.button-error {
+    background: #Ef3E3E; /*Red*/
+    width: 600px;
+}
+
+.button-log {
+    background: #03AAAA; /*Teal*/
+    width: 600px;
+}
+
+.download-buttons {
+    width: 600px;
+}
+
+.error-log-buttons {
+    width: 600px;
+}
+
 .pure-form label {
     margin: 1em 0 0;
     font-weight: bold;
@@ -39,10 +82,9 @@ label {
 
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
-    /*position: absolute;*/
     top: 10%;
+    height: auto;
     width: 100%;
-    min-height: 90%;
     z-index: 2;
     background: #000000;
 }
@@ -56,7 +98,7 @@ label {
 }
 
 .footer {
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     z-index: 2;

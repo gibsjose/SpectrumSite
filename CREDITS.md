@@ -6,3 +6,4 @@
 * [Bootstrap](http://getbootstrap.com): Bootstrap CSS Library
 * [Particles](http://cssdeck.com/labs/particle-system-leaving-trails): Particle System Leaving Trails
 * [jNotify](http://cssdeck.com/labs/jnotify-bootstrap): jNotify to Bootstrap
+* [Select2](http://ivaynberg.github.io/select2/): Fancy select boxes

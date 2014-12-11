@@ -11,7 +11,7 @@ defaults = {}
 # Checks whether the key exists in the input dictionary
 def Write(_key, _file):
     if _key in d:
-        _file.write(_key + ' = ' + d[_key] + '\n')
+        _file.write(_key + ' = ' + d[_key])
     elif _key in defaults:
         _file.write(_key + ' = ' + defaults[_key] + '\n')
 
@@ -22,8 +22,16 @@ outputPath = sys.argv[2]
 #with open(inputPath, 'r') as f:
 f = open(inputPath, 'r')
 for line in f:
-    (key, val) = line.split()
+    # Split the line based on the '='
+    (key, val) = line.split(' = ')
+
+    # Strip newlines from the value
+    val.rstrip('\n');
+
+    #Store in the dictionary
     d[key] = val
+
+#Close the file
 f.close()
 
 # Create default dictionary
@@ -73,11 +81,11 @@ defaults['ratio_title'] = 'Ratio'
 f = open(outputPath, 'w')
 
 # [GEN]
-f.write('\n\n[GEN]\n')
+f.write('[GEN]\n')
 Write('debug', f)
 
 # [GRAPH]
-f.write('\n\n[GRAPH]\n')
+f.write('\n[GRAPH]\n')
 Write('plot_band', f)
 Write('plot_error_ticks', f)
 Write('plot_marker', f)
@@ -93,7 +101,7 @@ Write('y_ratio_min', f)
 Write('y_ratio_max', f)
 
 # [PLOT_0]
-f.write('\n\n[PLOT_0]\n')
+f.write('\n[PLOT_0]\n')
 Write('plot_type', f)
 Write('desc', f)
 Write('data_directory', f)
@@ -115,6 +123,11 @@ Write('display_style', f)
 Write('overlay_style', f)
 Write('ratio_title', f)
 
-#@TODO Implement ratios...
+#Look for up to 10 ratios
+for i in range(0, 10):
+    rs = 'ratio_style_' + str(i)
+    r = 'ratio_' + str(i)
+    Write(rs, f)
+    Write(r, f)
 
 f.close()
