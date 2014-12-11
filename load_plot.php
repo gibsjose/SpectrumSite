@@ -129,7 +129,7 @@
         $timestamped_filename = preg_replace(".png", "", $plots[0]) . date(DATE_ATOM) . ".png";
         print("<h3>$plots[0]</h3>");
         print("<h3>$timestamped_filename</h3>");
-        renmame($plots[0], $timestamped_filename);
+        rename($plots[0], $timestamped_filename);
         print("<h2>$plots[0]</h2>");
         $plot = $timestamped_filename;
         $plotted = TRUE;
