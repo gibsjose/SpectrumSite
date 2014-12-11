@@ -133,7 +133,7 @@
         //Rename the plot to the timestamped version
         rename($plots[0], $timestamped_filename);
         $plot = $timestamped_filename;
-        
+
         $plotted = TRUE;
     } else {
         $plotted = FALSE;
@@ -145,6 +145,9 @@
     <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
 
+    <div id = "pure-g">
+        <?php print("<a href='$plot'>") ?><button class="pure-button pure-u-1 pure-md-1-2 pure-lg-1-4"><i class="fa fa-chevron-circle-down"></i>Plot</button></a>
+    </div>
 <?php } else {?>
     <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
     <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
