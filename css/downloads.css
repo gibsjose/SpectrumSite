@@ -11,11 +11,9 @@ label {
 
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
-    /*position: absolute;*/
     top: 10%;
+    height: auto;
     width: 100%;
-    min-height: 90%;
-    /*min-height: 100%;*/
     z-index: 2;
     background: #000000;
 }
@@ -28,12 +26,11 @@ label {
     color: #39B54A;
 }
 
-/* This is the class used for the footer */
 .footer {
     position: relative;
     bottom: 0;
     width: 100%;
-    z-index: 0;
+    z-index: 2;
 
     font-family: 'Lato', sans-serif;
     font-style: normal;
