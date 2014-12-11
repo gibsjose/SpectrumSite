@@ -94,13 +94,13 @@
 
         $i = 0;
         foreach($ratio_styles as $rs) {
-            $kvp_text = $kvp_text . "ratio_style_" . $i . " = " . $rs;
+            $kvp_text = $kvp_text . "ratio_style_" . $i . " = " . $rs . "\n";
             $i = $i + 1;
         }
 
         $i = 0;
         foreach($ratios as $r) {
-            $kvp_text = $kvp_text . "ratio_" . $i . " = " . $r;
+            $kvp_text = $kvp_text . "ratio_" . $i . " = " . $r . "\n";
             $i = $i + 1;
         }
 
