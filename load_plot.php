@@ -22,6 +22,8 @@
     $grid_steering = $_POST['grid_steering'];
     $pdf_steering = $_POST['pdf_steering'];
     $display_style = $_POST['display_style'];
+    $ratio_style = $_POST['ratio_style'];
+    $ratio = $_POST['ratio'];
 ?>
 
 <!-- Write variables to file (settings.txt) -->

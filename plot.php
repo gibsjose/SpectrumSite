@@ -80,17 +80,64 @@
                     display_style_v = "";
                 }
 
+                var ratio_styles = "";
+                var ratios = "";
+
                 if(plot_type_v == 0) {
                     plot_type_v = "data,grid,pdf";
+
+                    for(var i = 0; i < data_steering_v.length; i++) {
+                        if(i == (data_steering_v.length - 1)) {
+                            ratio_styles += "convolute / data";
+                            ratios += "([grid_" + i + ", pdf_" + 0 + "]) / (data_" + i + ")";
+                            break;
+                        } else {
+                            ratio_styles += "convolute / data:";
+                            ratios += "([grid_" + i + ", pdf_" + 0 + "]) / (data_" + i + "):";
+                        }
+                    }
                 }
                 else if(plot_type_v == 1) {
                     plot_type_v = "data[],grid[],pdf";
+
+                    for(var i = 0; i < data_steering_v.length; i++) {
+                        if(i == (data_steering_v.length - 1)) {
+                            ratio_styles += "convolute / data";
+                            ratios += "([grid_" + i + ", pdf_" + 0 + "]) / (data_" + i + ")";
+                            break;
+                        } else {
+                            ratio_styles += "convolute / data:";
+                            ratios += "([grid_" + i + ", pdf_" + 0 + "]) / (data_" + i + "):";
+                        }
+                    }
                 }
                 else if(plot_type_v == 2) {
                     plot_type_v = "data,grid[],pdf";
+
+                    for(var i = 0; i < grid_steering_v.length; i++) {
+                        if(i == (grid_steering_v.length - 1)) {
+                            ratio_styles += "convolute / data";
+                            ratios += "([grid_" + i + ", pdf_" + 0 + "]) / (data_" + 0 + ")";
+                            break;
+                        } else {
+                            ratio_styles += "convolute / data:";
+                            ratios += "([grid_" + i + ", pdf_" + 0 + "]) / (data_" + 0 + "):";
+                        }
+                    }
                 }
                 else if(plot_type_v == 3) {
                     plot_type_v = "data,grid,pdf[]";
+
+                    for(var i = 0; i < pdf_steering_v.length; i++) {
+                        if(i == (pdf_steering_v.length - 1)) {
+                            ratio_styles += "convolute / data";
+                            ratios += "([grid_" + 0 + ", pdf_" + i + "]) / (data_" + 0 + ")";
+                            break;
+                        } else {
+                            ratio_styles += "convolute / data:";
+                            ratios += "([grid_" + 0 + ", pdf_" + i + "]) / (data_" + 0 + "):";
+                        }
+                    }
                 }
 
                 var data_steerings_v = "";
@@ -129,6 +176,8 @@
                 console.log("grid_steerings_v: " + grid_steerings_v);
                 console.log("pdf_steerings_v: " + pdf_steerings_v);
                 console.log("display_style_v: " + display_style_v);
+                console.log("ratio_styles: " + ratio_styles);
+                console.log("ratios: " + ratios);
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
@@ -137,7 +186,9 @@
                     data_steering: data_steerings_v,
                     grid_steering: grid_steerings_v,
                     pdf_steering: pdf_steerings_v,
-                    display_style: display_style_v
+                    display_style: display_style_v,
+                    ratio_style: ratio_styles,
+                    ratio: ratios
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
