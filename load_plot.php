@@ -144,7 +144,7 @@
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
     <br>
     <!-- @TODO Add 'download under anchor options to download the file instead of view it' -->
-    <div class="pure-g" width="600px">
+    <div class="pure-g" width="100px">
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
             <?php print("<a href='$plot'>") ?><button width="90%" color="#1F8DD6" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
         </div>
