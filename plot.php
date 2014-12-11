@@ -380,7 +380,7 @@
                         </div>
                     </div>
                     <div class="is-center pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
-                        <div id="canvas-container">
+                        <div class="is-center" id="canvas-container">
                             <canvas id="particle-canvas" width="600px" height="600px"></canvas>
                         </div>
                     </div>
