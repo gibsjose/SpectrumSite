@@ -67,9 +67,9 @@
             $data_directory = $data_directory . dirname($file) . ",";
             $data_file = $data_file . basename($file) . ",";
 
-            $actual_data_file = basename($data_file, '.txt') . "_data.txt";
-            $file_to_add = $data_directory . $actual_data_file;
-            $d_zip->addFile($file_to_add);
+            // $actual_data_file = basename($data_file, '.txt') . "_data.txt";
+            // $file_to_add = $data_directory . $actual_data_file;
+            // $d_zip->addFile($file_to_add);
         }
 
         $d_zip->close();
@@ -83,9 +83,9 @@
             $grid_directory = $grid_directory . dirname($file) . ",";
             $grid_file = $grid_file . basename($file) . ",";
 
-            $actual_grid_file = basename($grid_file, '.txt') . ".root";
-            $file_to_add = $grid_directory . $actual_grid_file;
-            $g_zip->addFile($file_to_add);
+            // $actual_grid_file = basename($grid_file, '.txt') . ".root";
+            // $file_to_add = $grid_directory . $actual_grid_file;
+            // $g_zip->addFile($file_to_add);
         }
 
         $g_zip->close();
