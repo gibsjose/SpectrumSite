@@ -270,17 +270,17 @@
                                     </select>
 
                                     <label for="data_steering">Data Steering File</label>
-                                    <select class="pure-u-1 chosen-select-deselect" name="data_steering" id="data_steering" multiple>
+                                    <select class="pure-u-1" name="data_steering" id="data_steering" multiple>
                                         <option>None</option>
                                     </select>
 
                                     <label for="grid_steering">Grid Steering File</label>
-                                    <select class="pure-u-1 chosen-select-deselect" name="grid_steering" id="grid_steering" multiple>
+                                    <select class="pure-u-1" name="grid_steering" id="grid_steering" multiple>
                                         <option>None</option>
                                     </select>
 
                                     <label for="pdf_steering">PDF Steering File</label>
-                                    <select class="pure-u-1 chosen-select-deselect" name="pdf_steering" id="pdf_steering" multiple>
+                                    <select class="pure-u-1" name="pdf_steering" id="pdf_steering" multiple>
                                         <option>None</option>
                                     </select>
                                     <br>

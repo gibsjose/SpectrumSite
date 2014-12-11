@@ -110,6 +110,7 @@
     exec("2>logs/error.log ./Spectrum/Spectrum -p $steering > logs/spectrum.log", $output, $return_status);
 ?>
 
+
 <?php
     //Get the name of the plot
     $plots = glob('plots/*.png');
@@ -124,7 +125,7 @@
 <?php if(($plotted == TRUE) && ($return_status == 0)) {?>
     <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
     <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
-<?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
+    <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
 
 <?php } else {?>
     <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
