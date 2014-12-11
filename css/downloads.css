@@ -12,7 +12,7 @@ label {
 .content-wrapper {
     /* These styles are required for the "scroll-over" effect */
     top: 10%;
-    height: auto;
+    height: 100%;
     width: 100%;
     z-index: 2;
     background: #000000;
@@ -27,7 +27,7 @@ label {
 }
 
 .footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 2;
