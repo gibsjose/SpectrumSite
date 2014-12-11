@@ -58,9 +58,9 @@
         $ratios = explode(":", $ratio);
 
         //Create the zip for the data files
-        $d_zip = new ZipArchive();
-        $data_zip_filename = "tmp/data.zip";
-        $d_zip->open($data_zip_filename, ZipArchive::CREATE);
+        // $d_zip = new ZipArchive();
+        // $data_zip_filename = "tmp/data.zip";
+        // $d_zip->open($data_zip_filename, ZipArchive::CREATE);
 
         //Get the data, grid, and pdf directories from the selected files
         foreach($data_steerings as $file) {
@@ -72,12 +72,12 @@
             // $d_zip->addFile($file_to_add);
         }
 
-        $d_zip->close();
+        // $d_zip->close();
 
         //Create the zip for the grid files
-        $g_zip = new ZipArchive();
-        $grids_zip_filename = "tmp/grids.zip";
-        $g_zip->open($grids_zip_filename, ZipArchive::CREATE);
+        // $g_zip = new ZipArchive();
+        // $grids_zip_filename = "tmp/grids.zip";
+        // $g_zip->open($grids_zip_filename, ZipArchive::CREATE);
 
         foreach($grid_steerings as $file) {
             $grid_directory = $grid_directory . dirname($file) . ",";
@@ -88,7 +88,7 @@
             // $g_zip->addFile($file_to_add);
         }
 
-        $g_zip->close();
+        // $g_zip->close();
 
         foreach($pdf_steerings as $file) {
             $pdf_directory = $pdf_directory . dirname($file) . ",";
