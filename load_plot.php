@@ -145,7 +145,7 @@
     <br>
     <br>
     <!-- @TODO Add 'download under anchor options to download the file instead of view it' -->
-    <div class="download-buttons pure-g">
+    <div class="download-buttons pure-g is-center">
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
             <?php print("<a href='$plot'>") ?><button width="90%" class="button-plot pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
         </div>
@@ -160,7 +160,7 @@
         </div>
     </div>
     <br>
-    <div class="error-log-buttons pure-g">
+    <div class="error-log-buttons pure-g is-center">
         <div class="pure-u-1">
             <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
         </div>
@@ -172,7 +172,7 @@
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
     <br>
     <br>
-    <div class="error-log-buttons pure-g">
+    <div class="error-log-buttons pure-g is-center">
         <div class="pure-u-1">
             <a href="./logs/error.log" target="_newtab"><button class="button-error pure-button"><i class="fa fa-exclamation-circle"></i> Spectrum Error Log</button></a>
         </div>
