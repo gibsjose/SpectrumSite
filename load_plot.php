@@ -54,6 +54,9 @@
         $pdf_directory = "";
         $pdf_file = "";
 
+        $ratio_style = explode(":", $ratio_style);
+        $ratios = explode(":", $ratio);
+
         //Get the data, grid, and pdf directories from the selected files
         foreach($data_steerings as $file) {
             //echo "<h2>$file</h2>";
@@ -88,6 +91,18 @@
                     "grid_steering_files = $grid_file\n".
                     "pdf_steering_files = $pdf_file\n".
                     "display_style = $display_style\n";
+
+        $i = 0;
+        foreach($ratio_styles as $rs) {
+            $kvp_text = $kvp_text . "ratio_style_" . $i . " = " . $rs;
+            $i = $i + 1;
+        }
+
+        $i = 0;
+        foreach($ratios as $r) {
+            $kvp_text = $kvp_text . "ratio_" . $i . " = " . $r;
+            $i = $i + 1;
+        }
 
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);
