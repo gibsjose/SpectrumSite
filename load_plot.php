@@ -107,11 +107,11 @@
             $steering = $output;
 
             //Generate a link to the generated file for viewing
-            print("<h2><a href=\"$steering\" target=\"_newtab\">Steering File</a></h2>");
+            //print("<h2><a href=\"$steering\" target=\"_newtab\">Steering File</a></h2>");
         }
     } else {
         //Print the Steering File name if a pre-built file was specified
-        print("<h2>$steering</h2>");
+        //print("<h2>$steering</h2>");
     }
 ?>
 
@@ -141,30 +141,33 @@
 ?>
 
 <?php if(($plotted == TRUE) && ($return_status == 0)) {?>
-    <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
-    <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
-
+    <br>
+    <!-- @TODO Add 'download under anchor options to download the file instead of view it' -->
     <div class="pure-g" width="600px">
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='$plot' download>") ?><button width="90%" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
+            <?php print("<a href='$plot'>") ?><button width="90%" color="#1F8DD6" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Plot</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='#' download>") ?><button width="90%" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Data</button></a>
+            <?php print("<a href='#'>") ?><button width="90%" color="#39B54A" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Data</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='#' download>") ?><button width="90%" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Grid</button></a>
+            <?php print("<a href='#'>") ?><button width="90%" color="#D4F447" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Grid</button></a>
         </div>
         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-4">
-            <?php print("<a href='$steering' download>") ?><button width="90%" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Steering</button></a>
+            <?php print("<a href='$steering'>") ?><button width="90%" color="#Ef3E3E" class="pure-button"><i class="fa fa-chevron-circle-down"></i> Steering</button></a>
         </div>
     </div>
+    <br>
+    <h3><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h3>
+    <h3><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h3>
 <?php } else {?>
-    <h2><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h2>
-    <h2><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h2>
-    <br>
-    <br>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
+    <br>
+    <br>
+    <h3><a href="./logs/error.log" target="_newtab">Spectrum Error Log</a></h3>
+    <h3><a href="./logs/spectrum.log" target="_newtab">Spectrum Log</a></h3>
+
 <?php } ?>
 
 <br>
