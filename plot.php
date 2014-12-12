@@ -218,7 +218,7 @@
             }
 
             function EnableDataSteeringSelect() {
-                $('#data_steering').enable("enable", true);
+                $('#data_steering').select2("enable", true);
             }
 
             function DisableDataSteeringSelect() {
