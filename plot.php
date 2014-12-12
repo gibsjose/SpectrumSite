@@ -336,8 +336,8 @@
             $('#plot_type').select2();
             $('#observable').select2();
             $('#observable').select2('val', 'None');
-            $('#data_steering').select2({closeOnSelect: false, maximumSelectionSize: 1, enable: false});
-            $('#grid_steering').select2({closeOnSelect: false, maximumSelectionSize: 1, enable: false});
+            $('#data_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
+            $('#grid_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
             $('#pdf_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
 
             //Populate the forms with the data in the steering files
@@ -353,6 +353,10 @@
             $('#data_steering').on("select2-remove", DataSteering);
             $('#grid_steering').on("change", GridSteering);
             $('#pdf_steering').on("change", PDFSteering);
+
+            //Default to Data/Grid disabled
+            DisableDataSteeringSelect();
+            DisableGridSteeringSelect();
         }
 
         //Run this when the window is loaded
