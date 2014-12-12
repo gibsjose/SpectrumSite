@@ -218,19 +218,19 @@
             }
 
             function EnableDataSteeringSelect() {
-                $('#data_steering').enable(true);
+                $('#data_steering').enable("enable", true);
             }
 
             function DisableDataSteeringSelect() {
-                $('#data_steering').enable(false);
+                $('#data_steering').select2("enable", false);
             }
 
             function EnableGridSteeringSelect() {
-                $('#grid_steering').enable(true);
+                $('#grid_steering').select2("enable", true);
             }
 
             function DisableGridSteeringSelect() {
-                $('#grid_steering').enable(false);
+                $('#grid_steering').select2("enable", false);
             }
 
             function PlotType() {
