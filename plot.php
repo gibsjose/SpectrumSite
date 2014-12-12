@@ -333,6 +333,7 @@
             $('#steering').select2();
             $('#plot_type').select2();
             $('#observable').select2();
+            $('#observable').select2('val', 'None');
             $('#data_steering').select2({closeOnSelect: false, maximumSelectionSize: 1, enabled: false});
             $('#grid_steering').select2({closeOnSelect: false, maximumSelectionSize: 1, enabled: false});
             $('#pdf_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
