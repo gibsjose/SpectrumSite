@@ -256,6 +256,12 @@
                 }
             }
 
+            function Observable() {
+                var obs = $('#observable').select2("val");
+
+                $('#test-container').load('Utilities/Configuration.py -o \"' + obs + '\"');
+            }
+
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
                 //console.log(ds);
@@ -287,6 +293,7 @@
             //Initialize the forms using the select2 interface: Default to Plot Type 0 (1, 1, 1)
             $('#steering').select2();
             $('#plot_type').select2();
+            $('#observable').select2();
             $('#data_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
             $('#grid_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
             $('#pdf_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
@@ -299,6 +306,7 @@
 
             //Bind OnChange events
             $('#plot_type').on("change", PlotType);
+            $('#observable').on("change", Observable);
             $('#data_steering').on("change", DataSteering);
             $('#data_steering').on("select2-remove", DataSteering);
             $('#grid_steering').on("change", GridSteering);
@@ -330,6 +338,8 @@
         <div class="content-wrapper">
             <div class="content">
                 <h2 class="content-head is-center">Spectrum Plot</h2>
+                <div id="test-container">
+                </div>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
                         <div id="form-container">
@@ -348,6 +358,14 @@
                                         <option value="1">N Data, N Grids, 1 PDF</option>
                                         <option value="2">1 Data, N Grids, 1 PDF</option>
                                         <option value="3">1 Data, 1 Grid, N PDFs</option>
+                                    </select>
+
+                                    <label for="observable">Observable</label>
+                                    <select class="pure-u-1" name="observable" id="observable">
+                                        <option>None</option>
+                                        <option>Inclusive Z</option>
+                                        <option>Inclusive Jets</option>
+                                        <option>Top</option>
                                     </select>
 
                                     <label for="data_steering">Data Steering File</label>
