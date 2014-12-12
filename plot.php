@@ -280,6 +280,8 @@
                     ClearGridSteeringFiles();
                     DisableDataSteeringSelect();
                     DisableGridSteeringSelect();
+
+                    return;
                 }
 
                 var script_v = 'Utilities/Configuration.py';
@@ -334,8 +336,8 @@
             $('#plot_type').select2();
             $('#observable').select2();
             $('#observable').select2('val', 'None');
-            $('#data_steering').select2({closeOnSelect: false, maximumSelectionSize: 1, enabled: false});
-            $('#grid_steering').select2({closeOnSelect: false, maximumSelectionSize: 1, enabled: false});
+            $('#data_steering').select2({closeOnSelect: false, maximumSelectionSize: 1, enable: false});
+            $('#grid_steering').select2({closeOnSelect: false, maximumSelectionSize: 1, enable: false});
             $('#pdf_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
 
             //Populate the forms with the data in the steering files
