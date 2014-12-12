@@ -259,10 +259,15 @@
             function Observable() {
                 var obs = $('#observable').select2("val");
 
-                var executableName = 'Utilities/Configuration.py -o \'' + obs + '\'';
-                console.log(executableName);
+                var script_v = 'Utilities/Configuration.py';
+                var flags_v = '-o \"' + obs + '\"';
 
-                $('#test-container').load(executableName);
+                data = {
+                    script: script_v,
+                    flags: flags_v
+                };
+
+                $('#test-container').load('run_script.php', data);
             }
 
             function DataSteering() {
