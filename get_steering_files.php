@@ -1,5 +1,5 @@
 <!-- Scan the 'Steering' directory and create options for each entry -->
-<?php
+<!-- <?php
     $output = shell_exec('find Steering/ -name *.txt');
     $steering_array = preg_split("/\r\n|\n|\r| /", $output);
 
@@ -10,4 +10,4 @@
         $stripped = basename($file, '.txt');
         echo "<option value='$full'>$stripped</option>\n";
     }
-?>
+?> -->
