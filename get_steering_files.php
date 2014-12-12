@@ -7,8 +7,7 @@
 
     foreach ($steering_array as $file) {
         $full = $file;
-        $stripped = preg_replace('Steering/', '', $file);
-        $stripped = basename($stripped, '.txt');
+        $stripped = basename($file, '.txt');
         echo "<option value='$full'>$stripped</option>\n";
     }
 ?>
