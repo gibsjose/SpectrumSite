@@ -267,7 +267,7 @@
                     flags: flags_v
                 };
 
-                $('#test-container').load('run_script.php', data);
+                $('#data_steering').load('run_script.php', data);
             }
 
             function DataSteering() {
