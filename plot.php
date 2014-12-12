@@ -217,6 +217,22 @@
                 ClearPDFSteeringFiles();
             }
 
+            function EnableDataSteeringSelect() {
+                $('#data_steering').select2("enable", true);
+            }
+
+            function DisableDataSteeringSelect() {
+                $('#data_steering').select2("enable", false);
+            }
+
+            function EnableGridSteeringSelect() {
+                $('#grid_steering').select2("enable", true);
+            }
+
+            function DisableGridSteeringSelect() {
+                $('#grid_steering').select2("enable", false);
+            }
+
             function PlotType() {
                 var pt = $('#plot_type').select2("val");
 
@@ -259,6 +275,13 @@
             function Observable() {
                 var obs = $('#observable').select2("val");
 
+                if(obs == "None") {
+                    ClearDataSteeringFiles();
+                    ClearGridSteeringFiles();
+                    DisableDataSteeringSelect();
+                    DisableGridSteeringSelect();
+                }
+
                 var script_v = 'Utilities/Configuration.py';
                 var flags_v = '-o \"' + obs + '\"';
 
@@ -268,11 +291,16 @@
                 };
 
                 $('#data_steering').load('run_script.php', data);
+
+                ClearDataSteeringFiles();
+                ClearGridSteeringFiles();
+
+                EnableDataSteeringSelect();
+                DisableGridSteeringSelect();
             }
 
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
-                //console.log(ds);
 
                 var pt = $('#plot_type').select2("val");
 
@@ -281,6 +309,9 @@
                     console.log("Setting max for grids to " + ds.length);
                     $('#grid_steering').select2({maximumSelectionSize: ds.length});
                 }
+
+                ClearGridSteeringFiles();
+                EnableGridSteeringSelect();
             }
 
             function GridSteering() {
