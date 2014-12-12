@@ -1,0 +1,22 @@
+body {
+  background: #EEE;
+  overflow: hidden;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 350px;
+  z-index: 9999;
+}
+
+.buttons {
+  position: absolute;
+  width: 600px;
+  top: 35%;
+  left: 50%;
+  margin-left: -300px;
+  text-align: center;
+  line-height: 60px;
+}

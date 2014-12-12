@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="http://bootswatch.com/paper/bootstrap.min.css">
+        <link rel="stylesheet" href="notify.css">
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="notify.js"></script>
+
+        <script type="text/javascript">
+          $(document).ready(function () {
+
+            $('.notification').jnotifyInizialize({
+              oneAtTime: false,
+              appendType: 'append'
+            });
+
+            $('#success').click(function () {
+              $('.notification').jnotifyAddMessage({
+                text: 'Message demonstration for jnotify!',
+                type: 'success'
+              });
+            });
+
+            $('#info').click(function () {
+              $('.notification').jnotifyAddMessage({
+                text: 'Message demonstration for jnotify!',
+                type: 'info',
+                permanent: false,
+              });
+            });
+
+            $('#alert').click(function () {
+              $('.notification').jnotifyAddMessage({
+                text: 'Message demonstration for jnotify!',
+                type: 'warning',
+                permanent: false,
+              });
+            });
+
+            $('#error').click(function () {
+              $('.notification').jnotifyAddMessage({
+                text: 'Message demonstration for jnotify!',
+                type: 'error',
+                permanent: false
+              });
+            });
+
+            $('#permanent').click(function () {
+              $('.notification').jnotifyAddMessage({
+                text: 'Message demonstration for jnotify!',
+                type: 'error',
+                permanent: true
+              });
+            });
+
+          });
+        </script>
+    </head>
+
+    <body>
+        <div class="notification notify-wrapper notify-wrapper-prepend"></div>
+
+        <div class="buttons">
+          <h3>jQuery jNotify to Bootstrap <small>v0.8</small></h3>
+          <p><small>Click the buttons to view the types of alerts</small></p>
+          <button id="success" class="btn btn-success">Success</button>
+          <button id="alert" class="btn btn-warning">Alert</button>
+          <button id="info" class="btn btn-info">Information</button>
+          <button id="error" class="btn btn-danger">Error</button>
+          <button id="permanent" class="btn btn-danger">Permanent</button>
+        </div>
+    </body>
+</html>
