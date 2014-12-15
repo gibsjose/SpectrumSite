@@ -501,7 +501,7 @@
                                     <h3>Overlay</h3>
                                     <div class="pure-g" width="80%">
                                         <input class="pure-u-1-3" placeholder="Min" id="y_overlay_min">
-                                        <h2><i class="pure-u-1-3 fa fa-arrows-h"></i></h2>
+                                        <h2 class="pure-u-1-3"><i class="fa fa-arrows-h"></i></h2>
                                         <input class="pure-u-1-3" placeholder="Max" id="y_overlay_min">
                                     </div>
 
