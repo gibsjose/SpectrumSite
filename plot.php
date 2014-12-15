@@ -309,6 +309,7 @@
 
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
+                var text = $('#data_steering').select2('data').text;
 
                 var pt = $('#plot_type').select2("val");
 
@@ -320,7 +321,7 @@
 
                 //Load the grid with the options corresponding to the data file
                 var script_v = 'Utilities/Configuration.py';
-                var flags_v = '-d "' + ds + '"';
+                var flags_v = '-d "' + text + '"';
 
                 data = {
                     script: script_v,
