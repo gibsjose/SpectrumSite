@@ -500,9 +500,13 @@
 
                                     <h3>Overlay</h3>
                                     <div class="pure-g">
-                                        <input class="pure-u-1-3" placeholder="Min" id="y_overlay_min">
+                                        <div class="pure-u-1-3">
+                                            <input placeholder="Min" id="y_overlay_min">
+                                        </div>
                                         <h2 size="60px" class="is-center pure-u-1-3"><i class="fa fa-arrows-h"></i></h2>
-                                        <input class="pure-u-1-3" placeholder="Max" id="y_overlay_max">
+                                        <div class="pure-u-1-3">
+                                            <input placeholder="Max" id="y_overlay_max">
+                                        </div>
                                     </div>
 
                                     <h3>Ratio</h3>
