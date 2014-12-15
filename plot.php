@@ -44,6 +44,7 @@
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
+
                 //Replace the container content with the particle canvas to run the animation each time
                 $('#canvas-container').html(function() {
                     canvas = "<canvas id='particle-canvas' width='600px' height='600px'></canvas>";
@@ -55,11 +56,6 @@
                 Collision();
 
                 //Get all the variables from the form
-                // var steering_v = document.getElementById('steering').value;
-                // var data_steering_v = document.getElementById('data_steering').value;
-                // var grid_steering_v = document.getElementById('grid_steering').value;
-                // var pdf_steering_v = document.getElementById('pdf_steering').value;
-
                 var steering_v = document.getElementById('steering').value;
                 var plot_type_v = $('#plot_type').select2("val");
                 var data_steering_v = $('#data_steering').select2("val");
@@ -345,7 +341,12 @@
                     $('#grid_steering').load('run_script.php', script_data);
                 } else {
                     $('#test-container').append($('<div>').load('run_script.php', script_data));
-                    $('#grid_steering').append($('<option>').load('run_script.php', data));
+                    // $('#grid_steering').append($('<option>').load('run_script.php', data));
+
+                    $.get('run_script.php', script_data).done(function(data) {
+                        console.log("script_data " + script_data);
+                        console.log("Data " + data);
+                    });
 
                     // $.get('run_script.php', data, function(data){
                     //     $(data).appendTo("#grid_steering")
