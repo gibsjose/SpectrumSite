@@ -498,8 +498,8 @@
                                         <input id="y_log" type="checkbox" checked> Logarithmic Y Axis
                                     </label>
 
-                                    <h4>Overlay</h4>
-                                    <div class="pure-g" width="50%">
+                                    <h3>Overlay</h3>
+                                    <div class="pure-g" width="80%">
                                         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
                                             <input placeholder="min" id="y_overlay_min">
                                         </div>
@@ -509,8 +509,8 @@
                                         </div>
                                     </div>
 
-                                    <h4>Ratio</h4>
-                                    <div class="pure-g" width="50%">
+                                    <h3>Ratio</h3>
+                                    <div class="pure-g" width="80%">
                                         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
                                             <input placeholder="min" id="y_ratio_min">
                                         </div>
