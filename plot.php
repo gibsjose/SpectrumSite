@@ -310,15 +310,16 @@
                 var count = ds.length;
                 var text;
 
+                console.log("ds " + ds);
+                console.log("index " + index);
+                console.log("data " + data);
+
                 if(count > 0) {
                     text = data[index].text;
                 } else {
                     text = " ";
                 }
 
-                console.log("ds " + ds);
-                console.log("index " + index);
-                console.log("data " + data);
                 console.log("count " + count);
 
                 var pt = $('#plot_type').select2("val");
