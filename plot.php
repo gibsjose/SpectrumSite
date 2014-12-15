@@ -347,9 +347,14 @@
                     $('#test-container').append($('<div>').load('run_script.php', data));
                     //$('#grid_steering').append($('<select>').load('run_script.php', data));
 
-                    $.get('run_script.php', data, function(data){
-                        $(data).appendTo("#grid_steering")
-                    }, 'text' );
+                    // $.get('run_script.php', data, function(data){
+                    //     $(data).appendTo("#grid_steering")
+                    // }, 'text' );
+
+                    $.get( "run_script.php", data)
+                    .done(function(_data) {
+                        alert( "Data Loaded: " + _data );
+                    });
                 }
 
                 ClearGridSteeringFiles();
