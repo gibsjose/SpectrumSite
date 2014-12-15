@@ -305,13 +305,12 @@
 
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
-                var index = $("#data_steering")[0].selectedIndex;
+                // var index = $("#data_steering")[0].selectedIndex;
                 var data = $('#data_steering').select2('data');
                 var count = ds.length;
                 var text;
 
                 console.log("ds " + ds);
-                console.log("index " + index);
                 console.log("data " + data);
                 console.log("count " + count);
 
@@ -321,11 +320,12 @@
                     text = " ";
                 }
 
+                console.log("text " + text);
+
                 var pt = $('#plot_type').select2("val");
 
                 //Limit the number of grid steering files to match the number of data if plot type is N, N, 1
                 if(pt == 1) {
-                    console.log("Setting max for grids to " + ds.length);
                     $('#grid_steering').select2({maximumSelectionSize: ds.length});
                 }
 
@@ -339,8 +339,6 @@
                 };
 
                 console.log("Data Selected: " + text);
-                console.log(script_v);
-                console.log(flags_v);
 
                 if(count <= 1) {
                     $('#test-container').load('run_script.php', data);
