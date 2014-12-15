@@ -313,14 +313,13 @@
                 console.log("ds " + ds);
                 console.log("index " + index);
                 console.log("data " + data);
+                console.log("count " + count);
 
                 if(count > 0) {
                     text = data[count - 1].text;
                 } else {
                     text = " ";
                 }
-
-                console.log("count " + count);
 
                 var pt = $('#plot_type').select2("val");
 
@@ -345,7 +344,7 @@
 
                 $('#test-container').load('run_script.php', data);
 
-                if(count == 1) {
+                if(count <= 1) {
                     $('#grid_steering').load('run_script.php', data);
                 } else {
                     $('#grid_steering').append($('<div>').load('run_script.php', data));
