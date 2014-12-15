@@ -13,7 +13,7 @@
         putenv($_ENV["SPX_PATH"]);
         putenv($_ENV["SPX_LD_LIBRARY_PATH"]);
     }
-
+    
     function menu() {
 
     }
