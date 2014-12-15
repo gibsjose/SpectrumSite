@@ -130,7 +130,9 @@ def main ():
     #Create the configuration
     filename = './config/observables.config'
     configuration = Configuration(filename)
-    
+
+    sys.stderr.write(filename + '\n');
+
     #Create the configuration
     configuration.Create()
 
