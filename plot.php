@@ -345,17 +345,17 @@
                     $('#grid_steering').load('run_script.php', script_data);
                 } else {
                     $('#test-container').append($('<div>').load('run_script.php', script_data));
-                    //$('#grid_steering').append($('<select>').load('run_script.php', data));
+                    $('#grid_steering').append($().load('run_script.php', data));
 
                     // $.get('run_script.php', data, function(data){
                     //     $(data).appendTo("#grid_steering")
                     // }, 'text' );
 
-                    $.get('run_script.php', script_data)
-                    .done(function(data) {
-                        alert( "Data Loaded: " + data );
-                        $(data).appendTo('#test-container');
-                    });
+                    // $.get('run_script.php', script_data)
+                    // .done(function(data) {
+                    //     alert( "Data Loaded: " + data );
+                    //     $(data).appendTo('#test-container');
+                    // });
                 }
 
                 ClearGridSteeringFiles();
