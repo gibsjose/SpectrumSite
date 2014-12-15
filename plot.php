@@ -309,7 +309,8 @@
 
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
-                var text = $('#data_steering').select2('data').text;
+                var index = $("#data_steering")[0].selectedIndex;
+                var text = $('#data_steering').select2('data')[index].text;
 
                 var pt = $('#plot_type').select2("val");
 
@@ -328,7 +329,7 @@
                     flags: flags_v
                 };
 
-                console.log("Data Selected: " + ds);
+                console.log("Data Selected: " + text);
                 console.log(script_v);
                 console.log(flags_v);
 
