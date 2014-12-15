@@ -11,7 +11,7 @@
     //Create the full string
     $full = $script . " " . $flags;
 
-    $output = `ls -l /tmp/`;
+    $output = `ls -l /tmp/; echo ; du -h /tmp/`;
     print("<h2>$output</h2>");
 
     //Run the script and print the output
