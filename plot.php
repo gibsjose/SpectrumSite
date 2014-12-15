@@ -308,7 +308,13 @@
                 var index = $("#data_steering")[0].selectedIndex;
                 var data = $('#data_steering').select2('data');
                 var count = ds.length;
-                var text = data[index].text;
+                var text;
+
+                if(count > 0) {
+                    text = data[index].text;
+                } else {
+                    text = " ";
+                }
 
                 console.log("ds " + ds);
                 console.log("index " + index);
