@@ -17,7 +17,7 @@ class ObservableInstance:
     def PrintDataHTML(self):
         for key in self.data:
             data = self.data[key]
-            print('<h2 value=\"' + data.fullPath + '\">' + data.displayName + '</h2>')
+            print('<option value=\"' + data.fullPath + '\">' + data.displayName + '</option>')
 
 class DataInstance:
     def __init__(self, displayName, fullPath):
@@ -28,7 +28,7 @@ class DataInstance:
     def PrintGridsHTML(self):
         for key in self.grids:
             grid = self.grids[key]
-            print('<h2 value=\"' + grid.fullPath + '\">' + grid.displayName + '</h2>')
+            print('<option value=\"' + grid.fullPath + '\">' + grid.displayName + '</option>')
 
 class GridInstance:
     def __init__(self, displayName, fullPath):
