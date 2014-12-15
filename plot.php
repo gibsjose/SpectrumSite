@@ -344,8 +344,8 @@
                     // $('#grid_steering').append($('<option>').load('run_script.php', data));
 
                     $.get('run_script.php', script_data).done(function(data) {
-                        console.log("script_data " + script_data);
-                        console.log("Data " + data);
+                        console.log(script_data);
+                        console.log(data);
                     });
 
                     // $.get('run_script.php', data, function(data){
