@@ -128,7 +128,7 @@ def main ():
     global options, args
 
     #Create the configuration
-    filename = "../config/observables.config"
+    filename = '../config/observables.config'
     configuration = Configuration(filename)
 
     #Create the configuration
