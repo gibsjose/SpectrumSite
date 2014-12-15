@@ -287,7 +287,7 @@
                 }
 
                 var script_v = 'Utilities/Configuration.py';
-                var flags_v = '-o \"' + obs + '\"';
+                var flags_v = '-o "' + obs + '"';
 
                 console.log(script_v);
                 console.log(flags_v);
