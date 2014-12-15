@@ -17,7 +17,7 @@ class ObservableInstance:
     def PrintDataHTML(self):
         for key in self.data:
             data = self.data[key]
-            print('<option value=\"' + data.fullPath + '\">' + data.displayName + '</option>')
+            print('<h2 value=\"' + data.fullPath + '\">' + data.displayName + '</h2>')
 
 class DataInstance:
     def __init__(self, displayName, fullPath):
@@ -28,7 +28,7 @@ class DataInstance:
     def PrintGridsHTML(self):
         for key in self.grids:
             grid = self.grids[key]
-            print('<option value=\"' + grid.fullPath + '\">' + grid.displayName + '</option>')
+            print('<h2 value=\"' + grid.fullPath + '\">' + grid.displayName + '</h2>')
 
 class GridInstance:
     def __init__(self, displayName, fullPath):
@@ -87,8 +87,6 @@ class Configuration:
 
             #Valid Lines
             else:
-                sys.stderr.write(line + '\n');
-                
                 #New Observable
                 if line.startswith('[O]'):
                     # Get the observable name
