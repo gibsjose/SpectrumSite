@@ -131,6 +131,10 @@ def main ():
     filename = '../config/observables.config'
     configuration = Configuration(filename)
 
+    pwd = os.path.getcwd();
+
+    filename = pwd + '/' + filename;
+
     #Create the configuration
     configuration.Create()
 
