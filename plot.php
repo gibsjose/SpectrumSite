@@ -310,7 +310,13 @@
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
                 var index = $("#data_steering")[0].selectedIndex;
-                var text = $('#data_steering').select2('data')[index].text;
+                var data = $('#data_steering').select2('data');
+                var count = data.length;
+
+                console.log("ds " + ds);
+                console.log("index " + index);
+                console.log("data " + dat);
+                console.log("count " + count);
 
                 var pt = $('#plot_type').select2("val");
 
@@ -334,7 +340,12 @@
                 console.log(flags_v);
 
                 $('#test-container').load('run_script.php', data);
-                $('#grid_steering').load('run_script.php', data);
+
+                if(count == 1) {
+                    $('#grid_steering').load('run_script.php', data);
+                } else {
+                    $('#grid_steering').append($('<div>').load('run_script.php', data));
+                }
 
                 ClearGridSteeringFiles();
                 EnableGridSteeringSelect();
