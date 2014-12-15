@@ -3,12 +3,12 @@
     $script = $_POST['script'];
     $flags = $_POST['flags'];
 
-    echo "$script";
-    echo "$flags";
+    print("<h2>$script</h2>");
+    print("<h2>$flags</h2>");
 
     $test = $script . $flags;
-    echo "$test";
+    print("<h2>$test</h2>");
 
     $output = shell_exec($script . $flags);
-    echo "$output";
+    print("<h2>$output</h2>");
 ?>
