@@ -301,22 +301,15 @@
 
             function DataSteering() {
                 var ds = $('#data_steering').select2("val");
-                // var index = $("#data_steering")[0].selectedIndex;
                 var data = $('#data_steering').select2('data');
                 var count = ds.length;
                 var text;
-
-                console.log("ds " + ds);
-                console.log("data " + data);
-                console.log("count " + count);
 
                 if(count > 0) {
                     text = data[count - 1].text;
                 } else {
                     text = " ";
                 }
-
-                console.log("text " + text);
 
                 var pt = $('#plot_type').select2("val");
 
@@ -329,35 +322,24 @@
                 var script_v = 'Utilities/Configuration.py';
                 var flags_v = '-d "' + text + '"';
 
-                script_data = {
+                data = {
                     script: script_v,
                     flags: flags_v
                 };
 
-                console.log("Data Selected: " + text);
-
+                //If there is only one option, clear out the list and just put the single option
                 if(count <= 1) {
-                    $('#test-container').load('run_script.php', script_data);
-                    $('#grid_steering').load('run_script.php', script_data);
-                } else {
-                    $('#test-container').append($('<div>').load('run_script.php', script_data));
-                    // $('#grid_steering').append($('<option>').load('run_script.php', data));
-
-                    $.post('run_script.php', script_data).done(function(data) {
-                        $(data).appendTo('#grid_steering');
-                    });
-
-                    // $.get('run_script.php', data, function(data){
-                    //     $(data).appendTo("#grid_steering")
-                    // }, 'text' );
-
-                    // $.get('run_script.php', script_data)
-                    // .done(function(data) {
-                    //     alert( "Data Loaded: " + data );
-                    //     $(data).appendTo('#test-container');
-                    // });
+                    $('#grid_steering').load('run_script.php', data);
                 }
 
+                //If multiple data files selected, append the corresponding grids to the selection box
+                else {
+                    $.post('run_script.php', data).done(function(_data) {
+                        $(data).appendTo('#grid_steering');
+                    });
+                }
+
+                //Clear and enable the grid selection
                 ClearGridSteeringFiles();
                 EnableGridSteeringSelect();
             }
