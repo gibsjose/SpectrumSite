@@ -87,6 +87,8 @@ class Configuration:
 
             #Valid Lines
             else:
+                sys.stderr.write(line + '\n');
+                
                 #New Observable
                 if line.startswith('[O]'):
                     # Get the observable name
@@ -130,8 +132,6 @@ def main ():
     #Create the configuration
     filename = './config/observables.config'
     configuration = Configuration(filename)
-
-    sys.stderr.write(filename + '\n');
 
     #Create the configuration
     configuration.Create()
