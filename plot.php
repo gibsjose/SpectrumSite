@@ -327,6 +327,10 @@
                     flags: flags_v
                 };
 
+                console.log("Data Selected: " + ds);
+                console.log(script_v);
+                console.log(flags_v);
+
                 $('#test-container').load('run_script.php', data);
                 $('#grid_steering').load('run_script.php', data);
 
