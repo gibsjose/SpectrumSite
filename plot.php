@@ -327,6 +327,7 @@
                     flags: flags_v
                 };
 
+                $('#test-container').load('run_script.php', data);
                 $('#grid_steering').load('run_script.php', data);
 
                 ClearGridSteeringFiles();
