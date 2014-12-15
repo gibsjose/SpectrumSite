@@ -1,4 +1,3 @@
-<!-- Get HTTP Request from JS on plot.php -->
 <?php
     //Get the script name and flags
     $script = $_POST['script'];
@@ -12,6 +11,6 @@
     $full = $script . " " . $flags;
 
     //Run the script and print the output
-    $output = `2>&1 $full`;
-    print("<h2>$output</h2>");
+    $output = `$full`;
+    print("$output");
 ?>

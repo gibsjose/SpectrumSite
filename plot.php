@@ -343,10 +343,8 @@
                     $('#test-container').append($('<div>').load('run_script.php', script_data));
                     // $('#grid_steering').append($('<option>').load('run_script.php', data));
 
-                    $.post('run_script.php', script_data).done(function(data1, data2) {
-                        console.log(script_data);
-                        console.log(data1);
-                        console.log(data2);
+                    $.post('run_script.php', script_data).done(function(data) {
+                        $(data).appendTo('#grid_steering');
                     });
 
                     // $.get('run_script.php', data, function(data){
