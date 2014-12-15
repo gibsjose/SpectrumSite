@@ -333,7 +333,7 @@
                 var script_v = 'Utilities/Configuration.py';
                 var flags_v = '-d "' + text + '"';
 
-                data = {
+                script_data = {
                     script: script_v,
                     flags: flags_v
                 };
@@ -341,19 +341,20 @@
                 console.log("Data Selected: " + text);
 
                 if(count <= 1) {
-                    $('#test-container').load('run_script.php', data);
-                    $('#grid_steering').load('run_script.php', data);
+                    $('#test-container').load('run_script.php', script_data);
+                    $('#grid_steering').load('run_script.php', script_data);
                 } else {
-                    $('#test-container').append($('<div>').load('run_script.php', data));
+                    $('#test-container').append($('<div>').load('run_script.php', script_data));
                     //$('#grid_steering').append($('<select>').load('run_script.php', data));
 
                     // $.get('run_script.php', data, function(data){
                     //     $(data).appendTo("#grid_steering")
                     // }, 'text' );
 
-                    $.get( "run_script.php", data)
-                    .done(function(_data) {
-                        alert( "Data Loaded: " + _data );
+                    $.get('run_script.php', script_data)
+                    .done(function(data) {
+                        alert( "Data Loaded: " + data );
+                        $(data).appendTo('#test-container');
                     });
                 }
 
