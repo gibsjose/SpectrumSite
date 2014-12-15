@@ -335,7 +335,8 @@
                 //If multiple data files selected, append the corresponding grids to the selection box
                 else {
                     $.post('run_script.php', data).done(function(_data) {
-                        $(data).appendTo('#grid_steering');
+                        console.log(_data)
+                        $(_data).appendTo('#grid_steering');
                     });
                 }
 
