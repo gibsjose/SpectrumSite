@@ -289,15 +289,11 @@
                 var script_v = 'Utilities/Configuration.py';
                 var flags_v = '-o "' + obs + '"';
 
-                console.log(script_v);
-                console.log(flags_v);
-
                 data = {
                     script: script_v,
                     flags: flags_v
                 };
 
-                $('#test-container').load('run_script.php', data);
                 $('#data_steering').load('run_script.php', data);
 
                 ClearDataSteeringFiles();
@@ -311,11 +307,12 @@
                 var ds = $('#data_steering').select2("val");
                 var index = $("#data_steering")[0].selectedIndex;
                 var data = $('#data_steering').select2('data');
-                var count = data.length;
+                var count = ds.length;
+                var text = data[index].text;
 
                 console.log("ds " + ds);
                 console.log("index " + index);
-                console.log("data " + dat);
+                console.log("data " + data);
                 console.log("count " + count);
 
                 var pt = $('#plot_type').select2("val");

@@ -11,9 +11,9 @@
     //Create the full string
     $full = $script . " " . $flags;
 
-    $output = `uname -a`;
-    print("<h2>$output</h2>");
-    print("<br>");
+    // $output = `uname -a`;
+    // print("<h2>$output</h2>");
+    // print("<br>");
 
     // $output = `ls -ltr /afs/cern.ch/sw/lcg/contrib/gcc/4.3.2/x86_64-slc5-gcc43-opt/lib64`;
     // print("<h2>$output</h2>");
