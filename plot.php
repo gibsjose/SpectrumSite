@@ -315,7 +315,7 @@
                 console.log("data " + data);
 
                 if(count > 0) {
-                    text = data[index].text;
+                    text = data[count - 1].text;
                 } else {
                     text = " ";
                 }
