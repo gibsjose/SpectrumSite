@@ -297,8 +297,7 @@
                     flags: flags_v
                 };
 
-                $('#test-container').load('run_script.php', data);
-                //$('#data_steering').load('run_script.php', data);
+                $('#data_steering').load('run_script.php', data);
 
                 ClearDataSteeringFiles();
                 ClearGridSteeringFiles();
@@ -390,9 +389,6 @@
         <div class="content-wrapper">
             <div class="content">
                 <h2 class="content-head is-center">Spectrum Plot</h2>
-                <div id="test-container">
-                    <h2>TEST</h2>
-                </div>
                 <div class="pure-g">
                     <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-2-5">
                         <div id="form-container">
