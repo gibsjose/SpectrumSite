@@ -318,6 +318,17 @@
                     $('#grid_steering').select2({maximumSelectionSize: ds.length});
                 }
 
+                //Load the grid with the options corresponding to the data file
+                var script_v = 'Utilities/Configuration.py';
+                var flags_v = '-d "' + ds + '"';
+
+                data = {
+                    script: script_v,
+                    flags: flags_v
+                };
+
+                $('#grid_steering').load('run_script.php', data);
+
                 ClearGridSteeringFiles();
                 EnableGridSteeringSelect();
             }
