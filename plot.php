@@ -502,18 +502,14 @@
                                     <div class="pure-g">
                                         <input class="pure-u-1-3" placeholder="Min" id="y_overlay_min">
                                         <h2 size="60px" class="is-center pure-u-1-3"><i class="fa fa-arrows-h"></i></h2>
-                                        <input class="pure-u-1-3" placeholder="Max" id="y_overlay_min">
+                                        <input class="pure-u-1-3" placeholder="Max" id="y_overlay_max">
                                     </div>
 
                                     <h3>Ratio</h3>
-                                    <div class="pure-g" width="80%">
-                                        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                                            <input placeholder="Min" id="y_ratio_min">
-                                        </div>
-                                        <h2><i class="fa fa-arrows-h"></i></h2>
-                                        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                                            <input placeholder="Max" id="y_ratio_max">
-                                        </div>
+                                    <div class="pure-g">
+                                        <input class="pure-u-1-3" placeholder="Min" id="y_ratio_min">
+                                        <h2 size="60px" class="is-center pure-u-1-3"><i class="fa fa-arrows-h"></i></h2>
+                                        <input class="pure-u-1-3" placeholder="Max" id="y_ratio_max">
                                     </div>
 
                                     <br>
