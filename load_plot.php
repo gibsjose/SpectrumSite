@@ -24,6 +24,12 @@
     $display_style = $_POST['display_style'];
     $ratio_style = $_POST['ratio_style'];
     $ratio = $_POST['ratio'];
+    $grid_corr = $_POST['grid_corr'];
+
+    //Style Options
+    $x_log = $_POST['x_log'];
+    $y_log = $_POST['y_log'];
+    $plot_band = $_POST['plot_band'];
 ?>
 
 <!-- Write variables to file (settings.txt) -->
@@ -102,7 +108,11 @@
                     "data_steering_files = $data_file\n".
                     "grid_steering_files = $grid_file\n".
                     "pdf_steering_files = $pdf_file\n".
-                    "display_style = $display_style\n";
+                    "display_style = $display_style\n".
+                    "grid_corr = $grid_corr\n".
+                    "x_log = $x_log\n".
+                    "y_log = $y_log\n".
+                    "plot_band = $plot_band\n";
 
         $i = 0;
         foreach($ratio_styles as $rs) {

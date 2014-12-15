@@ -166,6 +166,13 @@
                     }
                 }
 
+                var grid_corr_v = document.getElementById('grid_corr').checked;
+
+                var x_log_v = document.getElementById('x_log').checked;
+                var y_log_v = document.getElementById('y_log').checked;
+
+                var plot_band_v = document.getElementById('plot_band').checked;
+
                 console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
                 console.log("data_steerings_v: " + data_steerings_v);
@@ -174,6 +181,7 @@
                 console.log("display_style_v: " + display_style_v);
                 console.log("ratio_styles: " + ratio_styles);
                 console.log("ratios: " + ratios);
+
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
@@ -184,7 +192,11 @@
                     pdf_steering: pdf_steerings_v,
                     display_style: display_style_v,
                     ratio_style: ratio_styles,
-                    ratio: ratios
+                    ratio: ratios,
+                    grid_corr: grid_corr_v,
+                    x_log: x_log_v,
+                    y_log: y_log_v,
+                    plot_band: plot_band_v
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
@@ -335,7 +347,6 @@
                 //If multiple data files selected, append the corresponding grids to the selection box
                 else {
                     $.post('run_script.php', data).done(function(_data) {
-                        console.log(_data);
                         $(_data).appendTo('#grid_steering');
                     });
                 }
@@ -466,6 +477,39 @@
                                     <label for="ratio">
                                         <input id="ratio" type="checkbox" checked> Ratio
                                     </label>
+
+                                    <label for="grid_corr">
+                                        <input id="grid_corr" type="checkbox"> Apply Grid Corrections
+                                    </label>
+
+                                    <br>
+                                    <br>
+                                    <h3>Style Options</h3>
+                                    <hr color="#39B54A" width="100%" size="2" align="left">
+                                    <br>
+                                    <label for="plot_band">
+                                        <input id="plot_band" type="checkbox"> Use Bands Instead of Points
+                                    </label>
+
+                                    <label for="x_log">
+                                        <input id="x_log" type="checkbox" checked> Logarithmic X Axis
+                                    </label>
+
+                                    <label for="y_log">
+                                        <input id="y_log" type="checkbox" checked> Logarithmic Y Axis
+                                    </label>
+
+                                    <label for="y_overlay_min">Overlay Y Min</label>
+                                    <input id="y_overlay_min">
+
+                                    <label for="y_overlay_max">Overlay Y Max</label>
+                                    <input id="y_overlay_max">
+
+                                    <label for="y_ratio_min">Ratio Y Min</label>
+                                    <input id="y_ratio_min">
+
+                                    <label for="y_ratio_max">Ratio Y Max</label>
+                                    <input id="y_ratio_max">
 
                                     <br>
                                     <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
