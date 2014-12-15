@@ -342,11 +342,11 @@
                 console.log(script_v);
                 console.log(flags_v);
 
-                $('#test-container').load('run_script.php', data);
-
                 if(count <= 1) {
+                    $('#test-container').load('run_script.php', data);
                     $('#grid_steering').load('run_script.php', data);
                 } else {
+                    $('#test-container').append($('<div>').load('run_script.php', data));
                     $('#grid_steering').append($('<div>').load('run_script.php', data));
                 }
 
