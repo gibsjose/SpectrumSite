@@ -11,7 +11,7 @@
     //Create the full string
     $full = $script . " " . $flags;
 
-    $output = `echo $(uname -a)`;
+    $output = `2>&1 uname -a`;
     print("<h2>$output</h2>");
 
     //Run the script and print the output
