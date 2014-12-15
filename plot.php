@@ -483,7 +483,7 @@
                                     </label>
 
                                     <br>
-                                    <h3>Style Options</h3>
+                                    <h3 color="#1F8DD6">Style Options</h3>
                                     <hr color="#39B54A" width="100%" size="2" align="left">
 
                                     <label for="plot_band">
@@ -500,23 +500,19 @@
 
                                     <h3>Overlay</h3>
                                     <div class="pure-g" width="80%">
-                                        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                                            <input placeholder="min" id="y_overlay_min">
-                                        </div>
-                                        <h2><i class="fa fa-arrows-h"></i></h2>
-                                        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                                            <input placeholder="max" id="y_overlay_min">
-                                        </div>
+                                        <input class="pure-u-1-3" placeholder="Min" id="y_overlay_min">
+                                        <h2><i class="pure-u-1-3 fa fa-arrows-h"></i></h2>
+                                        <input class="pure-u-1-3" placeholder="Max" id="y_overlay_min">
                                     </div>
 
                                     <h3>Ratio</h3>
                                     <div class="pure-g" width="80%">
                                         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                                            <input placeholder="min" id="y_ratio_min">
+                                            <input placeholder="Min" id="y_ratio_min">
                                         </div>
                                         <h2><i class="fa fa-arrows-h"></i></h2>
                                         <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
-                                            <input placeholder="max" id="y_ratio_max">
+                                            <input placeholder="Max" id="y_ratio_max">
                                         </div>
                                     </div>
 
