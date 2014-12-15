@@ -483,10 +483,9 @@
                                     </label>
 
                                     <br>
-                                    <br>
                                     <h3>Style Options</h3>
                                     <hr color="#39B54A" width="100%" size="2" align="left">
-                                    <br>
+
                                     <label for="plot_band">
                                         <input id="plot_band" type="checkbox"> Use Bands Instead of Points
                                     </label>
@@ -499,17 +498,27 @@
                                         <input id="y_log" type="checkbox" checked> Logarithmic Y Axis
                                     </label>
 
-                                    <label for="y_overlay_min">Overlay Y Min</label>
-                                    <input id="y_overlay_min">
+                                    <h4>Overlay</h4>
+                                    <div class="pure-g" width="50%">
+                                        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                                            <input placeholder="min" id="y_overlay_min">
+                                        </div>
+                                        <h2><i class="fa fa-arrows-h"></i></h2>
+                                        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                                            <input placeholder="max" id="y_overlay_min">
+                                        </div>
+                                    </div>
 
-                                    <label for="y_overlay_max">Overlay Y Max</label>
-                                    <input id="y_overlay_max">
-
-                                    <label for="y_ratio_min">Ratio Y Min</label>
-                                    <input id="y_ratio_min">
-
-                                    <label for="y_ratio_max">Ratio Y Max</label>
-                                    <input id="y_ratio_max">
+                                    <h4>Ratio</h4>
+                                    <div class="pure-g" width="50%">
+                                        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                                            <input placeholder="min" id="y_ratio_min">
+                                        </div>
+                                        <h2><i class="fa fa-arrows-h"></i></h2>
+                                        <div class="pure-u-1 pure-u-md-1-2 pure-u-lg-1-2">
+                                            <input placeholder="max" id="y_ratio_max">
+                                        </div>
+                                    </div>
 
                                     <br>
                                     <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
