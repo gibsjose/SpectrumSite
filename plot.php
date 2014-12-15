@@ -275,6 +275,8 @@
             function Observable() {
                 var obs = $('#observable').select2("val");
 
+                console.log(obs);
+
                 if(obs == "None") {
                     ClearDataSteeringFiles();
                     ClearGridSteeringFiles();
@@ -286,6 +288,9 @@
 
                 var script_v = 'Utilities/Configuration.py';
                 var flags_v = '-o \"' + obs + '\"';
+
+                console.log(script_v);
+                console.log(flags_v);
 
                 data = {
                     script: script_v,
