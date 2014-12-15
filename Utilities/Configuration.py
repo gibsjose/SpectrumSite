@@ -6,6 +6,7 @@
 #The input required is the observable name, exactly as spelled in the configuration file
 
 import sys, os, traceback, optparse
+import operator
 import time
 import re
 
@@ -15,8 +16,9 @@ class ObservableInstance:
         self.data = {}
 
     def PrintDataHTML(self):
-        for key in self.data:
-            data = self.data[key]
+        sorted_dict = sorted(self.data.items(), key = operator.itemgetter(1))
+        for item in sorted_dict:
+            data = item[1]
             print('<option value=\"' + data.fullPath + '\">' + data.displayName + '</option>')
 
 class DataInstance:
@@ -26,8 +28,9 @@ class DataInstance:
         self.grids = {}
 
     def PrintGridsHTML(self):
-        for key in self.grids:
-            grid = self.grids[key]
+        sorted_dict = sorted(self.grids.items(), key = operator.itemgetter(1))
+        for item in sorted_dict:
+            grid = item[1]
             print('<option value=\"' + grid.fullPath + '\">' + grid.displayName + '</option>')
 
 class GridInstance:
