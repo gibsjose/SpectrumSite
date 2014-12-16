@@ -208,6 +208,8 @@
                     steering: steering_v,
                     plot_type: plot_type_v,
                     data_steering: data_steerings_v,
+                    data_marker_color: data_marker_colors_v,
+                    data_marker_style: data_marker_styles_v,
                     grid_steering: grid_steerings_v,
                     pdf_steering: pdf_steerings_v,
                     display_style: display_style_v,
@@ -229,6 +231,17 @@
 
             function ClearDataSteeringFiles() {
                 $("#data_steering").select2("data", null);
+
+                ClearDataMarkerColors();
+                ClearDataMarkerStyles();
+            }
+
+            function ClearDataMarkerColors() {
+                $('#data_marker_color').select2("data", null);
+            }
+
+            function ClearDataMarkerStyles() {
+                $('#data_marker_style').select2("data", null);
             }
 
             function ClearGridSteeringFiles() {
@@ -247,10 +260,32 @@
 
             function EnableDataSteeringSelect() {
                 $('#data_steering').select2("enable", true);
+
+                EnableDataMarkerColorSelect();
+                EnableDataMarkerStyleSelect();
             }
 
             function DisableDataSteeringSelect() {
                 $('#data_steering').select2("enable", false);
+
+                DisableDataMarkerColorSelect();
+                DisableDataMarkerStyleSelect();
+            }
+
+            function EnableDataMarkerStyleSelect() {
+                $('#data_marker_color').select2("enable", true);
+            }
+
+            function DisableDataMarkerStyleSelect() {
+                $('#data_marker_color').select2("enable", false);
+            }
+
+            function EnableDataMarkerStyleSelect() {
+                $('#data_marker_style').select2("enable", true);
+            }
+
+            function DisableDataMarkerStyleSelect() {
+                $('#data_marker_style').select2("enable", false);
             }
 
             function EnableGridSteeringSelect() {
@@ -513,16 +548,16 @@
                                         <option>None</option>
                                     </select>
                                     <select class="pure-u-1" name="data_marker_color" id="data_marker_color" multiple>
-                                        <option value="1">Black</option>
-                                        <option value="2">Red</option>
-                                        <option value="3">Green</option>
-                                        <option value="4">Blue</option>
+                                        <option value="1" id="1">Black</option>
+                                        <option value="2" id="2">Red</option>
+                                        <option value="3" id="3">Green</option>
+                                        <option value="4" id="4">Blue</option>
                                     </select>
                                     <select class="pure-u-1" name="data_marker_style" id="data_marker_style" multiple>
-                                        <option value="20">Circle</option>
-                                        <option value="21">Square</option>
-                                        <option value="22">Triangle</option>
-                                        <option value="23">Inverted Triangle</option>
+                                        <option value="20" id="20">Circle</option>
+                                        <option value="21" id="21">Square</option>
+                                        <option value="22" id="22">Triangle</option>
+                                        <option value="23" id="23">Inverted Triangle</option>
                                     </select>
 
                                     <label for="grid_steering">Grid Steering File</label>
