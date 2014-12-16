@@ -23,6 +23,7 @@
     $data_marker_style = $_POST['data_marker_style'];
     $grid_steering = $_POST['grid_steering'];
     $pdf_steering = $_POST['pdf_steering'];
+    $pdf_fill_color = $_POST['pdf_fill_color'];
     $display_style = $_POST['display_style'];
     $ratio_style = $_POST['ratio_style'];
     $ratio = $_POST['ratio'];
@@ -112,6 +113,7 @@
                     "data_marker_style = $data_marker_style\n".
                     "grid_steering_files = $grid_file\n".
                     "pdf_steering_files = $pdf_file\n".
+                    "pdf_fill_color = $pdf_fill_color\n".
                     "display_style = $display_style\n".
                     "grid_corr = $grid_corr\n".
                     "x_log = $x_log\n".

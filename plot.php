@@ -175,12 +175,21 @@
                 }
 
                 var pdf_steerings_v = "";
+                var pdf_fill_colors_v = "";
+
+                if(pdf_fill_color_v.length != pdf_steering_v.length) {
+                    alert("Too few PDF fill colors specified");
+                    return;
+                }
+
                 for(var i = 0; i < pdf_steering_v.length; i++) {
                     if(i == (pdf_steering_v.length - 1)) {
                         pdf_steerings_v += pdf_steering_v[i];
+                        pdf_fill_colors_v += pdf_fill_color_v[i];
                         break;
                     } else {
                         pdf_steerings_v += pdf_steering_v[i] + ", ";
+                        pdf_full_colors_v += pdf_fill_color_v[i] + ", ";
                     }
                 }
 
@@ -198,6 +207,7 @@
                 console.log("data_marker_styles_v: " + data_marker_styles_v);
                 console.log("grid_steerings_v: " + grid_steerings_v);
                 console.log("pdf_steerings_v: " + pdf_steerings_v);
+                console.log("pdf_fill_colors_v: " + pdf_fill_colors_v);
                 console.log("display_style_v: " + display_style_v);
                 console.log("ratio_styles: " + ratio_styles);
                 console.log("ratios: " + ratios);
@@ -212,6 +222,7 @@
                     data_marker_style: data_marker_styles_v,
                     grid_steering: grid_steerings_v,
                     pdf_steering: pdf_steerings_v,
+                    pdf_fill_color: pdf_fillcolors_v,
                     display_style: display_style_v,
                     ratio_style: ratio_styles,
                     ratio: ratios,
@@ -249,6 +260,7 @@
 
             function ClearPDFSteeringFiles() {
                 $("#pdf_steering").select2("data", null);
+                $("#pdf_fill_color").select2("data", null);
             }
 
             function ClearAllSteeringFiles() {
@@ -430,7 +442,13 @@
 
             function PDFSteering() {
                 var ps = $('#pdf_steering').select2("val");
-                //console.log(ps);
+
+                $("#pdf_fill_color").select2({
+                    maximumSelectionSize: ps.length,
+                    formatResult: colorFormat,
+                    formatSelection: colorFormat,
+                    escapeMarkup: function(m) { return m; }
+                });
             }
         </script>
 
@@ -465,14 +483,23 @@
             $('#pdf_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
 
             $("#data_marker_color").select2({
+                maximumSelectionSize: 1,
                 formatResult: colorFormat,
                 formatSelection: colorFormat,
                 escapeMarkup: function(m) { return m; }
             });
 
             $("#data_marker_style").select2({
+                maximumSelectionSize: 1,
                 formatResult: markerStyleFormat,
                 formatSelection: markerStyleFormat,
+                escapeMarkup: function(m) { return m; }
+            });
+
+            $("#pdf_fill_color").select2({
+                maximumSelectionSize: 1,
+                formatResult: colorFormat,
+                formatSelection: colorFormat,
                 escapeMarkup: function(m) { return m; }
             });
 
@@ -555,13 +582,13 @@
                                     <select class="pure-u-1" name="data_steering" id="data_steering" multiple>
                                         <option>None</option>
                                     </select>
-                                    <select class="pure-u-1" name="data_marker_color" id="data_marker_color" multiple>
+                                    <select placeholder="Color" class="pure-u-1" name="data_marker_color" id="data_marker_color" multiple>
                                         <option value="1" id="1">Black</option>
                                         <option value="2" id="2">Red</option>
                                         <option value="3" id="3">Green</option>
                                         <option value="4" id="4">Blue</option>
                                     </select>
-                                    <select class="pure-u-1" name="data_marker_style" id="data_marker_style" multiple>
+                                    <select placeholder="Style" class="pure-u-1" name="data_marker_style" id="data_marker_style" multiple>
                                         <option value="20" id="20">Circle</option>
                                         <option value="21" id="21">Square</option>
                                         <option value="22" id="22">Triangle</option>
@@ -576,6 +603,12 @@
                                     <label for="pdf_steering">PDF Steering File</label>
                                     <select class="pure-u-1" name="pdf_steering" id="pdf_steering" multiple>
                                         <option>None</option>
+                                    </select>
+                                    <select placeholder="Color" class="pure-u-1" name="pdf_fill_color" id="pdf_fill_color" multiple>
+                                        <option value="1" id="1">Black</option>
+                                        <option value="2" id="2">Red</option>
+                                        <option value="3" id="3">Green</option>
+                                        <option value="4" id="4">Blue</option>
                                     </select>
 
                                     <label for="overlay">
