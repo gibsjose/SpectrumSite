@@ -63,6 +63,7 @@
                 var data_marker_style_v = $('#data_marker_style').select2("val");
                 var grid_steering_v = $('#grid_steering').select2("val");
                 var pdf_steering_v = $('#pdf_steering').select2("val");
+                var pdf_fill_color_v = $('#pdf_fill_color').select2("val");
 
                 var display_style_v = "";
                 var overlay_v = document.getElementById('overlay').checked;
