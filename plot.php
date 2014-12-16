@@ -223,7 +223,7 @@
                     data_marker_style: data_marker_styles_v,
                     grid_steering: grid_steerings_v,
                     pdf_steering: pdf_steerings_v,
-                    pdf_fill_color: pdf_fillcolors_v,
+                    pdf_fill_color: pdf_fill_colors_v,
                     display_style: display_style_v,
                     ratio_style: ratio_styles,
                     ratio: ratios,
