@@ -19,6 +19,8 @@
     $steering = $_POST['steering'];
     $plot_type = $_POST['plot_type'];
     $data_steering = $_POST['data_steering'];
+    $data_marker_color = $_POST['data_marker_color'];
+    $data_marker_style = $_POST['data_marker_style'];
     $grid_steering = $_POST['grid_steering'];
     $pdf_steering = $_POST['pdf_steering'];
     $display_style = $_POST['display_style'];
@@ -106,6 +108,8 @@
                     "grid_directory = $grid_directory\n".
                     "pdf_directory = $pdf_directory\n".
                     "data_steering_files = $data_file\n".
+                    "data_marker_color = $data_marker_color\n".
+                    "data_marker_style = $data_marker_style\n".
                     "grid_steering_files = $grid_file\n".
                     "pdf_steering_files = $pdf_file\n".
                     "display_style = $display_style\n".
