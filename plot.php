@@ -376,8 +376,19 @@
                 }
 
                 //Limit the number of data marker colors/styles to the
-                $('#data_marker_color').select2({maximumSelectionSize: ds.length});
-                $('#data_marker_style').select2({maximumSelectionSize: ds.length});
+                $("#data_marker_color").select2({
+                    maximumSelectionSize: ds.length,
+                    formatResult: colorFormat,
+                    formatSelection: colorFormat,
+                    escapeMarkup: function(m) { return m; }
+                });
+
+                $("#data_marker_style").select2({
+                    maximumSelectionSize: ds.length,
+                    formatResult: markerStyleFormat,
+                    formatSelection: markerStyleFormat,
+                    escapeMarkup: function(m) { return m; }
+                });
 
                 var pt = $('#plot_type').select2("val");
 
