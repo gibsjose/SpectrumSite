@@ -59,6 +59,8 @@
                 var steering_v = document.getElementById('steering').value;
                 var plot_type_v = $('#plot_type').select2("val");
                 var data_steering_v = $('#data_steering').select2("val");
+                var data_marker_color_v = $('#data_marker_color').select2("val");
+                var data_marker_style_v = $('#data_marker_style').select2("val");
                 var grid_steering_v = $('#grid_steering').select2("val");
                 var pdf_steering_v = $('#pdf_steering').select2("val");
 
@@ -137,12 +139,28 @@
                 }
 
                 var data_steerings_v = "";
+                var data_marker_colors_v = "";
+                var data_marker_styles_v = "";
+
+                if(data_marker_color_v.length != data_steering_v.length) {
+                    alert("Too few data marker colors specified");
+                    return;
+                }
+                if(data_marker_style_v.length != data_steering_v.length) {
+                    alert("Too few data marker styles specified");
+                    return;
+                }
+
                 for(var i = 0; i < data_steering_v.length; i++) {
                     if(i == (data_steering_v.length - 1)) {
                         data_steerings_v += data_steering_v[i];
+                        data_marker_colors_v += data_marker_color_v[i];
+                        data_marker_styles_v += data_marker_style_v[i];
                         break;
                     } else {
                         data_steerings_v += data_steering_v[i] + ", ";
+                        data_marker_colors_v += data_marker_color_v[i] + ", ";
+                        data_marker_styles_v += data_marker_style_v[i] + ", ";
                     }
                 }
 
@@ -176,6 +194,8 @@
                 console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
                 console.log("data_steerings_v: " + data_steerings_v);
+                console.log("data_marker_colors_v: " + data_marker_colors_v);
+                console.log("data_marker_styles_v: " + data_marker_styles_v);
                 console.log("grid_steerings_v: " + grid_steerings_v);
                 console.log("pdf_steerings_v: " + pdf_steerings_v);
                 console.log("display_style_v: " + display_style_v);
@@ -323,6 +343,10 @@
                     text = " ";
                 }
 
+                //Limit the number of data marker colors/styles to the
+                $('#data_marker_color').select2({maximumSelectionSize: ds.length});
+                $('#data_marker_style').select2({maximumSelectionSize: ds.length});
+
                 var pt = $('#plot_type').select2("val");
 
                 //Limit the number of grid steering files to match the number of data if plot type is N, N, 1
@@ -367,6 +391,23 @@
             }
         </script>
 
+        <script type="text/javascript">
+            function colorFormat(color) {
+                if (!color.id) return color.text;
+                return "<img class='select-color' src='img/root/colors/" + color.id.toLowerCase() + ".png'/>" + color.text;
+            }
+
+            function markerStyleFormat(style) {
+                if (!style.id) return style.text;
+                return "<img class='select-marker-style' src='img/root/marker-styles/" + style.id.toLowerCase() + ".png'/>" + style.text;
+            }
+
+            function fillStyleFormat(style) {
+                if (!style.id) return style.text;
+                return "<img class='select-fill-style' src='img/root/fill-styles/" + style.id.toLowerCase() + ".png'/>" + style.text;
+            }
+        </script>
+
         <!-- Initialize the Forms -->
         <script type="text/javascript">
         function InitializeForms() {
@@ -379,6 +420,18 @@
             $('#data_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
             $('#grid_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
             $('#pdf_steering').select2({closeOnSelect: false, maximumSelectionSize: 1});
+
+            $("#data_marker_color").select2({
+                formatResult: colorFormat,
+                formatSelection: colorFormat,
+                escapeMarkup: function(m) { return m; }
+            });
+
+            $("#data_marker_style").select2({
+                formatResult: markerStyleFormat,
+                formatSelection: markerStyleFormat,
+                escapeMarkup: function(m) { return m; }
+            });
 
             //Populate the forms with the data in the steering files
             $('#steering').load('get_steering_files.php');
@@ -458,6 +511,18 @@
                                     <label for="data_steering">Data Steering File</label>
                                     <select class="pure-u-1" name="data_steering" id="data_steering" multiple>
                                         <option>None</option>
+                                    </select>
+                                    <select class="pure-u-1" name="data_marker_color" id="data_marker_color" multiple>
+                                        <option value="1">Black</option>
+                                        <option value="2">Red</option>
+                                        <option value="3">Green</option>
+                                        <option value="4">Blue</option>
+                                    </select>
+                                    <select class="pure-u-1" name="data_marker_style" id="data_marker_style" multiple>
+                                        <option value="20">Circle</option>
+                                        <option value="21">Square</option>
+                                        <option value="22">Triangle</option>
+                                        <option value="23">Inverted Triangle</option>
                                     </select>
 
                                     <label for="grid_steering">Grid Steering File</label>
