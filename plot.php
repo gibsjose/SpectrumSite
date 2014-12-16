@@ -231,9 +231,8 @@
 
             function ClearDataSteeringFiles() {
                 $("#data_steering").select2("data", null);
-
-                ClearDataMarkerColors();
-                ClearDataMarkerStyles();
+                $('#data_marker_color').select2("data", null);
+                $('#data_marker_style').select2("data", null);
             }
 
             function ClearDataMarkerColors() {
@@ -260,16 +259,14 @@
 
             function EnableDataSteeringSelect() {
                 $('#data_steering').select2("enable", true);
-
-                EnableDataMarkerColorSelect();
-                EnableDataMarkerStyleSelect();
+                $('#data_marker_color').select2("enable", true);
+                $('#data_marker_style').select2("enable", true);
             }
 
             function DisableDataSteeringSelect() {
                 $('#data_steering').select2("enable", false);
-
-                DisableDataMarkerColorSelect();
-                DisableDataMarkerStyleSelect();
+                $('#data_marker_color').select2("enable", false);
+                $('#data_marker_style').select2("enable", false);
             }
 
             function EnableDataMarkerStyleSelect() {
@@ -429,17 +426,17 @@
         <script type="text/javascript">
             function colorFormat(color) {
                 if (!color.id) return color.text;
-                return "<img class='select-color' src='img/root/colors/" + color.id.toLowerCase() + ".png'/>" + color.text;
+                return "<img class='select-color' src='img/root/colors/" + color.id.toLowerCase() + ".png'/>" + "  " + color.text;
             }
 
             function markerStyleFormat(style) {
                 if (!style.id) return style.text;
-                return "<img class='select-marker-style' src='img/root/marker-styles/" + style.id.toLowerCase() + ".png'/>" + style.text;
+                return "<img class='select-marker-style' src='img/root/marker-styles/" + style.id.toLowerCase() + ".png'/>" + "  " + style.text;
             }
 
             function fillStyleFormat(style) {
                 if (!style.id) return style.text;
-                return "<img class='select-fill-style' src='img/root/fill-styles/" + style.id.toLowerCase() + ".png'/>" + style.text;
+                return "<img class='select-fill-style' src='img/root/fill-styles/" + style.id.toLowerCase() + ".png'/>" + "  " + style.text;
             }
         </script>
 
