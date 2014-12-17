@@ -265,6 +265,7 @@
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
                 $('#canvas-container').load('load_plot.php', data);
+                $('#notification-container').html('');
             }
         </script>
 
@@ -695,6 +696,8 @@
                         </div>
                     </div>
                     <div class="is-center pure-u-1 pure-u-md-1-2 pure-u-lg-3-5">
+                        <div id="notification-container" align="center">
+                        </div>
                         <div id="canvas-container" align="center">
                             <canvas id="particle-canvas" width="600px" height="600px"></canvas>
                         </div>
