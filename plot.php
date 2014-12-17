@@ -41,6 +41,18 @@
         <link href="select2/select2.css" rel="stylesheet"/>
         <script src="select2/select2.js"></script>
 
+        <script type="text/javascript">
+        function ClearNotifications() {
+            document.getElementById('notification-container').innerHTML = "";
+        }
+        </script>
+
+        <script type="text/javascript">
+        function DisplayPleaseWait() {
+            document.getElementById('notification-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Still Plotting...</h2>";
+        }
+        </script>
+
         <!-- Collide Function -->
         <script type="text/javascript">
             function Plot() {
@@ -51,6 +63,8 @@
                     script = "<script type='text/javascript' src='js/protons.js'><\/script>";
                     return canvas + script;
                 });
+
+                DisplayPleaseWait();
 
                 //Generate a collision
                 Collision();
@@ -275,7 +289,6 @@
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
                 $('#canvas-container').load('load_plot.php', data);
-                DonePlotting(true);
             }
         </script>
 
