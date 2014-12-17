@@ -69,6 +69,11 @@
                 var overlay_v = document.getElementById('overlay').checked;
                 var ratio_v = document.getElementById('ratio').checked;
 
+                var y_overlay_min_v = document.getElementById('y_overlay_min').value;
+                var y_overlay_max_v = document.getElementById('y_overlay_max').value;
+                var y_ratio_min_v = document.getElementById('y_ratio_min').value;
+                var y_ratio_max_v = document.getElementById('y_ratio_max').value;
+
                 if(overlay_v && ratio_v) {
                     display_style_v = "overlay, ratio";
                 } else if(overlay_v) {
@@ -256,7 +261,12 @@
                     grid_corr: grid_corr_v,
                     x_log: x_log_v,
                     y_log: y_log_v,
+
                     plot_band: plot_band_v,
+                    y_overlay_min: y_overlay_min_v,
+                    y_overlay_max: y_overlay_max_v,
+                    y_ratio_min: y_ratio_min_v,
+                    y_ratio_max: y_ratio_max_v,
 
                     plot_pdf_band: plot_pdf_band_v,
                     plot_alpha_s_band: plot_alpha_s_band_v,

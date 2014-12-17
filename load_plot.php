@@ -33,6 +33,10 @@
     $x_log = $_POST['x_log'];
     $y_log = $_POST['y_log'];
     $plot_band = $_POST['plot_band'];
+    $y_overlay_min = $_POST['y_overlay_min'];
+    $y_overlay_max = $_POST['y_overlay_max'];
+    $y_ratio_min = $_POST['y_ratio_min'];
+    $y_ratio_max = $_POST['y_ratio_max'];
 
     $plot_pdf_band = $_POST['plot_pdf_band'];
     $plot_alpha_s_band = $_POST['plot_alpha_s_band'];
@@ -123,6 +127,10 @@
                     "x_log = $x_log\n".
                     "y_log = $y_log\n".
                     "plot_band = $plot_band\n".
+                    "y_overlay_min = $y_overlay_min\n".
+                    "y_overlay_max = $y_overlay_max\n".
+                    "y_ratio_min = $y_ratio_min\n".
+                    "y_ratio_max = $y_ratio_max\n".
                     "band_with_pdf = $plot_pdf_band\n".
                     "band_with_alphas = $plot_alpha_s_band\n".
                     "band_with_scale = $plot_scale_band\n";
