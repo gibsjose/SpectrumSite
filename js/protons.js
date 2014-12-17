@@ -3,6 +3,8 @@
 
 debug = false;
 
+masterKillTime = 2;
+
 var canvas = document.getElementById('particle-canvas'),
         ctx = canvas.getContext('2d'),
         window_width = canvas.width,//window.innerWidth,
@@ -432,7 +434,7 @@ function MasterTimer() {
         }
 
         //Kill after 20000ms
-        if(time > 200) {
+        if(time > masterKillTime * 10) {
             timeout = true;
             clearInterval(masterTimer);
             if(debug) console.log('masterTimer --> TIMEOUT <--');
@@ -466,7 +468,7 @@ function Jets() {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, window_width, window_height);
                 ctx.clearRect(0, 0, window_width, window_height);
-                canvas.innerHTML = "<h2>Still Plotting...</h2>";
+                ctx.fillText("Still Plotting...", 0 ,0);
                 collided = false;
                 timeout = false;
                 clearInterval(jetsTimer);
