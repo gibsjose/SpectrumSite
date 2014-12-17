@@ -509,6 +509,11 @@
                         document.getElementById('y_overlay_min').value = "";
                     }
                 }
+
+                //Set to a low number if zero is entered
+                if(parseFloat(minVal) == 0) {
+                    document.getElementById('y_overlay_min').value = "0.001";
+                }
             }
 
             function YOverlayMax() {
