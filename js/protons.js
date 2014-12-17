@@ -461,7 +461,7 @@ function DonePlotting(_done) {
 }
 
 function Jets() {
-        
+
     jetsTimer = setInterval(function() {
         if(collided == true) {
             if(timeout == false) {
@@ -476,13 +476,6 @@ function Jets() {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, window_width, window_height);
                 ctx.clearRect(0, 0, window_width, window_height);
-
-                //@TODO Not sure why this isn't working properly...
-                // if(!donePlotting) {
-                //     document.getElementById('notification-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Still Plotting...</h2>";
-                // } else {
-                //     document.getElementById('notification-container').innerHTML = "";
-                // }
 
                 clearInterval(jetsTimer);
                 clearInterval(masterTimer);

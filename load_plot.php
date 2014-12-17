@@ -195,7 +195,7 @@
 <?php if(($plotted == TRUE) && ($return_status == 0)) {?>
     <script type="text/javascript">
         //Tell animation that we are done plotting
-        DonePlotting(true);
+        ClearNotifications();
     </script>
     <br>
     <br>
@@ -254,7 +254,7 @@
 <?php } else {?>
     <script type="text/javascript">
         //Tell animation that we are done plotting
-        DonePlotting(true);
+        ClearNotifications();
     </script>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
     <br>
