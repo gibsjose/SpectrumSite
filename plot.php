@@ -587,7 +587,7 @@
             $('#y_overlay_min').on('change', YOverlayMin);
             $('#y_overlay_max').on('change', YOverlayMax);
             $('#y_ratio_min').on('change', YRatioMin);
-            ('#y_ratio_max').on('change', YRatioMax);
+            $('#y_ratio_max').on('change', YRatioMax);
 
             //Default to Data/Grid disabled
             DisableDataSteeringSelect();
