@@ -495,16 +495,16 @@
 
             //Verifies the input for the min/max's to be valid
             function YOverlayMin() {
-                var minVal = document.getElementById('#y_overlay_min').value;
-                var maxVal = document.getElementById('#y_overlay_max').value;
+                var minVal = document.getElementById('y_overlay_min').value;
+                var maxVal = document.getElementById('y_overlay_max').value;
 
                 console.log("min: " + minVal);
                 console.log("max: " + maxVal);
             }
 
             function YOverlayMax() {
-                var minVal = document.getElementById('#y_overlay_min').value;
-                var maxVal = document.getElementById('#y_overlay_max').value;
+                var minVal = document.getElementById('y_overlay_min').value;
+                var maxVal = document.getElementById('y_overlay_max').value;
 
                 console.log("min: " + minVal);
                 console.log("max: " + maxVal);
@@ -587,7 +587,7 @@
             $('#y_overlay_min').on('input', YOverlayMin);
             $('#y_overlay_max').on('input', YOverlayMax);
             $('#y_ratio_min').on('input', YRatioMin);
-            $('#y_ratio_max').on('input', YRatioMax);
+            ('#y_ratio_max').on('input', YRatioMax);
 
             //Default to Data/Grid disabled
             DisableDataSteeringSelect();
