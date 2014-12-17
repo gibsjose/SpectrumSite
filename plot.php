@@ -685,7 +685,7 @@
                                         <input class="min-max-input" width="60px" placeholder="Max" id="y_overlay_max">
                                     </div>
                                     <br>
-
+                                    <br>
                                     <label>Ratio</label>
                                     <div class="min-max">
                                         <input class="min-max-input" width="60px" placeholder="Min" id="y_ratio_min">
