@@ -218,7 +218,7 @@
         </div>
     </div>
 
-    <div class="data-metadata">
+    <div class="data-metadata" align="left">
         <h3>Data Metadata</h3>
         <?php
             if(file_exists('./metadata/data.txt')) {
@@ -228,7 +228,7 @@
         ?>
     </div>
 
-    <div class="grid-metadata">
+    <div class="grid-metadata" align="left">
         <h3>Grid Metadata</h3>
         <?php
             if(file_exists('./metadata/grids.txt')) {
