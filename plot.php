@@ -684,7 +684,7 @@
                                         <input class="pure-u-1-3" placeholder="Max" id="y_overlay_max">
                                     </div> -->
                                     <div class="min-max">
-                                        <input width="60px" placeholder="Min" id="y_overlay_min">
+                                        <input width="60px" placeholder="Min" id="y_overlay_min">&emsp;
                                     </div>
                                     <div class="min-max">
                                         <input width="60px" placeholder="Max" id="y_overlay_max">
