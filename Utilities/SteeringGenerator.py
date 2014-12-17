@@ -11,6 +11,7 @@ defaults = {}
 # Checks whether the key exists in the input dictionary
 def Write(_key, _file):
     if _key in d:
+        sys.err.write(d[_key])
         if not d[_key]:
             _file.write("; ")
 
