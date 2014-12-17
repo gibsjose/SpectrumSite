@@ -677,25 +677,22 @@
                                         <input id="y_log" type="checkbox" checked> Logarithmic Y Axis
                                     </label>
 
-                                    <h3>Overlay</h3>
-                                    <!-- <div class="pure-g">
-                                        <input class="pure-u-1-3" placeholder="Min" id="y_overlay_min">
-                                        <h2 size="60px" class="is-center pure-u-1-3"><i class="fa fa-arrows-h"></i></h2>
-                                        <input class="pure-u-1-3" placeholder="Max" id="y_overlay_max">
-                                    </div> -->
+                                    <label>Overlay</label>
                                     <div class="min-max">
                                         <input width="60px" placeholder="Min" id="y_overlay_min">
                                     </div>
+                                    &emsp;
                                     &emsp;
                                     <div class="min-max">
                                         <input width="60px" placeholder="Max" id="y_overlay_max">
                                     </div>
                                     <br>
 
-                                    <h3>Ratio</h3>
+                                    <label>Ratio</label>
                                     <div class="min-max">
                                         <input width="60px" placeholder="Min" id="y_ratio_min">
                                     </div>
+                                    &emsp;
                                     &emsp;
                                     <div class="min-max">
                                         <input width="60px" placeholder="Max" id="y_ratio_max">
