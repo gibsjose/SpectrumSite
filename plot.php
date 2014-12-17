@@ -659,7 +659,8 @@
                                         <input id="grid_corr" type="checkbox"> Apply Corrections to NLO QCD (Electroweak, Hadronization, etc.)
                                     </label>
 
-                                    <label>Include in Uncertainty Band:  </label> <input id="plot_pdf_band" type="checkbox" checked> PDF Band  <input id="plot_alpha_s_band" type="checkbox"> Alpha S Band  <input id="plot_scale_band" type="checkbox"> Scale Band
+                                    <label>Include in Uncertainty Band:</label>
+                                    <input id="plot_pdf_band" type="checkbox" checked> PDF Band &emsp;<input id="plot_alpha_s_band" type="checkbox"> Alpha S Band &emsp;<input id="plot_scale_band" type="checkbox"> Scale Band
 
                                     <br>
                                     <h3 color="#1F8DD6">Style Options</h3>
