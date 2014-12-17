@@ -15,7 +15,7 @@ def Write(_key, _file):
             _file.write("; ")
 
         _file.write(_key + ' = ' + d[_key])
-    elif _key in defaults:            
+    elif _key in defaults:
         _file.write(_key + ' = ' + defaults[_key] + '\n')
 
 inputPath = sys.argv[1]
@@ -59,7 +59,7 @@ defaults['y_ratio_max'] = ''
 defaults['band_with_pdf'] = 'true'
 defaults['band_with_alphas'] = 'false'
 defaults['band_with_scale'] = 'false'
-defaults['band_total'] = 'true'
+defaults['band_total'] = 'false'
 
 # [PLOT_0]
 defaults['plot_type'] = 'data, grid, pdf'

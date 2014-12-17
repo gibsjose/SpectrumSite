@@ -125,8 +125,7 @@
                     "plot_band = $plot_band\n".
                     "band_with_pdf = $plot_pdf_band\n".
                     "band_with_alphas = $plot_alpha_s_band\n".
-                    "band_with_scale = $plot_scale_band\n".
-                    "band_total = true\n";
+                    "band_with_scale = $plot_scale_band\n";
 
         $i = 0;
         foreach($ratio_styles as $rs) {
