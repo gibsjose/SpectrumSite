@@ -11,11 +11,14 @@ defaults = {}
 # Checks whether the key exists in the input dictionary
 def Write(_key, _file):
     if _key in d:
-        if not d[_key].strip(' \t\n\r'):
+        if not d[_key].strip():
             _file.write("; ")
 
         _file.write(_key + ' = ' + d[_key])
     elif _key in defaults:
+        if not defaults[_key].strip():
+            _file.write("; ")
+            
         _file.write(_key + ' = ' + defaults[_key] + '\n')
 
 inputPath = sys.argv[1]
