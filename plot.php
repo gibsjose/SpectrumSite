@@ -656,7 +656,7 @@
                                     </label>
 
                                     <label for="grid_corr">
-                                        <input id="grid_corr" type="checkbox"> Apply Corrections to NLO QCD (Electroweak, Hadronization, etc.)
+                                        <input id="grid_corr" type="checkbox"> Apply Corrections to NLO QCD (Electroweak, etc.)
                                     </label>
 
                                     <label>Include in Uncertainty Band:</label>
