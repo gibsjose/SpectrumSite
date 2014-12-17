@@ -4,7 +4,7 @@
 debug = false;
 
 //Number of seconds for which the jets run
-masterKillTime = 5;
+masterKillTime = 30;
 
 donePlotting = false;
 
@@ -476,11 +476,12 @@ function Jets() {
                 ctx.fillRect(0, 0, window_width, window_height);
                 ctx.clearRect(0, 0, window_width, window_height);
 
-                if(!donePlotting) {
-                    document.getElementById('notification-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Still Plotting...</h2>";
-                } else {
-                    document.getElementById('notification-container').innerHTML = "";
-                }
+                //@TODO Not sure why this isn't working properly...
+                // if(!donePlotting) {
+                //     document.getElementById('notification-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Still Plotting...</h2>";
+                // } else {
+                //     document.getElementById('notification-container').innerHTML = "";
+                // }
 
                 clearInterval(jetsTimer);
                 clearInterval(masterTimer);
