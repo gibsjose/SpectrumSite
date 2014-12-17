@@ -664,7 +664,7 @@
 
                                     <br>
                                     <h3 color="#1F8DD6">Style Options</h3>
-                                    <hr color="#39B54A" width="100%" size="2" align="left">
+                                    <!-- <hr color="#39B54A" width="100%" size="2" align="left"> -->
 
                                     <label for="plot_band">
                                         <input id="plot_band" type="checkbox"> Use Bands Instead of Points
