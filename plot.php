@@ -684,19 +684,23 @@
                                         <input class="pure-u-1-3" placeholder="Max" id="y_overlay_max">
                                     </div> -->
                                     <div class="min-max">
-                                        <input width="60px" placeholder="Min" id="y_overlay_min">&emsp;
+                                        <input width="60px" placeholder="Min" id="y_overlay_min">
                                     </div>
+                                    &emsp;
                                     <div class="min-max">
                                         <input width="60px" placeholder="Max" id="y_overlay_max">
                                     </div>
+                                    <br>
 
                                     <h3>Ratio</h3>
-                                    <div class="pure-g">
-                                        <input class="pure-u-1-3" placeholder="Min" id="y_ratio_min">
-                                        <h2 size="60px" class="is-center pure-u-1-3"><i class="fa fa-arrows-h"></i></h2>
-                                        <input class="pure-u-1-3" placeholder="Max" id="y_ratio_max">
+                                    <div class="min-max">
+                                        <input width="60px" placeholder="Min" id="y_ratio_min">
                                     </div>
-
+                                    &emsp;
+                                    <div class="min-max">
+                                        <input width="60px" placeholder="Max" id="y_ratio_max">
+                                    </div>
+                                    <br>
                                     <br>
                                 </fieldset>
                             </form>
