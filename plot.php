@@ -143,14 +143,14 @@
                 var data_marker_colors_v = "";
                 var data_marker_styles_v = "";
 
-                if(data_marker_color_v.length != data_steering_v.length) {
-                    alert("Too few data marker colors specified");
-                    return;
-                }
-                if(data_marker_style_v.length != data_steering_v.length) {
-                    alert("Too few data marker styles specified");
-                    return;
-                }
+                // if(data_marker_color_v.length != data_steering_v.length) {
+                //     alert("Too few data marker colors specified");
+                //     return;
+                // }
+                // if(data_marker_style_v.length != data_steering_v.length) {
+                //     alert("Too few data marker styles specified");
+                //     return;
+                // }
 
                 for(var i = 0; i < data_steering_v.length; i++) {
                     if(i == (data_steering_v.length - 1)) {
@@ -178,10 +178,10 @@
                 var pdf_steerings_v = "";
                 var pdf_fill_colors_v = "";
 
-                if(pdf_fill_color_v.length != pdf_steering_v.length) {
-                    alert("Too few PDF fill colors specified");
-                    return;
-                }
+                // if(pdf_fill_color_v.length != pdf_steering_v.length) {
+                //     alert("Too few PDF fill colors specified");
+                //     return;
+                // }
 
                 for(var i = 0; i < pdf_steering_v.length; i++) {
                     if(i == (pdf_steering_v.length - 1)) {
@@ -201,6 +201,11 @@
 
                 var plot_band_v = document.getElementById('plot_band').checked;
 
+                var plot_pdf_band_v = document.getElementById('plot_pdf_band').checked;
+                var plot_alpha_s_band_v = document.getElementById('plot_alpha_s_band').checked;
+                var plot_scale_band_v = document.getElementById('plot_scale_band').checked;
+                var plot_total_band_v = (plot_pdf_band_v || plot_alpha_s_band_v || plot_scale_band_v);
+
                 console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
                 console.log("data_steerings_v: " + data_steerings_v);
@@ -212,6 +217,10 @@
                 console.log("display_style_v: " + display_style_v);
                 console.log("ratio_styles: " + ratio_styles);
                 console.log("ratios: " + ratios);
+                console.log("plot_pdf_band_v" + plot_pdf_band_v);
+                console.log("plot_alpha_s_band_v" + plot_alpha_s_band_v);
+                console.log("plot_scale_band_v" + plot_scale_band_v);
+                console.log("plot_total_band_v" + plot_total_band_v);
 
 
                 //Get Steering File data from form and send it to PHP for plotting
@@ -230,7 +239,12 @@
                     grid_corr: grid_corr_v,
                     x_log: x_log_v,
                     y_log: y_log_v,
-                    plot_band: plot_band_v
+                    plot_band: plot_band_v,
+
+                    plot_pdf_band: plot_pdf_band_v,
+                    plot_alpha_s_band: plot_alpha_s_band_v,
+                    plot_scale_band: plot_scale_band_v,
+                    plot_total_band: plot_total_band_v
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
@@ -580,7 +594,7 @@
                                     </select>
 
                                     <label for="data_steering">Data Steering File</label>
-                                    <select class="pure-u-1" name="data_steering" id="data_steering" multiple>
+                                    <select placeholder="Data File" class="pure-u-1" name="data_steering" id="data_steering" multiple>
                                         <option>None</option>
                                     </select>
                                     <select placeholder="Color" class="pure-u-1" name="data_marker_color" id="data_marker_color" multiple>
@@ -597,12 +611,12 @@
                                     </select>
 
                                     <label for="grid_steering">Grid Steering File</label>
-                                    <select class="pure-u-1" name="grid_steering" id="grid_steering" multiple>
+                                    <select placeholder="Grid File" class="pure-u-1" name="grid_steering" id="grid_steering" multiple>
                                         <option>None</option>
                                     </select>
 
                                     <label for="pdf_steering">PDF Steering File</label>
-                                    <select class="pure-u-1" name="pdf_steering" id="pdf_steering" multiple>
+                                    <select placeholder="PDF File" class="pure-u-1" name="pdf_steering" id="pdf_steering" multiple>
                                         <option>None</option>
                                     </select>
                                     <select placeholder="Color" class="pure-u-1" name="pdf_fill_color" id="pdf_fill_color" multiple>
@@ -624,6 +638,22 @@
                                         <input id="grid_corr" type="checkbox"> Apply Grid Corrections
                                     </label>
 
+                                    <label>Uncertainty Band Type</label>
+                                    <label for="plot_pdf_band">
+                                        <input id="plot_pdf_band" type="checkbox" checked> PDF Band
+                                    </label>
+
+                                    <label for="plot_alpha_s_band">
+                                        <input id="plot_alpha_s_band" type="checkbox"> Alpha S Band
+                                    </label>
+
+                                    <label for="plot_scale_band">
+                                        <input id="plot_scale_band" type="checkbox"> Scale Band
+                                    </label>
+
+                                    <br>
+                                    <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
+                                    <br>
                                     <br>
                                     <h3 color="#1F8DD6">Style Options</h3>
                                     <hr color="#39B54A" width="100%" size="2" align="left">
@@ -655,7 +685,6 @@
                                     </div>
 
                                     <br>
-                                    <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
                                 </fieldset>
                             </form>
                         </div>
