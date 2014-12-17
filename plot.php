@@ -204,7 +204,6 @@
                 var plot_pdf_band_v = document.getElementById('plot_pdf_band').checked;
                 var plot_alpha_s_band_v = document.getElementById('plot_alpha_s_band').checked;
                 var plot_scale_band_v = document.getElementById('plot_scale_band').checked;
-                var plot_total_band_v = (plot_pdf_band_v || plot_alpha_s_band_v || plot_scale_band_v);
 
                 console.log("steering_v: " + steering_v);
                 console.log("plot_type_v: " + plot_type_v);
@@ -220,8 +219,6 @@
                 console.log("plot_pdf_band_v" + plot_pdf_band_v);
                 console.log("plot_alpha_s_band_v" + plot_alpha_s_band_v);
                 console.log("plot_scale_band_v" + plot_scale_band_v);
-                console.log("plot_total_band_v" + plot_total_band_v);
-
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
@@ -244,7 +241,6 @@
                     plot_pdf_band: plot_pdf_band_v,
                     plot_alpha_s_band: plot_alpha_s_band_v,
                     plot_scale_band: plot_scale_band_v,
-                    plot_total_band: plot_total_band_v
                 };
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
@@ -639,17 +635,8 @@
                                     </label>
 
                                     <label>Uncertainty Band Type</label>
-                                    <label for="plot_pdf_band">
-                                        <input id="plot_pdf_band" type="checkbox" checked> PDF Band
-                                    </label>
-
-                                    <label for="plot_alpha_s_band">
-                                        <input id="plot_alpha_s_band" type="checkbox"> Alpha S Band
-                                    </label>
-
-                                    <label for="plot_scale_band">
-                                        <input id="plot_scale_band" type="checkbox"> Scale Band
-                                    </label>
+                                    <label>Include: </label> <input id="plot_pdf_band" type="checkbox" checked> PDF Band <input id="plot_alpha_s_band" type="checkbox"> Alpha S Band <input id="plot_scale_band" type="checkbox"> Scale Band
+                                    
 
                                     <br>
                                     <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
