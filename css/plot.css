@@ -46,6 +46,12 @@
     width: 600px;
 }
 
+.metadata {
+    width: 600px;
+    height: 200px;
+    overflow-y: scroll;
+}
+
 .data-metadata {
     width: 600px;
 }

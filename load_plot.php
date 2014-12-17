@@ -221,24 +221,26 @@
         </div>
     </div>
 
-    <div class="data-metadata" align="left">
-        <h3>Data Metadata</h3>
-        <?php
-            if(file_exists('./metadata/data.txt')) {
-                $data_metadata = file_get_contents('./metadata/data.txt');
-                echo nl2br("<p>$data_metadata</p>");
-            }
-        ?>
-    </div>
+    <div class="metadata">
+        <div class="data-metadata" align="left">
+            <h3>Data Metadata</h3>
+            <?php
+                if(file_exists('./metadata/data.txt')) {
+                    $data_metadata = file_get_contents('./metadata/data.txt');
+                    echo nl2br("<p>$data_metadata</p>");
+                }
+            ?>
+        </div>
 
-    <div class="grid-metadata" align="left">
-        <h3>Grid Metadata</h3>
-        <?php
-            if(file_exists('./metadata/grids.txt')) {
-                $grid_metadata = file_get_contents('./metadata/grids.txt');
-                echo nl2br("<p>$grid_metadata</p>");
-            }
-        ?>
+        <div class="grid-metadata" align="left">
+            <h3>Grid Metadata</h3>
+            <?php
+                if(file_exists('./metadata/grids.txt')) {
+                    $grid_metadata = file_get_contents('./metadata/grids.txt');
+                    echo nl2br("<p>$grid_metadata</p>");
+                }
+            ?>
+        </div>
     </div>
 <?php } else {?>
     <script type="text/javascript">
