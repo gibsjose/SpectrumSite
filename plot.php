@@ -214,7 +214,7 @@
                         pdf_steerings_v += pdf_steering_v[i] + ", ";
 
                         if(pdf_fill_color_v.length) {
-                            pdf_full_colors_v += pdf_fill_color_v[i] + ", ";
+                            pdf_fill_colors_v += pdf_fill_color_v[i] + ", ";
                         }
                     }
                 }
