@@ -162,7 +162,7 @@
 
 <!-- Run Spectrum on the steering file -->
 <?php
-    exec("2>logs/error.log ./Spectrum/Spectrum -p $steering > logs/spectrum.log", $output, $return_status);
+    exec("2>logs/error.log ./Spectrum/Spectrum -p -m $steering > logs/spectrum.log", $output, $return_status);
 ?>
 
 
@@ -216,6 +216,24 @@
         <div class="pure-u-1">
             <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
         </div>
+    </div>
+
+    <div class="data-metadata">
+        <?php
+            if(file_exists('./metadata/data.txt')) {
+                $data_metadata = file_get_contents('./metadata/data.txt');
+                print("<p>$data_metadata</p>");
+            }
+        ?>
+    </div>
+
+    <div class="grid-metadata">
+        <?php
+            if(file_exists('./metadata/grids.txt')) {
+                $grid_metadata = file_get_contents('./metadata/grids.txt');
+                print("<p>$grid_metadata</p>");
+            }
+        ?>
     </div>
 <?php } else {?>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
