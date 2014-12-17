@@ -469,7 +469,7 @@ function Jets() {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, window_width, window_height);
                 ctx.clearRect(0, 0, window_width, window_height);
-                console.log(canvas.innerHTML);
+                console.log(document.getElementById('canvas-container').innerHTML);
 
                 clearInterval(jetsTimer);
                 clearInterval(masterTimer);
