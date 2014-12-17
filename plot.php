@@ -265,7 +265,7 @@
 
                 //Run the PHP script which creates the steering file, runs spectrum, and updates the page
                 $('#canvas-container').load('load_plot.php', data);
-                $('#notification-container').html('');
+                DonePlotting(true);
             }
         </script>
 

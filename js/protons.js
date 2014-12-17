@@ -6,6 +6,8 @@ debug = false;
 //Number of seconds for which the jets run
 masterKillTime = 20;
 
+donePlotting = false;
+
 var canvas = document.getElementById('particle-canvas'),
         ctx = canvas.getContext('2d'),
         window_width = canvas.width,//window.innerWidth,
@@ -454,6 +456,10 @@ function ProtonCollision() {
     collisionTimer = setInterval(RepaintProtons, 1000/60);
 }
 
+function DonePlotting(_done) {
+    donePlotting = _done;
+}
+
 function Jets() {
     jetsTimer = setInterval(function() {
         if(collided == true) {
@@ -469,7 +475,12 @@ function Jets() {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, window_width, window_height);
                 ctx.clearRect(0, 0, window_width, window_height);
-                document.getElementById('notification-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Still Plotting...</h2>";
+
+                if(!donePlotting) {
+                    document.getElementById('notification-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Still Plotting...</h2>";
+                } else {
+                    document.getElementById('notification-container').innerHTML = "";
+                }
 
                 clearInterval(jetsTimer);
                 clearInterval(masterTimer);
@@ -483,6 +494,7 @@ function Jets() {
 
 function Collision() {
     collisionIsDone = false;
+    donePlotting = false;
     protons = [];
     particles = [];
 
