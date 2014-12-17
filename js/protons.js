@@ -469,18 +469,16 @@ function Jets() {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, window_width, window_height);
                 ctx.clearRect(0, 0, window_width, window_height);
-                ctx.fillText("Still Plotting...", 0 ,0);
+                console.log(canvas.innerHTML);
+
+                clearInterval(jetsTimer);
+                clearInterval(masterTimer);
                 collided = false;
                 timeout = false;
-                clearInterval(jetsTimer);
             }
         }
 
     }, 1000/60);    //Was set to 1000: Increasing causes slower particle generation, decreasing causes faster generation
-}
-
-function TEST() {
-    return true;
 }
 
 function Collision() {
