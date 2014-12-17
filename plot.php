@@ -49,7 +49,7 @@
 
         <script type="text/javascript">
         function DisplayPleaseWait() {
-            document.getElementById('notification-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Still Plotting...</h2>";
+            document.getElementById('notification-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Creating the Figure, Please Wait...</h2>";
         }
         </script>
 

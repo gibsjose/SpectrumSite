@@ -4,7 +4,7 @@
 debug = false;
 
 //Number of seconds for which the jets run
-masterKillTime = 5;
+masterKillTime = 30;
 
 donePlotting = false;
 
