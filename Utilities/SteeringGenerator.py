@@ -15,10 +15,7 @@ def Write(_key, _file):
             _file.write("; ")
 
         _file.write(_key + ' = ' + d[_key])
-    elif _key in defaults:
-        if not defaults[_key].strip():
-            _file.write("; ")
-            
+    elif _key in defaults:            
         _file.write(_key + ' = ' + defaults[_key] + '\n')
 
 inputPath = sys.argv[1]
