@@ -11,6 +11,9 @@ defaults = {}
 # Checks whether the key exists in the input dictionary
 def Write(_key, _file):
     if _key in d:
+        if not d[_key]:
+            _file.write("; ")
+
         _file.write(_key + ' = ' + d[_key])
     elif _key in defaults:
         _file.write(_key + ' = ' + defaults[_key] + '\n')
