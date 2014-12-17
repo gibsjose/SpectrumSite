@@ -11,6 +11,9 @@ defaults = {}
 # Checks whether the key exists in the input dictionary
 def Write(_key, _file):
     if _key in d:
+        if not d[_key].strip():
+            _file.write("; ")
+
         _file.write(_key + ' = ' + d[_key])
     elif _key in defaults:
         _file.write(_key + ' = ' + defaults[_key] + '\n')
@@ -49,10 +52,14 @@ defaults['grid_corr'] = 'false'
 defaults['label_sqrt_s'] = 'true'
 defaults['x_legend'] = '0.9'
 defaults['y_legend'] = '0.9'
-defaults['y_overlay_min'] = ''
-defaults['y_overlay_max'] = ''
-defaults['y_ratio_min'] = ''
-defaults['y_ratio_max'] = ''
+# defaults['y_overlay_min'] = ''
+# defaults['y_overlay_max'] = ''
+# defaults['y_ratio_min'] = ''
+# defaults['y_ratio_max'] = ''
+defaults['band_with_pdf'] = 'true'
+defaults['band_with_alphas'] = 'false'
+defaults['band_with_scale'] = 'false'
+defaults['band_total'] = 'false'
 
 # [PLOT_0]
 defaults['plot_type'] = 'data, grid, pdf'
@@ -63,11 +70,11 @@ defaults['pdf_directory'] = '.'
 defaults['data_steering_files'] = 'none'
 defaults['grid_steering_files'] = 'none'
 defaults['pdf_steering_files'] = 'none'
-#defaults['data_marker_style'] = '20'
-#defaults['data_marker_color'] = '1'
-#defaults['pdf_fill_style'] = ''
-#defaults['pdf_fill_color'] = ''
-#defaults['pdf_marker_style'] = ''
+# defaults['data_marker_style'] = '20'
+# defaults['data_marker_color'] = '1'
+# defaults['pdf_fill_style'] = ''
+# defaults['pdf_fill_color'] = ''
+# defaults['pdf_marker_style'] = ''
 defaults['x_scale'] = '1.0'
 defaults['y_scale'] = '1.0'
 defaults['x_log'] = 'true'
@@ -99,6 +106,10 @@ Write('y_overlay_min', f)
 Write('y_overlay_max', f)
 Write('y_ratio_min', f)
 Write('y_ratio_max', f)
+Write('band_with_pdf', f)
+Write('band_with_alphas', f)
+Write('band_with_scale', f)
+Write('band_total', f)
 
 # [PLOT_0]
 f.write('\n[PLOT_0]\n')

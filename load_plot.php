@@ -19,11 +19,28 @@
     $steering = $_POST['steering'];
     $plot_type = $_POST['plot_type'];
     $data_steering = $_POST['data_steering'];
+    $data_marker_color = $_POST['data_marker_color'];
+    $data_marker_style = $_POST['data_marker_style'];
     $grid_steering = $_POST['grid_steering'];
     $pdf_steering = $_POST['pdf_steering'];
+    $pdf_fill_color = $_POST['pdf_fill_color'];
     $display_style = $_POST['display_style'];
     $ratio_style = $_POST['ratio_style'];
     $ratio = $_POST['ratio'];
+    $grid_corr = $_POST['grid_corr'];
+
+    //Style Options
+    $x_log = $_POST['x_log'];
+    $y_log = $_POST['y_log'];
+    $plot_band = $_POST['plot_band'];
+    $y_overlay_min = $_POST['y_overlay_min'];
+    $y_overlay_max = $_POST['y_overlay_max'];
+    $y_ratio_min = $_POST['y_ratio_min'];
+    $y_ratio_max = $_POST['y_ratio_max'];
+
+    $plot_pdf_band = $_POST['plot_pdf_band'];
+    $plot_alpha_s_band = $_POST['plot_alpha_s_band'];
+    $plot_scale_band = $_POST['plot_scale_band'];
 ?>
 
 <!-- Write variables to file (settings.txt) -->
@@ -100,9 +117,23 @@
                     "grid_directory = $grid_directory\n".
                     "pdf_directory = $pdf_directory\n".
                     "data_steering_files = $data_file\n".
+                    "data_marker_color = $data_marker_color\n".
+                    "data_marker_style = $data_marker_style\n".
                     "grid_steering_files = $grid_file\n".
                     "pdf_steering_files = $pdf_file\n".
-                    "display_style = $display_style\n";
+                    "pdf_fill_color = $pdf_fill_color\n".
+                    "display_style = $display_style\n".
+                    "grid_corr = $grid_corr\n".
+                    "x_log = $x_log\n".
+                    "y_log = $y_log\n".
+                    "plot_band = $plot_band\n".
+                    "y_overlay_min = $y_overlay_min\n".
+                    "y_overlay_max = $y_overlay_max\n".
+                    "y_ratio_min = $y_ratio_min\n".
+                    "y_ratio_max = $y_ratio_max\n".
+                    "band_with_pdf = $plot_pdf_band\n".
+                    "band_with_alphas = $plot_alpha_s_band\n".
+                    "band_with_scale = $plot_scale_band\n";
 
         $i = 0;
         foreach($ratio_styles as $rs) {
@@ -138,7 +169,7 @@
 
 <!-- Run Spectrum on the steering file -->
 <?php
-    exec("2>logs/error.log ./Spectrum/Spectrum -p $steering > logs/spectrum.log", $output, $return_status);
+    exec("2>logs/error.log ./Spectrum/Spectrum -p -m $steering > logs/spectrum.log", $output, $return_status);
 ?>
 
 
@@ -162,6 +193,10 @@
 ?>
 
 <?php if(($plotted == TRUE) && ($return_status == 0)) {?>
+    <script type="text/javascript">
+        //Tell animation that we are done plotting
+        DonePlotting(true);
+    </script>
     <br>
     <br>
     <?php print("<img src=\"$plot\" alt=\"ERROR\" width=\"600px\">"); ?>
@@ -193,7 +228,34 @@
             <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
         </div>
     </div>
+    <br>
+    <br>
+    <div class="metadata">
+        <div class="data-metadata" align="left">
+            <h3>Data Metadata</h3>
+            <?php
+                if(file_exists('./metadata/data.txt')) {
+                    $data_metadata = file_get_contents('./metadata/data.txt');
+                    echo nl2br("<p>$data_metadata</p>");
+                }
+            ?>
+        </div>
+
+        <div class="grid-metadata" align="left">
+            <h3>Grid Metadata</h3>
+            <?php
+                if(file_exists('./metadata/grids.txt')) {
+                    $grid_metadata = file_get_contents('./metadata/grids.txt');
+                    echo nl2br("<p>$grid_metadata</p>");
+                }
+            ?>
+        </div>
+    </div>
 <?php } else {?>
+    <script type="text/javascript">
+        //Tell animation that we are done plotting
+        DonePlotting(true);
+    </script>
     <h1><font color="#Ef3E3E" size="40px">ERROR</font></h1>
     <br>
     <br>

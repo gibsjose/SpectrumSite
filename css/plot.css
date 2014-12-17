@@ -46,6 +46,34 @@
     width: 600px;
 }
 
+.metadata {
+    width: 600px;
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.min-max {
+    float: left;
+}
+
+.min-max-input {
+    width: 80%;
+}
+
+.data-metadata {
+    width: 600px;
+}
+
+.grid-metadata {
+    width: 600px;
+}
+
+.still-plotting {
+    color: #1F8DD6;
+    font-weight: bold;
+    font-size: 150%;
+}
+
 .pure-form label {
     margin: 1em 0 0;
     font-weight: bold;
@@ -59,6 +87,11 @@
     margin-bottom: 1em;
     width: auto;
 }
+
+/*.select2-disabled {
+    background: #39B54A;
+    color: #353f36;
+}*/
 
 h2,
 h3 {
