@@ -219,6 +219,7 @@
     </div>
 
     <div class="data-metadata">
+        <h3>Data Metadata</h3>
         <?php
             if(file_exists('./metadata/data.txt')) {
                 $data_metadata = file_get_contents('./metadata/data.txt');
@@ -228,6 +229,7 @@
     </div>
 
     <div class="grid-metadata">
+        <h3>Grid Metadata</h3>
         <?php
             if(file_exists('./metadata/grids.txt')) {
                 $grid_metadata = file_get_contents('./metadata/grids.txt');
