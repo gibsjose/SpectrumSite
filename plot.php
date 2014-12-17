@@ -678,11 +678,15 @@
                                     </label>
 
                                     <h3>Overlay</h3>
-                                    <div class="pure-g">
+                                    <!-- <div class="pure-g">
                                         <input class="pure-u-1-3" placeholder="Min" id="y_overlay_min">
                                         <h2 size="60px" class="is-center pure-u-1-3"><i class="fa fa-arrows-h"></i></h2>
                                         <input class="pure-u-1-3" placeholder="Max" id="y_overlay_max">
-                                    </div>
+                                    </div> -->
+                                    <span>
+                                        <input width="100px" placeholder="Min" id="y_overlay_min">
+                                        <input width="100px" placeholder="Max" id="y_overlay_max">
+                                    </span>
 
                                     <h3>Ratio</h3>
                                     <div class="pure-g">
