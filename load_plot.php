@@ -220,7 +220,8 @@
             <a href="./logs/spectrum.log" target="_newtab"><button class="button-log pure-button"><i class="fa fa-info-circle"></i> Spectrum Log</button></a>
         </div>
     </div>
-
+    <br>
+    <br>
     <div class="metadata">
         <div class="data-metadata" align="left">
             <h3>Data Metadata</h3>
