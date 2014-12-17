@@ -505,7 +505,7 @@
 
                 //Clear if greater than max
                 if(maxVal) {
-                    if(minVal > maxVal) {
+                    if(parseFloat(minVal) > parseFloat(maxVal)) {
                         document.getElementById('y_overlay_min').value = "";
                     }
                 }
@@ -522,7 +522,7 @@
 
                 //Clear if less than min
                 if(minVal) {
-                    if(maxVal < minVal) {
+                    if(parseFloat(maxVal) < parseFloat(minVal)) {
                         document.getElementById('y_overlay_max').value = "";
                     }
                 }
@@ -539,7 +539,7 @@
 
                 //Clear if greater than max
                 if(maxVal) {
-                    if(minVal > maxVal) {
+                    if(parseFloat(minVal) > parseFloat(maxVal)) {
                         document.getElementById('y_ratio_min').value = "";
                     }
                 }
@@ -556,7 +556,7 @@
 
                 //Clear if less than min
                 if(minVal) {
-                    if(maxVal < minVal) {
+                    if(parseFloat(maxVal) < parseFloat(minVal)) {
                         document.getElementById('y_ratio_max').value = "";
                     }
                 }
