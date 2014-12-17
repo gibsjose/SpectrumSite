@@ -54,6 +54,12 @@
     width: 600px;
 }
 
+.still-plotting {
+    color: #1F8DD6;
+    font-weight: bold;
+    font-size: 150%;
+}
+
 .pure-form label {
     margin: 1em 0 0;
     font-weight: bold;

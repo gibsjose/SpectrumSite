@@ -469,8 +469,7 @@ function Jets() {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, window_width, window_height);
                 ctx.clearRect(0, 0, window_width, window_height);
-                //console.log(document.getElementById('canvas-container').innerHTML);
-                document.getElementById('canvas-container').innerHTML = "<h2>Still Plotting...</h2>";
+                document.getElementById('canvas-container').innerHTML = "<br><br><br><br><h2 class='still-plotting'>Still Plotting...</h2>";
 
                 clearInterval(jetsTimer);
                 clearInterval(masterTimer);
