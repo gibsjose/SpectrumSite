@@ -587,6 +587,10 @@
                         <div id="form-container">
                             <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
                                 <fieldset>
+                                    <br>
+                                    <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
+                                    <br>
+                                    <br>
                                     <label for="steering">Pre-Defined Plots</label>
                                     <select class="pure-u-1" name="steering" id="steering">
                                         <option>None</option>
@@ -657,9 +661,6 @@
 
                                     <label>Include in Uncertainty Band:  </label> <input id="plot_pdf_band" type="checkbox" checked> PDF Band  <input id="plot_alpha_s_band" type="checkbox"> Alpha S Band  <input id="plot_scale_band" type="checkbox"> Scale Band
 
-                                    <br>
-                                    <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
-                                    <br>
                                     <br>
                                     <h3 color="#1F8DD6">Style Options</h3>
                                     <hr color="#39B54A" width="100%" size="2" align="left">
