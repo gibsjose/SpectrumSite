@@ -4,7 +4,7 @@
 debug = false;
 
 //Number of seconds for which the jets run
-masterKillTime = 2;
+masterKillTime = 20;
 
 var canvas = document.getElementById('particle-canvas'),
         ctx = canvas.getContext('2d'),
