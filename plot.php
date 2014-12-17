@@ -498,24 +498,68 @@
                 var minVal = document.getElementById('y_overlay_min').value;
                 var maxVal = document.getElementById('y_overlay_max').value;
 
-                console.log("min: " + minVal);
-                console.log("max: " + maxVal);
+                //Clear if not a number
+                if(!$.isNumeric(minVal)) {
+                    document.getElementById('y_overlay_min').value = "";
+                }
+
+                //Clear if greater than max
+                if(maxVal) {
+                    if(minVal > maxVal) {
+                        document.getElementById('y_overlay_min').value = "";
+                    }
+                }
             }
 
             function YOverlayMax() {
                 var minVal = document.getElementById('y_overlay_min').value;
                 var maxVal = document.getElementById('y_overlay_max').value;
 
-                console.log("min: " + minVal);
-                console.log("max: " + maxVal);
+                //Clear if not a number
+                if(!$.isNumeric(maxVal)) {
+                    document.getElementById('y_overlay_max').value = "";
+                }
+
+                //Clear if less than min
+                if(minVal) {
+                    if(maxVal < minVal) {
+                        document.getElementById('y_overlay_max').value = "";
+                    }
+                }
             }
 
             function YRatioMin() {
+                var minVal = document.getElementById('y_ratio_min').value;
+                var maxVal = document.getElementById('y_ratio_max').value;
 
+                //Clear if not a number
+                if(!$.isNumeric(minVal)) {
+                    document.getElementById('y_ratio_min').value = "";
+                }
+
+                //Clear if greater than max
+                if(maxVal) {
+                    if(minVal > maxVal) {
+                        document.getElementById('y_ratio_min').value = "";
+                    }
+                }
             }
 
             function YRatioMax() {
+                var minVal = document.getElementById('y_ratio_min').value;
+                var maxVal = document.getElementById('y_ratio_max').value;
 
+                //Clear if not a number
+                if(!$.isNumeric(maxVal)) {
+                    document.getElementById('y_ratio_max').value = "";
+                }
+
+                //Clear if less than min
+                if(minVal) {
+                    if(maxVal < minVal) {
+                        document.getElementById('y_ratio_max').value = "";
+                    }
+                }
             }
         </script>
 
