@@ -683,8 +683,12 @@
                                         <h2 size="60px" class="is-center pure-u-1-3"><i class="fa fa-arrows-h"></i></h2>
                                         <input class="pure-u-1-3" placeholder="Max" id="y_overlay_max">
                                     </div> -->
-                                    <span><input width="60px" placeholder="Min" id="y_overlay_min"></span>
-                                    <span><input width="60px" placeholder="Max" id="y_overlay_max"></span>
+                                    <div class="min-max">
+                                        <input width="60px" placeholder="Min" id="y_overlay_min">
+                                    </div>
+                                    <div class="min-max">
+                                        <input width="60px" placeholder="Max" id="y_overlay_max">
+                                    </div>
 
                                     <h3>Ratio</h3>
                                     <div class="pure-g">
