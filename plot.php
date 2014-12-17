@@ -679,23 +679,19 @@
 
                                     <label>Overlay</label>
                                     <div class="min-max">
-                                        <input width="60px" placeholder="Min" id="y_overlay_min">
+                                        <input class="min-max-input" width="60px" placeholder="Min" id="y_overlay_min">
                                     </div>
-                                    &emsp;
-                                    &emsp;
                                     <div class="min-max">
-                                        <input width="60px" placeholder="Max" id="y_overlay_max">
+                                        <input class="min-max-input" width="60px" placeholder="Max" id="y_overlay_max">
                                     </div>
                                     <br>
 
                                     <label>Ratio</label>
                                     <div class="min-max">
-                                        <input width="60px" placeholder="Min" id="y_ratio_min">
+                                        <input class="min-max-input" width="60px" placeholder="Min" id="y_ratio_min">
                                     </div>
-                                    &emsp;
-                                    &emsp;
                                     <div class="min-max">
-                                        <input width="60px" placeholder="Max" id="y_ratio_max">
+                                        <input class="min-max-input" width="60px" placeholder="Max" id="y_ratio_max">
                                     </div>
                                     <br>
                                     <br>
