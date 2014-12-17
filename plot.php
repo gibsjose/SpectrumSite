@@ -143,25 +143,38 @@
                 var data_marker_colors_v = "";
                 var data_marker_styles_v = "";
 
-                // if(data_marker_color_v.length != data_steering_v.length) {
-                //     alert("Too few data marker colors specified");
-                //     return;
-                // }
-                // if(data_marker_style_v.length != data_steering_v.length) {
-                //     alert("Too few data marker styles specified");
-                //     return;
-                // }
+                if(data_marker_color_v.length && (data_marker_color_v.length != data_steering_v.length)) {
+                    alert("Too few data marker colors specified");
+                    return;
+                }
+                if(data_marker_style_v.length && (data_marker_style_v.length != data_steering_v.length)) {
+                    alert("Too few data marker styles specified");
+                    return;
+                }
 
                 for(var i = 0; i < data_steering_v.length; i++) {
                     if(i == (data_steering_v.length - 1)) {
                         data_steerings_v += data_steering_v[i];
-                        data_marker_colors_v += data_marker_color_v[i];
-                        data_marker_styles_v += data_marker_style_v[i];
+
+                        if(data_marker_color_v.length) {
+                            data_marker_colors_v += data_marker_color_v[i];
+                        }
+
+                        if(data_marker_style_v.length) {
+                            data_marker_styles_v += data_marker_style_v[i];
+                        }
+
                         break;
                     } else {
                         data_steerings_v += data_steering_v[i] + ", ";
-                        data_marker_colors_v += data_marker_color_v[i] + ", ";
-                        data_marker_styles_v += data_marker_style_v[i] + ", ";
+
+                        if(data_marker_color_v.length) {
+                            data_marker_colors_v += data_marker_color_v[i] + ", ";
+                        }
+
+                        if(data_marker_style_v.length) {
+                            data_marker_styles_v += data_marker_style_v[i] + ", ";
+                        }
                     }
                 }
 
@@ -178,19 +191,26 @@
                 var pdf_steerings_v = "";
                 var pdf_fill_colors_v = "";
 
-                // if(pdf_fill_color_v.length != pdf_steering_v.length) {
-                //     alert("Too few PDF fill colors specified");
-                //     return;
-                // }
+                if(pdf_fill_color_v.length && (pdf_fill_color_v.length != pdf_steering_v.length)) {
+                    alert("Too few PDF fill colors specified");
+                    return;
+                }
 
                 for(var i = 0; i < pdf_steering_v.length; i++) {
                     if(i == (pdf_steering_v.length - 1)) {
                         pdf_steerings_v += pdf_steering_v[i];
-                        pdf_fill_colors_v += pdf_fill_color_v[i];
+
+                        if(pdf_fill_color_v.length) {
+                            pdf_fill_colors_v += pdf_fill_color_v[i];
+                        }
+
                         break;
                     } else {
                         pdf_steerings_v += pdf_steering_v[i] + ", ";
-                        pdf_full_colors_v += pdf_fill_color_v[i] + ", ";
+
+                        if(pdf_fill_color_v.length) {
+                            pdf_full_colors_v += pdf_fill_color_v[i] + ", ";
+                        }
                     }
                 }
 
