@@ -584,10 +584,10 @@
             $('#grid_steering').on("change", GridSteering);
             $('#pdf_steering').on("change", PDFSteering);
 
-            $('#y_overlay_min').on('input', YOverlayMin);
-            $('#y_overlay_max').on('input', YOverlayMax);
-            $('#y_ratio_min').on('input', YRatioMin);
-            ('#y_ratio_max').on('input', YRatioMax);
+            $('#y_overlay_min').on('change', YOverlayMin);
+            $('#y_overlay_max').on('change', YOverlayMax);
+            $('#y_ratio_min').on('change', YRatioMin);
+            ('#y_ratio_max').on('change', YRatioMax);
 
             //Default to Data/Grid disabled
             DisableDataSteeringSelect();
