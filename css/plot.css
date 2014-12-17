@@ -46,6 +46,14 @@
     width: 600px;
 }
 
+.data-metadata {
+    width: 600px;
+}
+
+.grid-metadata {
+    width: 600px;
+}
+
 .pure-form label {
     margin: 1em 0 0;
     font-weight: bold;

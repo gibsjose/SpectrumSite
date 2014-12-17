@@ -223,7 +223,7 @@
         <?php
             if(file_exists('./metadata/data.txt')) {
                 $data_metadata = file_get_contents('./metadata/data.txt');
-                print("<p>$data_metadata</p>");
+                echo nl2br("<p>$data_metadata</p>");
             }
         ?>
     </div>
@@ -233,7 +233,7 @@
         <?php
             if(file_exists('./metadata/grids.txt')) {
                 $grid_metadata = file_get_contents('./metadata/grids.txt');
-                print("<p>$grid_metadata</p>");
+                echo nl2br("<p>$grid_metadata</p>");
             }
         ?>
     </div>
