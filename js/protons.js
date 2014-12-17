@@ -461,6 +461,7 @@ function DonePlotting(_done) {
 }
 
 function Jets() {
+        
     jetsTimer = setInterval(function() {
         if(collided == true) {
             if(timeout == false) {
