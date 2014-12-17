@@ -466,6 +466,7 @@ function Jets() {
                 ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
                 ctx.fillRect(0, 0, window_width, window_height);
                 ctx.clearRect(0, 0, window_width, window_height);
+                canvas.innerHTML = "<h2>Still Plotting...</h2>";
                 collided = false;
                 timeout = false;
                 clearInterval(jetsTimer);
