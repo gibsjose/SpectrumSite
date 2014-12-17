@@ -33,6 +33,10 @@
     $x_log = $_POST['x_log'];
     $y_log = $_POST['y_log'];
     $plot_band = $_POST['plot_band'];
+
+    $plot_pdf_band = $_POST['plot_pdf_band'];
+    $plot_alpha_s_band = $_POST['plot_alpha_s_band'];
+    $plot_scale_band = $_POST['plot_scale_band'];
 ?>
 
 <!-- Write variables to file (settings.txt) -->
@@ -118,7 +122,11 @@
                     "grid_corr = $grid_corr\n".
                     "x_log = $x_log\n".
                     "y_log = $y_log\n".
-                    "plot_band = $plot_band\n";
+                    "plot_band = $plot_band\n".
+                    "band_with_pdf = $plot_pdf_band\n".
+                    "band_with_alphas = $plot_alpha_s_band\n".
+                    "band_with_scale = $plot_scale_band\n".
+                    "band_total = true\n";
 
         $i = 0;
         foreach($ratio_styles as $rs) {

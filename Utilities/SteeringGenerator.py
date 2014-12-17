@@ -53,6 +53,10 @@ defaults['y_overlay_min'] = ''
 defaults['y_overlay_max'] = ''
 defaults['y_ratio_min'] = ''
 defaults['y_ratio_max'] = ''
+defaults['band_with_pdf'] = 'true'
+defaults['band_with_alphas'] = 'false'
+defaults['band_with_scale'] = 'false'
+defaults['band_total'] = 'true'
 
 # [PLOT_0]
 defaults['plot_type'] = 'data, grid, pdf'
@@ -99,6 +103,10 @@ Write('y_overlay_min', f)
 Write('y_overlay_max', f)
 Write('y_ratio_min', f)
 Write('y_ratio_max', f)
+Write('band_with_pdf', f)
+Write('band_with_alphas', f)
+Write('band_with_scale', f)
+Write('band_total', f)
 
 # [PLOT_0]
 f.write('\n[PLOT_0]\n')
