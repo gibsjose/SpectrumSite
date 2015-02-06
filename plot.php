@@ -707,7 +707,7 @@
                                         <option value="3">1 Data, 1 Grid, N PDFs</option>
                                     </select>
 
-                                    <label for="observable">Observable</label>
+                                    <label for="observable">Physics process</label>
                                     <select class="pure-u-1" name="observable" id="observable">
                                         <option>None</option>
                                         <option>Inclusive Z</option>
@@ -715,7 +715,7 @@
                                         <option>Top</option>
                                     </select>
 
-                                    <label for="data_steering">Data Steering File</label>
+                                    <label for="data_steering">Cross section</label>
                                     <select placeholder="Data File" class="pure-u-1" name="data_steering" id="data_steering" multiple>
                                         <option>None</option>
                                     </select>
@@ -732,12 +732,12 @@
                                         <option value="23" id="23">Inverted Triangle</option>
                                     </select>
 
-                                    <label for="grid_steering">Grid Steering File</label>
+                                    <label for="grid_steering">ApplGrid File</label>
                                     <select placeholder="Grid File" class="pure-u-1" name="grid_steering" id="grid_steering" multiple>
                                         <option>None</option>
                                     </select>
 
-                                    <label for="pdf_steering">PDF Steering File</label>
+                                    <label for="pdf_steering">PDF</label>
                                     <select placeholder="PDF File" class="pure-u-1" name="pdf_steering" id="pdf_steering" multiple>
                                         <option>None</option>
                                     </select>
