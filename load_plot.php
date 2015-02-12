@@ -2,6 +2,7 @@
 <?php
     include_once "setup.php";
     setupSpectrumEnv();
+
 ?>
 
 <!-- Remove All Plots (*.png) -->
@@ -47,17 +48,25 @@
 <?php
     //If 'steering' is 'None', then create a steering file with the other data
     if(strcasecmp($steering, "None") == 0) {
+
+#        print("Steering is None");
+
         $input = "tmp/kvp.txt";
         $output = "tmp/steering.txt";
 
         //Remove the existing KVP File
-        unlink($input);
+        if (file_exists($input)) {
+         unlink($input);
+        }
 
         //Remove the existing Steering File
-        unlink($output);
-
+        if (file_exists($output)) {
+         unlink($output);
+        } 
         //Write a new kvp file
         $kvp_file = fopen($input, "w");
+
+        #print("file_open ?");
 
         $data_steerings = explode(",", $data_steering);
         $data_directory = "";
@@ -150,9 +159,12 @@
         fwrite($kvp_file, $kvp_text);
         fclose($kvp_file);
 
+#        print_r(error_get_last());
+
         //Make sure input exists
         if(file_exists($input)) {
             //Call SteeringGenerator.py on the file to create a steering file
+            //print("<h2><a href=\"$input\" target=\"_newtab\">Input File</a></h2>");
             $ret = `2>&1 Utilities/SteeringGenerator.py $input $output`;
 
             //Steering file is now the newly generated file
@@ -160,16 +172,31 @@
 
             //Generate a link to the generated file for viewing
             //print("<h2><a href=\"$steering\" target=\"_newtab\">Steering File</a></h2>");
+
         }
     } else {
-        //Print the Steering File name if a pre-built file was specified
-        //print("<h2>$steering</h2>");
+      //Print the Steering File name if a pre-built file was specified
+        print("<h2>$steering</h2>");
     }
+
+# echo "<br \>";
+# $output = `2>&1 ls -ltr tmp`;
+# echo "$output";
+
 ?>
+
+
 
 <!-- Run Spectrum on the steering file -->
 <?php
+
     exec("2>logs/error.log ./Spectrum/Spectrum -p -m $steering > logs/spectrum.log", $output, $return_status);
+
+# echo "<br \>";
+# $output = `2>&1 ls -l logs`;
+# echo "$output";
+#
+
 ?>
 
 

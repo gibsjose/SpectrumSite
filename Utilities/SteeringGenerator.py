@@ -23,6 +23,9 @@ outputPath = sys.argv[2]
 
 # Open the key-value-pair file and create a dictionary out of it
 #with open(inputPath, 'r') as f:
+
+#print "inputPath = " inputPath
+
 f = open(inputPath, 'r')
 for line in f:
     # Split the line based on the '='

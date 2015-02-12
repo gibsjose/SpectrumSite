@@ -62,7 +62,7 @@
                     canvas = "<canvas id='particle-canvas' width='600px' height='600px'></canvas>";
                     script = "<script type='text/javascript' src='js/protons.js'><\/script>";
                     return canvas + script;
-                });
+                }); 
 
                 DisplayPleaseWait();
 
@@ -70,7 +70,10 @@
                 Collision();
 
                 //Get all the variables from the form
-                var steering_v = document.getElementById('steering').value;
+		//var steering_v = document.getElementById('steering').value;
+                // turn off predefined plots on this page
+                var steering_v = "None";
+		//
                 var plot_type_v = $('#plot_type').select2("val");
                 var data_steering_v = $('#data_steering').select2("val");
                 var data_marker_color_v = $('#data_marker_color').select2("val");
@@ -261,7 +264,7 @@
 
                 //Get Steering File data from form and send it to PHP for plotting
                 data = {
-                    steering: steering_v,
+		    steering: steering_v,
                     plot_type: plot_type_v,
                     data_steering: data_steerings_v,
                     data_marker_color: data_marker_colors_v,
@@ -602,7 +605,7 @@
         function InitializeForms() {
 
             //Initialize the forms using the select2 interface: Default to Plot Type 0 (1, 1, 1)
-            $('#steering').select2();
+            //$('#steering').select2();
             $('#plot_type').select2();
             $('#observable').select2();
             $('#observable').select2('val', 'None');
@@ -679,7 +682,7 @@
         </div>
         <div class="content-wrapper">
             <div class="content">
-                <h2 class="content-head is-center">Spectrum Plot</h2>
+                <h2 class="content-head is-center">Spectrum Plot Panel</h2>
                 <div id="test-container">
                     <!-- Used for test jQuery output from PHP scripts -->
                 </div>
@@ -688,15 +691,14 @@
                         <div id="form-container">
                             <form class="pure-form pure-form-stacked" action="JavaScript:Plot()" method="post">
                                 <fieldset>
-                                    <br>
-                                    <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
-                                    <br>
+<!---
                                     <br>
                                     <label for="steering">Pre-Defined Plots</label>
                                     <select class="pure-u-1" name="steering" id="steering">
                                         <option>None</option>
                                     </select>
                                     <br>
+-->
                                     <hr color="#39B54A" width="100%" size="2" align="left">
                                     <br>
                                     <label for="plot_type">Plot Type</label>
@@ -747,6 +749,11 @@
                                         <option value="3" id="3">Green</option>
                                         <option value="4" id="4">Blue</option>
                                     </select>
+
+                                    <br>                                    
+                                    <br>
+                                    <button type="submit" id="submit" class="button-submit pure-button"><i class="fa fa-rocket"></i> Go!</button>
+                                    <br>
 
                                     <label for="overlay">
                                         <input id="overlay" type="checkbox" checked> Overlay
