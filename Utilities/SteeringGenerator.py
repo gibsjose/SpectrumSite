@@ -43,7 +43,7 @@ f.close()
 # Create default dictionary
 
 # [GEN]
-defaults['debug'] = 'true'
+defaults['debug'] = 'false'
 
 # [GRAPH]
 defaults['plot_band'] = 'false'
