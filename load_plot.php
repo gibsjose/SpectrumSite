@@ -190,6 +190,11 @@
 <!-- Run Spectrum on the steering file -->
 <?php
 
+    #exec("2>logs/error.log echo PATH $PATH   ", $output, $return_status);
+    #exec("2>logs/error.log gcc --version   ", $output, $return_status);
+    #exec("2>logs/error.log echo LD_LIBEARY_PATH=  $LD_LIBRARY_PATH   ", $output, $return_status);
+    #exec("2>logs/error.log root -b test.C   ", $output, $return_status);
+
     exec("2>logs/error.log ./Spectrum/Spectrum -p -m $steering > logs/spectrum.log", $output, $return_status);
 
 # echo "<br \>";
