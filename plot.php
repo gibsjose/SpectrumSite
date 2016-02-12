@@ -104,8 +104,12 @@
                 var ratio_styles = "";
                 var ratios = "";
 
+                //data,grid,pdf
                 if(plot_type_v == 0) {
                     plot_type_v = "data,grid,pdf";
+
+                    ratio_styles += "data_tot:data_stat:";
+                    ratios += "data_0:data:0:";
 
                     for(var i = 0; i < data_steering_v.length; i++) {
                         if(i == (data_steering_v.length - 1)) {
@@ -118,6 +122,7 @@
                         }
                     }
                 }
+                //data[],grid[],pdf
                 else if(plot_type_v == 1) {
                     plot_type_v = "data[],grid[],pdf";
 
@@ -132,8 +137,12 @@
                         }
                     }
                 }
+                //data,grid[],pdf
                 else if(plot_type_v == 2) {
                     plot_type_v = "data,grid[],pdf";
+
+                    ratio_styles += "data_tot:data_stat:";
+                    ratios += "data_0:data:0:";
 
                     for(var i = 0; i < grid_steering_v.length; i++) {
                         if(i == (grid_steering_v.length - 1)) {
@@ -146,8 +155,12 @@
                         }
                     }
                 }
+                //data,grid,pdf[]
                 else if(plot_type_v == 3) {
                     plot_type_v = "data,grid,pdf[]";
+
+                    ratio_styles += "data_tot:data_stat:";
+                    ratios += "data_0:data:0:";
 
                     for(var i = 0; i < pdf_steering_v.length; i++) {
                         if(i == (pdf_steering_v.length - 1)) {
